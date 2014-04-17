@@ -1,0 +1,16 @@
+{
+  "name": "strater-kit",
+  "version": "0.0.0",
+  "authors": [
+    "Shawn Sandy <shawnsandy04@gmail.com>"
+  ],
+  "description": "A simple theme starter kit",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
