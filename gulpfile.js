@@ -9,7 +9,9 @@ var clean = require('gulp-clean');
 var print = require('gulp-print');
 var watch = require('gulp-watch');
 var changed = require('gulp-changed');
-var streamque = require('streamqueue');
+var include = require('gulp-file-includer');
+var sequence = require('run-sequence');
+
 
 /*
  install gulp and dependencies the easy way

@@ -1,6 +1,6 @@
 {
   "name": "strater-kit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "Shawn Sandy <shawnsandy04@gmail.com>"
   ],
@@ -12,5 +12,13 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2",
+    "knockout": "",
+    "knockout-bootstrap": "~0.2.1",
+    "bootstrap": "~3.1.1"
+  },
+  "devDependencies": {}
 }
