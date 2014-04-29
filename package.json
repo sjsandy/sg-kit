@@ -1,5 +1,5 @@
 {
-  "name": "gulpjs-kit",
+  "name": "starter-kit",
   "version": "0.0.0",
   "description": "A simple task runner starter kit built with gulp.js for front end designers/developers",
   "main": "gulpfile.js",
@@ -35,6 +35,9 @@
     "event-stream": "~3.1.0",
     "run-sequence": "~0.3.6",
     "gulp-file-includer": "~0.1.0",
-    "grunt": "~0.4.4"
+    "grunt": "~0.4.4",
+    "gulp-grunt": "~0.4.1",
+    "gulp-inject": "~0.4.1",
+    "gulp-preprocess": "~1.0.1"
   }
 }

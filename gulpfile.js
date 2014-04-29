@@ -11,6 +11,8 @@ var watch = require('gulp-watch');
 var changed = require('gulp-changed');
 var include = require('gulp-file-includer');
 var sequence = require('run-sequence');
+var grunt = require('gulp-grunt');
+var inject = require('gulp-inject');
 
 
 /*
