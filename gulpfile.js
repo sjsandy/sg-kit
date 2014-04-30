@@ -106,7 +106,7 @@ gulp.task('images', function () {
 
 gulp.task('fonts', function () {
 
-    var file_dir = 'images/';
+    var file_dir = 'fonts/';
     gulp.src(srcDir + file_dir + '*')
         .pipe(changed(buildPath + file_dir))
         .pipe(print())
@@ -199,6 +199,13 @@ gulp.task('copy_all', function () {
 
 });
 
+/* inject source */
+
+gulp.task("inject", function(){
+  gulp.src(srcDir + '*.html')
+      .pipe(inject(gulp.src([buildPath + "js/**/*.js", buildPath + "css/**/*.css"], {read: false})))
+      .pipe(gulp.dest("./dist"));
+});
 
 /*copy files/dependencies from root to the source folder */
 

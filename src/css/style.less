@@ -7,6 +7,8 @@
 @header-bg-color: darken(@bg-color, 90%);
 @header-color: lighten(@header-bg-color, 60%);
 @font-color: darken(@bg-color, 50%);
+@font-family: 'OpenSansRegular', Arial, sans-serif;
+@font-family-bold: 'OpenSansSemibold';
 @nav-height: 40px;
 
 //*less code/functions
@@ -27,10 +29,14 @@
 html,
 body {
   height: 100% !important;
+  font-family: @font-family;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family:@font-family-bold;
 }
 
 p {
-  color: @font-color;
   font-size: 16px;
   font-size: 1.6rem;
 }
@@ -52,6 +58,7 @@ footer .footer p {
 }
 /* Custom CSS3 Selectors */
 #page {
+  color: @font-color;
 }
 
 header {
@@ -68,3 +75,12 @@ header {
   }
 }
 
+.sidebar {
+  ul {
+    padding-left: 0;
+    li {
+      list-style: none;
+    }
+  }
+
+}

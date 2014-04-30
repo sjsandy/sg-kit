@@ -5,9 +5,16 @@
 html,
 body {
   height: 100% !important;
+  font-family: 'OpenSansRegular', Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'OpenSansSemibold';
 }
 p {
-  color: #808080;
   font-size: 16px;
   font-size: 1.6rem;
 }
@@ -25,6 +32,9 @@ footer .footer p {
   text-align: center;
 }
 /* Custom CSS3 Selectors */
+#page {
+  color: #808080;
+}
 header {
   height: 500px;
   text-align: center;
@@ -41,4 +51,10 @@ header .vtable .table-cell {
   display: table-cell;
   width: 100%;
   vertical-align: middle;
+}
+.sidebar ul {
+  padding-left: 0;
+}
+.sidebar ul li {
+  list-style: none;
 }
