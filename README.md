@@ -1,30 +1,18 @@
-GulpJS Boilerplate
+Starter Kit
 ============
 
 ##Description
 
-A simple boilerplate, starter kit or whatever you wish to call for automating common development task using gulp.js, it allows you to collect and package your files and assets for distribution.
+A simple Starter-Theme to ease some basic frontend developers chores
 
->###Why use a task runner?
->In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it, a task runner can do most of that mundane work for you—and your team—with basically zero effort *gruntjs.com*.
->
-
-##What you need to know
-The main purpose of this kit is to help you with setup and distribution of you app, the src files are mainly for demonstration purposes however they were created using html5 boilerplate so you can use them as a starting point for your project as well, I do.
-The Build directory
-Src
-Modules
-
-
-##Quick Start
+###Quick Start
 
 Three quick start options are available:
 
-- Clone the repo: `git clone https://github.com/shawnsandy/gulpjs-kit.git`.
+- Clone the repo: `git clone https://github.com/shawnsandy/starter-theme.git`.
 - Install the gulp and all dependencies `npm install`
-- Copy your files into the src
+- Modify / Copy your files into the src
 - Build and run `gulp to build`
-- Delete everything above end package including the line below it...
 
 ### What's included
 
@@ -32,6 +20,11 @@ Three quick start options are available:
 - Gulpfile (gulpfile.js) -- gulp commands
 - Source (/src)
 - Readme
+-
+
+### Features
+
+See FEATUERS.md
 
 #Documentation
 --------------
@@ -65,25 +58,4 @@ Build documentation here soon...
 end package delete this line and above replace the info below with your own
 ----------------------------------------------------------------
 
-PACKAGE NAME
-============
-
-
-##Description
-
-Your package description
-
-##Quick Start
-
-- Step 1
-- Step 2
-- Step 3
-
-##Documentation
-
-- Documentation
-
-##Licence
-
-Your Licence info ...
 

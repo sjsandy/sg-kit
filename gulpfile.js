@@ -134,10 +134,8 @@ gulp.task('fonts', function () {
 
 
 gulp.task('cleanup', function () {
-
     gulp.src(buildPath, {read: false})
         .pipe(clean());
-
 });
 
 
@@ -149,16 +147,11 @@ gulp.task('css', function () {
         .pipe(changed(buildPath + file_dir))
         .pipe(print())
         .pipe(gulp.dest(buildPath + file_dir));
-
     //custom folders
-
     var custom_folders = srcDir + file_dir
     var folders = getFolders(custom_folders);
     var tasks = folders.map(function (folder) {
         var src_folders = path.join(custom_folders, folder + '/*');
-        // find/join the directories
-        // minify
-        // write to output
         return gulp.src(src_folders)
             .pipe(changed(buildPath + file_dir))
             .pipe(print())
@@ -167,14 +160,6 @@ gulp.task('css', function () {
     });
 
     return es.concat.apply(null, tasks);
-
-});
-
-
-gulp.task('cleanup', function () {
-
-    gulp.src(buildPath, {read: false})
-        .pipe(clean());
 
 });
 
@@ -215,7 +200,7 @@ gulp.task('copy_all', function () {
 });
 
 
-/*copy files/dependencies froom root to the source folder */
+/*copy files/dependencies from root to the source folder */
 
 gulp.task("srcbuild", function () {
 

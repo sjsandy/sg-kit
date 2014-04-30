@@ -1,45 +1,44 @@
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-html, body {
-    height: 100% !important;
+/* HTML output */
+html,
+body {
+  height: 100% !important;
 }
-
-header, section, footer {
-    min-height: 20%;
+p {
+  color: #808080;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
-
-.vtable {
-    display: table;
-    height: 200px;
-    width: 100% !important;
+header,
+section,
+footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-
-.table-cell {
-    display: table-cell;
-    width: 100%;
-    vertical-align: middle;
-    text-align: center;
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-
 footer .footer p {
-    text-align: center;
+  text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Custom CSS3 Selectors */
+header {
+  height: 500px;
+  text-align: center;
+  background-color: #191919;
+  color: #b3b3b3;
+  padding: 0;
+}
+header .vtable {
+  display: table;
+  height: 500px;
+  width: 100% !important;
+}
+header .vtable .table-cell {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}

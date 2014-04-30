@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+//less variables
+@header-height: 500px;
+@bg-color: #FFFFFF;
+@header-bg-color: darken(@bg-color, 90%);
+@header-color: lighten(@header-bg-color, 60%);
+@font-color: darken(@bg-color, 50%);
+@nav-height: 40px;
+
+//*less code/functions
+
+.vtable() {
+  display: table;
+  height: @header-height;
+  width: 100% !important;
+}
+
+.table-cell(){
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* HTML output */
+html,
+body {
+  height: 100% !important;
+}
+
+p {
+  color: @font-color;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+header,
+section,
+footer {
+padding-top: @nav-height;
+padding-bottom: @nav-height;
+}
+
+section {
+  padding-top: @nav-height;
+  padding-bottom: @nav-height;
+}
+
+footer .footer p {
+  text-align: center;
+}
+/* Custom CSS3 Selectors */
+#page {
+}
+
+header {
+  height: @header-height;
+  text-align: center;
+  background-color: @header-bg-color;
+  color: @header-color;
+  padding: 0;
+  .vtable {
+    .vtable();
+    .table-cell {
+      .table-cell();
+    }
+  }
+}
+
