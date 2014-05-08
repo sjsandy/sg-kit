@@ -139,7 +139,8 @@ gulp.task('fonts', function () {
 
 
 gulp.task('cleanup', function () {
-    gulp.src(buildPath, {read: false})
+    gulp.src(buildPath + "**.*", {read: false})
+        .pipe(print())
         .pipe(clean());
 });
 
@@ -235,3 +236,17 @@ gulp.task('default', ['html_files', 'scripts', 'fonts', 'images'], function () {
 
 // test - empty gulp task
 gulp.task('test', function(){});
+
+var filesToMove = [
+    './src/css/**/*.css',
+    './src/js/**/*.*',
+
+];
+
+gulp.task('move', function(){
+    // the base option sets the relative root for the set of files,
+    // preserving the folder structure
+    gulp.src(filesToMove, { base: './src' })
+        .pipe(gulp.dest(buildPath))
+        .pipe(print());
+});
