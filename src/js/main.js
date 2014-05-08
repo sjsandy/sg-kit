@@ -3,7 +3,8 @@
  * and open the template in the editor.
  */
 
-//TODO add smooth scrool between page links
+//TODO add smooth scroll between page links
+//plugin
 jQuery.fn.topLink = function(settings) {
     settings = jQuery.extend({
         min: 1,
@@ -11,10 +12,10 @@ jQuery.fn.topLink = function(settings) {
     }, settings);
     return this.each(function() {
         //listen for scroll
-        var el = jQuery(this);
+        var el = $(this);
         el.hide(); //in case the user forgot
-        jQuery(window).scroll(function() {
-            if(jQuery(window).scrollTop() >= settings.min)
+        $(window).scroll(function() {
+            if($(window).scrollTop() >= settings.min)
             {
                 el.fadeIn(settings.fadeSpeed);
             }
@@ -90,31 +91,22 @@ jQuery(document).ready(function($){
 
     }
 
-    var top_nav = $('#top-nav').data('trigger');
-    if(top_nav) {
-        //$('body').addClass('top-nav-padding');
 
-        $('#nav-separator').waypoint(function(direction){
-            console.log("trigger " + top_nav +' ' + direction);
-            if(direction == 'down'){
-                $('#top-nav').addClass('navbar-fixed-top');
-                $('#top-nav').transition({ opacity: 0.5});
-                $('#top-nav').transition({ opacity: 0.95});
-            } else if(direction == 'up') {
-                $('body').removeClass('top-nav-padding');
-                $('#top-nav').removeClass('navbar-fixed-top');
-                $('#top-nav').transition({ opacity: 0.5});
-                $('#top-nav').transition({ opacity: 0.95});
+    //custom scroll scripts
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function(e) {
+            e.preventDefault();
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
             }
-
-        }, { offset: 0});
-    }
-
-    $('.nav-button').click(function(){
-        var menu = $(this).data('nav-menu');
-        // console.log(menu);
-        // $(menu).toggleClass('display');
-        $(menu).slideToggle();
+        });
     });
 
 

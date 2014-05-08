@@ -13,6 +13,8 @@ var include = require('gulp-file-includer');
 var sequence = require('run-sequence');
 var grunt = require('gulp-grunt');
 var inject = require('gulp-inject');
+var bower = require('gulp-bower-files');
+var ignore = require('gulp-ignore');
 
 
 /*
@@ -30,7 +32,10 @@ var inject = require('gulp-inject');
 
 var srcDir = './src/';
 var scriptsPath = srcDir + 'js/';
-var buildPath = 'deploy/';
+var buildPath = 'deploy/',
+    ignore_files = [''];
+
+
 
 function getFolders(dir) {
     return fs.readdirSync(dir)
@@ -199,8 +204,14 @@ gulp.task('copy_all', function () {
 
 });
 
-/* inject source */
+gulp.task("bower-files", function() {
+     bower()
+         .pipe(gulp.dest(buildPath + 'vendors/'))
+         .pipe(print());
+});
 
+
+/* inject source */
 gulp.task("inject", function(){
   gulp.src(srcDir + '*.html')
       .pipe(inject(gulp.src([buildPath + "js/**/*.js", buildPath + "css/**/*.css"], {read: false})))

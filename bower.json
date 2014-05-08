@@ -15,12 +15,14 @@
   ],
   "dependencies": {
     "modernizr": "~2.6.2",
-    "jquery": "~1.10.2"
-  },
-  "devDependencies": {
-    "less": "~1.7.0",
+    "jquery": "~1.10.2",
     "bootstrap": "~3.1.1",
     "knockout": "",
-    "knockout-bootstrap": "~0.2.1"
+    "knockout-bootstrap": "~0.2.1",
+    "scroll-reveal": "~0.1.2",
+    "fontawesome": "~4.0.3"
+  },
+  "devDependencies": {
+    "less": "~1.7.0"
   }
 }

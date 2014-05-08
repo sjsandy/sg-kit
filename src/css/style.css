@@ -36,15 +36,15 @@ footer .footer p {
   color: #808080;
 }
 header {
-  height: 500px;
+  height: 600px;
   text-align: center;
   background-color: #191919;
-  color: #b3b3b3;
+  color: #e6e6e6;
   padding: 0;
 }
 header .vtable {
   display: table;
-  height: 500px;
+  height: 600px;
   width: 100% !important;
 }
 header .vtable .table-cell {
@@ -52,9 +52,23 @@ header .vtable .table-cell {
   width: 100%;
   vertical-align: middle;
 }
+header h1 {
+  font-size: 83px;
+}
 .sidebar ul {
   padding-left: 0;
 }
 .sidebar ul li {
   list-style: none;
+}
+#top-link {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  z-index: 9999;
+  font-size: 36px;
+  padding: 10px;
+}
+#top-link a {
+  color: #e6e6e6;
 }

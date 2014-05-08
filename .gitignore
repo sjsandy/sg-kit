@@ -2,3 +2,4 @@ node_modules/
 desktop.ini
 src/images/white.png
 bower_components/
+deploy/

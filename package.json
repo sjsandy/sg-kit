@@ -38,6 +38,8 @@
     "grunt": "~0.4.4",
     "gulp-grunt": "~0.4.1",
     "gulp-inject": "~0.4.1",
-    "gulp-preprocess": "~1.0.1"
+    "gulp-preprocess": "~1.0.1",
+    "gulp-bower-files": "~0.2.2",
+    "gulp-ignore": "~1.0.1"
   }
 }

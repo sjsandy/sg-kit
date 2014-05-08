@@ -1,151 +1,220 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- inject:css -->
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <!-- endinject -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="chromeframe bg-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.
-            </p>
-        <![endif]-->
- <div id="page">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- endinject -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="chromeframe bg-danger">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> or <a
+        href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your
+    experience.
+</p>
+<![endif]-->
+<div id="page">
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Starter</a>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Starter</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#page">Home</a></li>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#features">Featured</a></li>
+                    <li><a href="#guide">Quickstart</a></li>
+                    <li><a href="#contribute">Contribute</a></li>
+                    <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                    <!--<li><a href="#">Action</a></li>-->
+                    <!--<li><a href="#">Another action</a></li>-->
+                    <!--<li><a href="#">Something else here</a></li>-->
+                    <!--<li class="divider"></li>-->
+                    <!--<li class="dropdown-header">Nav header</li>-->
+                    <!--<li><a href="#">Separated link</a></li>-->
+                    <!--<li><a href="#">One more separated link</a></li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
+                </ul>
+                <!--<form class="navbar-form navbar-right">-->
+                <!--<div class="form-group">-->
+                <!--<input type="text" placeholder="Email" class="form-control">-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                <!--<input type="password" placeholder="Password" class="form-control">-->
+                <!--</div>-->
+                <!--<button type="submit" class="btn btn-success">Sign in</button>-->
+                <!--</form>-->
+            </div>
+            <!--/.navbar-collapse -->
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <!--<li class="dropdown">-->
-              <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
-              <!--<ul class="dropdown-menu">-->
-                <!--<li><a href="#">Action</a></li>-->
-                <!--<li><a href="#">Another action</a></li>-->
-                <!--<li><a href="#">Something else here</a></li>-->
-                <!--<li class="divider"></li>-->
-                <!--<li class="dropdown-header">Nav header</li>-->
-                <!--<li><a href="#">Separated link</a></li>-->
-                <!--<li><a href="#">One more separated link</a></li>-->
-              <!--</ul>-->
-            <!--</li>-->
-          </ul>
-          <!--<form class="navbar-form navbar-right">-->
-            <!--<div class="form-group">-->
-              <!--<input type="text" placeholder="Email" class="form-control">-->
-            <!--</div>-->
-            <!--<div class="form-group">-->
-              <!--<input type="password" placeholder="Password" class="form-control">-->
-            <!--</div>-->
-            <!--<button type="submit" class="btn btn-success">Sign in</button>-->
-          <!--</form>-->
-        </div><!--/.navbar-collapse -->
-      </div>
     </div>
 
     <header>
         <div class="container vtable">
             <div class="row table-cell">
-                <h1>Starter</h1>
+                <div class="page-header-off">
+                    <h1>
+                        <i class="fa fa-cog"></i><br>
+                        Starter
+                    </h1>
 
-                <p class="">A Feature Packed Barebones Start Theme!</p>
+                    <p class="">A Feature Packed Barebones Start Theme!</p>
+                </div>
+
             </div>
         </div>
     </header>
 
- <section id="content">
-     <div class="container">
-         <div class="row">
-             <div class="col-md-12">
-                 <h2>Sample title</h2>
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div id="introduction" class="col-md-12">
+                    <h1>Sample title</h1>
 
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eos natus officiis ratione
-                     velit! Ab aliquid amet deleniti eum excepturi facere ipsa mollitia, nisi officia ratione voluptates
-                     voluptatum. Expedita laborum magnam molestiae perspiciatis quae quibusdam rerum sunt, tempore ut.
-                     Cumque eligendi esse incidunt minus odit provident rem suscipit voluptates voluptatum. Consequatur
-                     dolor est iure maxime odit quaerat quo recusandae veniam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eos natus officiis ratione
+                        velit! Ab aliquid amet deleniti eum excepturi facere ipsa mollitia, nisi officia ratione
+                        voluptates
+                        voluptatum. Expedita laborum magnam molestiae perspiciatis quae quibusdam rerum sunt, tempore
+                        ut.
+                        Cumque eligendi esse incidunt minus odit provident rem suscipit voluptates voluptatum.
+                        Consequatur
+                        dolor est iure maxime odit quaerat quo recusandae veniam.</p>
 
-                 <p>Aspernatur assumenda commodi dignissimos doloribus ducimus, esse facere id minima nihil nobis non
-                     nostrum numquam obcaecati officia possimus praesentium provident quo rerum sapiente sunt tenetur
-                     totam vero voluptate voluptatibus voluptatum? Beatae culpa deleniti dolor dolorem doloremque earum
-                     enim eum explicabo ipsum minus mollitia non pariatur perspiciatis placeat possimus quae, quam qui
-                     quibusdam, repellat sequi sint sit suscipit tempora totam vitae.</p>
+                    <p>Aspernatur assumenda commodi dignissimos doloribus ducimus, esse facere id minima nihil nobis non
+                        nostrum numquam obcaecati officia possimus praesentium provident quo rerum sapiente sunt tenetur
+                        totam vero voluptate voluptatibus voluptatum? Beatae culpa deleniti dolor dolorem doloremque
+                        earum
+                        enim eum explicabo ipsum minus mollitia non pariatur perspiciatis placeat possimus quae, quam
+                        qui
+                        quibusdam, repellat sequi sint sit suscipit tempora totam vitae.</p>
 
-                 <p>Aliquam assumenda atque, blanditiis cupiditate debitis dignissimos, dolore impedit in incidunt ipsa
-                     magnam nostrum nulla, quia sit voluptatem! Accusamus aperiam dignissimos earum, error fugiat hic
-                     id, illo ipsum iste labore laboriosam minus nostrum obcaecati odio officiis perferendis quod
-                     repellendus sed vel voluptas. Dolorum, facere incidunt itaque laboriosam provident quibusdam quos
-                     veniam! Atque autem distinctio eos harum magni quia repudiandae ullam.</p>
-             </div>
-             <div class="col-md-12">
-                 <aside class="sidebar">
-                     <h3>Features</h3>
-                     <ul>
-                         <li>Bootstrap Inside</li>
-                         <li>Gulp.js</li>
-                         <li>Less.css</li>
-                         <li>Bower</li>
-                         <li>...</li>
-                     </ul>
-                 </aside>
-             </div>
-         </div>
-     </div>
- </section>
-      <footer>
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-12">
-                      <div class="vtable">
-                          <div class="table-cell">
-                              <div class="footer">
-                                  <p>&copy; Company 2013</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </footer>
+                    <p>Aliquam assumenda atque, blanditiis cupiditate debitis dignissimos, dolore impedit in incidunt
+                        ipsa
+                        magnam nostrum nulla, quia sit voluptatem! Accusamus aperiam dignissimos earum, error fugiat hic
+                        id, illo ipsum iste labore laboriosam minus nostrum obcaecati odio officiis perferendis quod
+                        repellendus sed vel voluptas. Dolorum, facere incidunt itaque laboriosam provident quibusdam
+                        quos
+                        veniam! Atque autem distinctio eos harum magni quia repudiandae ullam.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Features</h1>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam commodi cupiditate
+                        dolores fugit molestiae nulla odit unde ut. Ab asperiores dolorem error itaque laboriosam
+                        minima natus nostrum quaerat sint! Accusamus aliquam, debitis dignissimos doloribus est facilis
+                        fuga ipsam labore laudantium obcaecati porro, quas quasi rem, veniam voluptatem. Culpa dolor
+                        doloribus labore natus reprehenderit suscipit. Accusantium deserunt ex ipsum libero.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="guide">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Quickstart</h1>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae commodi doloremque
+                        excepturi ipsa iusto nam odit optio perferendis quo? Architecto atque, commodi consequatur
+                        cumque cupiditate dignissimos distinctio dolor doloribus dolorum earum eius, esse est ex
+                        excepturi facere harum illo ipsam laudantium minima modi neque officiis omnis perferendis qui
+                        quidem quos reiciendis, repellendus saepe sunt tempore temporibus ut vero voluptates!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contribute">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Help it out</h1>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam consequuntur minus modi non
+                        odit perspiciatis quod ratione sequi voluptatum? Hic minus nam obcaecati. Accusantium at
+                        blanditiis delectus dicta molestiae nihil porro quam repellat, repellendus vitae! Accusamus
+                        accusantium asperiores beatae culpa debitis dignissimos ea expedita inventore laudantium
+                        maiores mollitia nobis odio optio placeat, rem, repellat repellendus reprehenderit, tempore
+                        tenetur voluptatibus?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="vtable">
+                        <div class="table-cell">
+                            <div class="footer">
+                                <p>&copy; Company 2013</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
-     <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-        <!-- inject:js -->
+<div id="top-link">
+    <a href="#page"><i class="fa fa-chevron-circle-up"></i></a>
+</div>
 
-        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="../bower_components/knockout/build/output/knockout-latest.debug.js"></script>
-        <script src="../bower_components/knockout-bootstrap/build/knockout-bootstrap.min.js"></script>
-        <!-- endinject-->
-        <script src="js/main.js"></script>
-        <script src="js/app.js"></script>
+<!-- /container -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+<!-- inject:js -->
+
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/knockout/build/output/knockout-latest.debug.js"></script>
+<script src="../bower_components/knockout-bootstrap/build/knockout-bootstrap.min.js"></script>
+<!-- endinject-->
+<script src="js/main.js"></script>
+<script src="js/app.js"></script>
 
 
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+<script>
+    var _gaq = [
+        ['_setAccount', 'UA-XXXXX-X'],
+        ['_trackPageview']
+    ];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+</script>
+</body>
 </html>
