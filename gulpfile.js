@@ -1,3 +1,4 @@
+//------- config -------------------
 var fs = require('fs');
 var path = require('path');
 var es = require('event-stream');
@@ -35,6 +36,13 @@ var scriptsPath = srcDir + 'js/';
 var buildPath = 'deploy/',
     ignore_files = [''];
 
+var src_files = [
+    './src/css/**/*.css',
+    './src/js/**/*.*',
+
+];
+
+//-----end config ----
 
 
 function getFolders(dir) {
@@ -138,11 +146,6 @@ gulp.task('fonts', function () {
 });
 
 
-gulp.task('cleanup', function () {
-    gulp.src(buildPath + "**.*", {read: false})
-        .pipe(print())
-        .pipe(clean());
-});
 
 
 
@@ -176,6 +179,7 @@ copies all the files from your src directory,
  src/dir -- (will not copy from scr/dir/dir )
  into your build
  made for simple structure apps
+ deprecated use move instead
  */
 
 gulp.task('copy_all', function () {
@@ -234,19 +238,33 @@ gulp.task("srcbuild", function () {
 
 gulp.task('default', ['html_files', 'scripts', 'fonts', 'images'], function () {});
 
-// test - empty gulp task
-gulp.task('test', function(){});
 
-var filesToMove = [
-    './src/css/**/*.css',
-    './src/js/**/*.*',
 
-];
 
+
+// moves directory (entire) listed in src_files to a deploy directory
 gulp.task('move', function(){
     // the base option sets the relative root for the set of files,
     // preserving the folder structure
-    gulp.src(filesToMove, { base: './src' })
+    gulp.src(src_files, { base: './src' })
         .pipe(gulp.dest(buildPath))
         .pipe(print());
 });
+
+// delete all the files in the deploy directory
+gulp.task('cleanup', function () {
+    gulp.src(buildPath + '**/*.*' , {read: false})
+        .pipe(print())
+        .pipe(clean());
+});
+
+// delete the deploy directory
+gulp.task('clean', function () {
+    gulp.src(buildPath, {read: false})
+        .pipe(print())
+        .pipe(clean());
+});
+
+
+// test - test your gulp file to see if it works
+gulp.task('test', function(){});
