@@ -238,10 +238,6 @@ gulp.task("srcbuild", function () {
 
 gulp.task('default', ['html_files', 'scripts', 'fonts', 'images'], function () {});
 
-
-
-
-
 // moves directory (entire) listed in src_files to a deploy directory
 gulp.task('move', function(){
     // the base option sets the relative root for the set of files,

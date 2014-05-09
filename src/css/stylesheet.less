@@ -15,15 +15,15 @@ Theme custom elements
   .lh-transition(all 0.5s ease);
 }
 
-
-
 /* HTML output */
 html,
 body {
   height: 100% !important;
   font-family: @font-family;
 }
-
+#page {
+  color: @font-color;
+}
 h1,h2,h3,h4,h5 {
   font-family:@font-family-bold;
 }
@@ -45,37 +45,35 @@ section {
   padding-bottom: @nav-height;
 }
 
-footer .footer p {
-  text-align: center;
-}
-/* Custom CSS3 Selectors */
-#page {
-  color: @font-color;
-}
-
 header {
   height: @header-height;
   text-align: center;
   background-color: @header-bg-color;
   color: @header-color;
   padding: 0;
-
+  h1 {
+    font-size: @font-xxlarge;
+    .lh-transition(all 0.5s ease);
+    &:hover {
+      color: @gray;
+    }
+  }
   .vtable {
     .vtable();
     .table-cell {
       .table-cell();
     }
+  }
+}
 
 
-  }
+footer .footer p {
+  text-align: center;
+}
 
-  h1 {
-    font-size: @font-xxlarge;
-    .lh-transition(all 0.5s ease);
-    &:hover {
-    color: @gray;
-  }
-  }
+
+#content {
+
 }
 
 .sidebar {
@@ -85,7 +83,6 @@ header {
       list-style: none;
     }
   }
-
 }
 
 #top-link {
