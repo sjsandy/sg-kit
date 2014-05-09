@@ -4,94 +4,9 @@
 //less variables
 // modify at will
 
-@header-height: 600px;
-@bg-color: #FFFFFF;
-@header-bg-color: darken(@bg-color, 90%);
-@header-color: darken(@bg-color, 10%);
-@font-xxlarge: 83px;
-@font-color: darken(@bg-color, 50%);
-@font-family: 'OpenSansRegular', Arial, sans-serif;
-@font-family-bold: 'OpenSansSemibold';
-@nav-height: 40px;
 //import theme variables
 @import "less/mixins";
 @import "less/theme";
+@import "../../bower_components/lesshat/build/lesshat-prefixed";
+@import "less/bootstrap-variables";
 //less code/functions
-
-
-/* HTML output */
-html,
-body {
-  height: 100% !important;
-  font-family: @font-family;
-}
-
-h1,h2,h3,h4,h5 {
-  font-family:@font-family-bold;
-}
-
-p {
-  font-size: 16px;
-  font-size: 1.6rem;
-}
-
-header,
-section,
-footer {
-padding-top: @nav-height;
-padding-bottom: @nav-height;
-}
-
-section {
-  padding-top: @nav-height;
-  padding-bottom: @nav-height;
-}
-
-footer .footer p {
-  text-align: center;
-}
-/* Custom CSS3 Selectors */
-#page {
-  color: @font-color;
-}
-
-header {
-  height: @header-height;
-  text-align: center;
-  background-color: @header-bg-color;
-  color: @header-color;
-  padding: 0;
-  .vtable {
-    .vtable();
-    .table-cell {
-      .table-cell();
-    }
-  }
-
-  h1 {
-    font-size: @font-xxlarge;
-  }
-}
-
-.sidebar {
-  ul {
-    padding-left: 0;
-    li {
-      list-style: none;
-    }
-  }
-
-}
-
-#top-link {
-  position: fixed;
-  bottom: 100px;
-  right: 100px;
-  z-index: 9999;
-  font-size: 36px;
-  padding: 10px;
-//  width: 100%;
-  a {
-    color: @header-color;
-  }
-}

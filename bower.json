@@ -1,29 +1,28 @@
 {
-  "name": "starter-kit",
-  "version": "0.0.1",
-  "authors": [
-    "Shawn Sandy <shawnsandy04@gmail.com>"
-  ],
-  "description": "A simple theme starter kit",
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "modernizr": "~2.6.2",
-    "jquery": "~1.10.2",
-    "bootstrap": "~3.1.1",
-    "knockout": "",
-    "knockout-bootstrap": "~0.2.1",
-    "scroll-reveal": "~0.1.2",
-    "fontawesome": "~4.0.3"
-  },
-  "devDependencies": {
-    "less": "~1.7.0",
-    "bootswatch": "~3.1.1+1"
-  }
+    "name": "starter-kit",
+    "version": "0.0.1",
+    "authors": [
+        "Shawn Sandy <shawnsandy04@gmail.com>"
+    ],
+    "description": "A simple theme starter kit",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "modernizr": "~2.6.2",
+        "jquery": "~1.10.2",
+        "knockout": "",
+        "knockout-bootstrap": "~0.2.1",
+        "scroll-reveal": "~0.1.2",
+        "fontawesome": "~4.0.3"
+    },
+    "devDependencies": {
+        "bootstrap": "~3.1.1",
+        "lesshat": "~3.0.0"
+    }
 }
