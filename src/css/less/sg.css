@@ -1,0 +1,56 @@
+.sg.header,
+header.sg {
+  background-color: #fff;
+}
+.sg.vtable {
+  display: table;
+  height: inherit !important;
+  width: 100% !important;
+}
+.sg.vtable .table-cell {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+.sg.background {
+  background-color: #ffffff;
+}
+.sg.background.color-c1 {
+  background-color: #f1f1f1;
+}
+.sg.background.color-c2 {
+  background-color: #f1f1f1;
+}
+.sg.background.color-c3 {
+  background-color: #f1f1f1;
+}
+.sg.background.color-c4 {
+  background-color: #f1f1f1;
+}
+.sg.background.color-c5 {
+  background-color: #f1f1f1;
+}
+.sg.background.color-c6 {
+  background-color: #f1f1f1;
+}
+.sg .color {
+  color: #404040;
+}
+.sg .color-c1 {
+  color: #f1f1f1;
+}
+.sg .color-c2 {
+  color: #f1f1f1;
+}
+.sg .color-c3 {
+  color: #f1f1f1;
+}
+.sg .color-c4 {
+  color: #f1f1f1;
+}
+.sg .color-c5 {
+  color: #f1f1f1;
+}
+.sg .color-c6 {
+  color: #f1f1f1;
+}
