@@ -1,0 +1,73 @@
+//style guide colors
+
+//set your  base colors
+@background-color: #FFFFFF;
+@font-color: #404040;
+
+
+//simple color list
+@c1: #f1f1f1;
+@c2: #f1f1f1;
+@c3: #f1f1f1;
+@c4: #f1f1f1;
+@c5: #f1f1f1;
+@c6: #f1f1f1;
+.sg-colors() {
+
+
+    &.background {
+
+      background-color: @background-color;
+
+      &.color {
+
+        &-c1{
+          background-color: @c1;
+        }
+        &-c2{
+          background-color: @c2;
+        }
+        &-c3{
+          background-color: @c3;
+        }
+        &-c4{
+          background-color: @c4;
+        }
+        &-c5{
+          background-color: @c5;
+        }
+        &-c6{
+          background-color: @c6;
+        }
+
+      }
+
+    }
+
+  .color {
+
+    color: @font-color;
+
+    &-c1{
+      color: @c1;
+    }
+    &-c2{
+      color: @c2;
+    }
+    &-c3{
+      color: @c3;
+    }
+    &-c4{
+      color: @c4;
+    }
+    &-c5{
+      color: @c5;
+    }
+    &-c6{
+      color: @c6;
+    }
+
+  }
+
+
+}
