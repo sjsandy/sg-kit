@@ -1,8 +1,12 @@
+.sg {
+  /* sg colors */
+}
 .sg.header,
 header.sg {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .sg.vtable {
+  /* vertically align div content */
   display: table;
   height: inherit !important;
   width: 100% !important;
