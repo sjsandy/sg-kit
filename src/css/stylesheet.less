@@ -1,10 +1,16 @@
-@import "../../bower_components/bootstrap/less/bootstrap";
-@import "../../bower_components/lesshat/build/lesshat-prefixed";
+/* ==========================================================================
+   theme styles
+   ========================================================================== */
 @import "less/bootstrap-variables";
-@import "less/theme";
+@import "../../bower_components/lesshat/build/lesshat-prefixed";
+@import "less/theme-variables";
 @import "less/mixins";
+<<<<<<< HEAD
 @import "../../bower_components/bootstrap/less/utilities";
 @import "less/sg";
+=======
+
+>>>>>>> cbb4dace01be2c6afdf4aeceff5aa8a2edd5022b
 /*
 STYLESHEET
 Theme custom elements
@@ -14,7 +20,6 @@ Theme custom elements
   //modify bootstrap the default button
   //.lh-border-radius(2);
   .lh-transition(all 0.3s ease);
-
 }
 
 /* HTML output */
@@ -33,6 +38,7 @@ h1,h2,h3,h4,h5 {
 p {
   font-size: 16px;
   font-size: 1.6rem;
+  .lh-justify-content(flex-end);
 }
 
 header,
@@ -45,6 +51,10 @@ footer {
 section {
   padding-top: @nav-height;
   padding-bottom: @nav-height;
+}
+
+.navbar-toggle .fa {
+  font-size: 16px;
 }
 
 header {
