@@ -3,10 +3,26 @@
   display: table;
   height: inherit !important;
   width: 100% !important;
+
+  .table-cell {
+
+      display: table-cell;
+      width: 100%;
+      vertical-align: middle;
+
+  }
 }
 
-.table-cell(){
-  display: table-cell;
-  width: 100%;
-  vertical-align: middle;
+//rgba color mixin
+.rgba(@r:255, @g:255, @b:255, @transparency:0.5, @type:'background'){
+
+  @color: rgba(@r, @g, @b, @transparency);
+  & when(@type = 'color'){
+   color: @color;
+  }
+  & when(@type = 'background') {
+    background-color: rgb(@r, @g, @b);
+    background-color: rgba(@color);
+  }
+
 }
