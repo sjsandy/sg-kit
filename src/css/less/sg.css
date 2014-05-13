@@ -16,6 +16,16 @@ header.sg {
   width: 100%;
   vertical-align: middle;
 }
+.sg.vtable .table-cell {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+.sg.vtable .table-cell {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
 .sg.background {
   background-color: #ffffff;
 }
