@@ -13,31 +13,33 @@
   }
 }
 
-<<<<<<< HEAD
 .table-cell(){
   display: table-cell;
   width: 100%;
   vertical-align: middle;
 }
 
-.sg-vtable(){
+.sg-vtable() {
+
   .vtable();
 
   .table-cell {
     .table-cell();
   }
-=======
+}
+
 //rgba color mixin
 .rgba(@r:255, @g:255, @b:255, @transparency:0.5, @type:'background'){
 
   @color: rgba(@r, @g, @b, @transparency);
+
   & when(@type = 'color'){
    color: @color;
   }
   & when(@type = 'background') {
-    background-color: rgb(@r, @g, @b);
-    background-color: rgba(@color);
+    background-color: rgb(@r @g @b);
+    background-color: @color;
   }
-
->>>>>>> cbb4dace01be2c6afdf4aeceff5aa8a2edd5022b
 }
+
+
