@@ -1,4 +1,6 @@
-//use full theme mixins
+/* mixins
+use full theme mixins
+*/
 .vtable() {
   display: table;
   height: inherit !important;
@@ -40,6 +42,17 @@
     background-color: rgb(@r @g @b);
     background-color: @color;
   }
+}
+
+
+//output font px/rem for font sizes
+//@font-size decimal value (1.6)
+//converts and outputs as px and rem values
+.font-size (@font-size) {
+  @px: @font-size * 10px;
+  font-size: floor(@px);
+  @rem: round(@font-size,3);
+  font-size: unit(@rem,rem);
 }
 
 

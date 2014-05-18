@@ -1,16 +1,10 @@
 /* ==========================================================================
    theme styles
    ========================================================================== */
-/*
-STYLESHEET
-Theme custom elements
+/* mixins
+use full theme mixins
 */
-.btn {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
+/* sg-fonts font mixins */
 /* HTML output */
 body {
   height: 100% !important;
@@ -99,4 +93,78 @@ footer .footer p {
 }
 #top-link a {
   color: #e6e6e6;
+}
+/*
+Customize bootstrap theme elements
+*/
+.btn {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.headlines {
+  font-size: 101px;
+  font-size: 10.1rem;
+}
+.titles {
+  font-size: 82px;
+  font-size: 8.2rem;
+}
+.subtitles {
+  font-size: 68px;
+  font-size: 6.8rem;
+}
+.xxlarge {
+  font-size: 52px;
+  font-size: 5.2rem;
+}
+.xlarge {
+  font-size: 41px;
+  font-size: 4.1rem;
+}
+.large {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+.medium {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+.default-font {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+.small {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.tiny {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+h1 {
+  font-size: 51px;
+  font-size: 5.1rem;
+}
+h2 {
+  font-size: 41px;
+  font-size: 4.1rem;
+}
+h3 {
+  font-size: 31px;
+  font-size: 3.1rem;
+}
+aside h1 {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+article h1 {
+  font-size: 41px;
+  font-size: 4.1rem;
+}
+footer h1 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: bolder;
 }
