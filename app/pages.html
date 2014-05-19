@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html ng-app>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!--inject:head:js-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <!--endinject-->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css"/>
+    <!-- endinject -->
+    <link rel="stylesheet" href="css/bootstrap-styles.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body class="index">
+<!--[if lt IE 8]>
+<p class="chromeframe bg-danger">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> or <a
+        href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your
+    experience.
+</p>
+<![endif]-->
+<div id="page" ng-controller="SettingsController">
+    <nav>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./home.html">Cover</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#page">Home</a></li>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#features">Featured</a></li>
+                        <li><a href="#guide">Quickstart</a></li>
+                        <li><a href="#contribute">Contribute</a></li>
+                        <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
+                        <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">Action</a></li>-->
+                        <!--<li><a href="#">Another action</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li class="dropdown-header">Nav header</li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                        <!--<li><a href="#">One more separated link</a></li>-->
+                        <!--</ul>-->
+                        <!--</li>-->
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                    <input type="text" class="form-control" ng-value="" ng-model="slug" placeholder="Your page slug"/>
+                    </div>
+                    <!--<input type="text" placeholder="Email" class="form-control">-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<input type="password" placeholder="Password" class="form-control">-->
+                    <!--</div>-->
+                    <!--<button type="submit" class="btn btn-success">Sign in</button>-->
+
+                    </form>
+                </div>
+                <!--/.navbar-collapse -->
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container vtable">
+            <div class="row table-cell">
+                <div class="page-header-off">
+                    <h1>
+                        <i class="fa fa-cog"></i>
+                    </h1>
+                    <p class="">{{ slug | uppercase }}</p>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="post">
+                        <article>
+                            <h1>Lorem ipsum dolor sit amet.</h1>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi autem beatae
+                                consectetur delectus dolores eos excepturi expedita explicabo facere iure laudantium
+                                maxime mollitia nulla pariatur quidem ratione recusandae rem repellat repudiandae sequi,
+                                sit velit veritatis voluptatem voluptatum? Consectetur ea facere illum in molestiae nam
+                                nisi porro provident quaerat ratione rerum sed suscipit, totam velit vitae. Ad excepturi
+                                tempore voluptatum.</p>
+                        </article>
+                        <article>
+                            <h1>A ad aut eum mollitia.</h1>
+
+                            <p>Amet commodi ea eius eos eveniet excepturi, ipsum iusto magnam nemo nobis quibusdam
+                                quisquam repudiandae saepe, sint tenetur, voluptatem voluptatibus. Autem ducimus id
+                                perferendis quae vitae? Adipisci autem dolorum harum, ipsa iste, iure laborum maxime
+                                modi molestiae nemo nobis officia omnis perferendis perspiciatis, placeat repellat sequi
+                                vero voluptatem. Accusantium at consectetur cum cumque dolorum magni nihil non quasi,
+                                repudiandae tempore?</p>
+                        </article>
+                        <article>
+                            <h1>Eum, omnis, tempora? Explicabo, iusto.</h1>
+
+                            <p>Accusamus accusantium aliquam aperiam culpa cumque debitis deserunt doloribus eius enim
+                                eos explicabo ipsa labore minima nisi nobis nostrum perspiciatis possimus praesentium
+                                provident quia quidem quos ratione recusandae repellendus, sed tempora ut vitae! Culpa
+                                debitis et provident! Accusantium architecto, aspernatur assumenda deserunt dolorum eius
+                                esse facilis hic itaque, labore laboriosam libero neque optio qui rem rerum sint ullam
+                                unde voluptatibus?</p>
+                        </article>
+                        <article>
+                            <h1>Cupiditate debitis quibusdam ut voluptatibus.</h1>
+
+                            <p>Amet aspernatur deserunt dicta dolorum ducimus id in ipsam, magnam magni molestias
+                                quaerat quas rem sapiente sint totam veniam voluptatum! Ab beatae blanditiis dolorum
+                                harum iste itaque, iure minus numquam omnis perspiciatis quo recusandae similique, sit
+                                sunt suscipit ullam voluptate voluptatibus? Ab delectus doloribus eaque error est
+                                inventore ipsam molestias neque, officia porro quisquam, rem reprehenderit rerum sed,
+                                voluptatem voluptatibus.</p>
+                        </article>
+                        <article>
+                            <h1>Cumque dolore doloremque eum minus.</h1>
+
+                            <p>Ab architecto asperiores aspernatur cum dolorum enim error eum explicabo facere harum
+                                incidunt laborum magnam maiores maxime nihil nisi nobis odio praesentium quae quis quod
+                                repudiandae rerum, soluta, temporibus ullam voluptas voluptatibus, voluptatum. Cum est
+                                harum hic itaque placeat ratione rem vero. Beatae corporis delectus excepturi odio,
+                                omnis quibusdam quos sed temporibus vero? Culpa magnam odit quibusdam repellat saepe,
+                                tempora!</p>
+                        </article>
+
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sidebar">
+                        <aside>
+                            <h1>Lorem ipsum dolor.</h1>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci, aperiam delectus
+                                dolore eaque eius eligendi eveniet expedita fuga iste itaque libero minima officiis quod
+                                reiciendis similique sint sit voluptate?</p>
+                        </aside>
+                        <aside>
+                            <h1>Eum perspiciatis, temporibus?</h1>
+
+                            <p>Architecto, dolores ducimus eius illo laborum repudiandae rerum unde. Aliquam aliquid
+                                aperiam architecto at, aut dolores ea eaque earum error excepturi ipsum maiores maxime
+                                quae rem repudiandae rerum saepe, vitae!</p>
+                        </aside>
+                        <aside>
+                            <h1>Impedit, libero, veritatis?</h1>
+
+                            <p>Commodi culpa dolore, expedita impedit ipsa, iste minus nihil obcaecati odio quam, quod
+                                ratione repellendus soluta vitae voluptatum? Aperiam exercitationem magnam sint.
+                                Aspernatur dicta doloribus omnis reprehenderit sequi totam vitae!</p>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="vtable">
+                        <div class="table-cell">
+                            <div class="footer">
+                                <p>&copy; Company 2013</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div id="top-link">
+    <a href="#page"><i class="fa fa-chevron-circle-up"></i></a>
+</div>
+
+<!-- /container -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+<!-- inject:js -->
+
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/knockout/build/output/knockout-latest.debug.js"></script>
+<script src="../bower_components/knockout-bootstrap/build/knockout-bootstrap.min.js"></script>
+<!-- endinject-->
+<script src="js/main.js"></script>
+<script src="js/app.js"></script>
+
+
+<script>
+    var _gaq = [
+        ['_setAccount', 'UA-XXXXX-X'],
+        ['_trackPageview']
+    ];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+</script>
+</body>
+</html>
