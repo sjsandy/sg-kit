@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html ng-app>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!--inject:head:js-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <!--endinject-->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css"/>
+    <!-- endinject -->
+    <link rel="stylesheet" href="css/bootstrap-styles.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body class="index">
+<!--[if lt IE 8]>
+<p class="chromeframe bg-danger">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> or <a
+        href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your
+    experience.
+</p>
+<![endif]-->
+<div id="page" ng-controller="SettingsController">
+    <nav>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./home.html">Cover</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#page">Home</a></li>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#features">Featured</a></li>
+                        <li><a href="#guide">Quickstart</a></li>
+                        <li><a href="#contribute">Contribute</a></li>
+                        <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
+                        <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">Action</a></li>-->
+                        <!--<li><a href="#">Another action</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li class="dropdown-header">Nav header</li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                        <!--<li><a href="#">One more separated link</a></li>-->
+                        <!--</ul>-->
+                        <!--</li>-->
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                    <input type="text" class="form-control" ng-value="" ng-model="slug" placeholder="Your page slug"/>
+                    </div>
+                    <!--<input type="text" placeholder="Email" class="form-control">-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<input type="password" placeholder="Password" class="form-control">-->
+                    <!--</div>-->
+                    <!--<button type="submit" class="btn btn-success">Sign in</button>-->
+
+                    </form>
+                </div>
+                <!--/.navbar-collapse -->
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container vtable">
+            <div class="row table-cell">
+                <div class="page-header-off">
+                    <h1>
+                        <i class="fa fa-cog"></i>
+                    </h1>
+                    <p class="">{{ slug | uppercase }}</p>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="post form">
+                    <form enctype="multipart/form-data" method="post" action="/job_seekers/virtual_register" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div>	<fieldset>
+                    <legend>Job Seeker Details</legend>
+                    <div class="input text required"><label for="VirtualJobFairJobSeekerFirstName">First Name <span>*</span></label><input name="data[VirtualJobFairJobSeeker][first_name]" type="text" maxlength="30" id="VirtualJobFairJobSeekerFirstName"></div>		<div class="input text required"><label for="VirtualJobFairJobSeekerLastName">Last Name <span>*</span></label><input name="data[VirtualJobFairJobSeeker][last_name]" type="text" maxlength="30" id="VirtualJobFairJobSeekerLastName"></div>		<div class="input text"><label for="VirtualJobFairJobSeekerMiddleInitial">Middle Initial</label><input name="data[VirtualJobFairJobSeeker][middle_initial]" type="text" maxlength="1" id="VirtualJobFairJobSeekerMiddleInitial"></div>		<div class="input text required"><label for="VirtualJobFairJobSeekerEmail">Email <span>*</span></label><input name="data[VirtualJobFairJobSeeker][email]" type="text" maxlength="100" id="VirtualJobFairJobSeekerEmail"></div>		<div class="input text required"><label for="VirtualJobFairJobSeekerEmailConfirmation">Confirm Email <span>*</span></label><input name="data[VirtualJobFairJobSeeker][email_confirmation]" type="text" id="VirtualJobFairJobSeekerEmailConfirmation"></div>		<div class="input date"><label for="VirtualJobFairJobSeekerDobMonth">Birthdate <span>*</span></label><select name="data[VirtualJobFairJobSeeker][dob][month]" id="VirtualJobFairJobSeekerDobMonth">
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05" selected="selected">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>-<select name="data[VirtualJobFairJobSeeker][dob][day]" id="VirtualJobFairJobSeekerDobDay">
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                        <option value="03">3</option>
+                        <option value="04">4</option>
+                        <option value="05">5</option>
+                        <option value="06">6</option>
+                        <option value="07">7</option>
+                        <option value="08">8</option>
+                        <option value="09">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19" selected="selected">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>-<select name="data[VirtualJobFairJobSeeker][dob][year]" id="VirtualJobFairJobSeekerDobYear">
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                        <option value="1994">1994</option>
+                        <option value="1993">1993</option>
+                        <option value="1992">1992</option>
+                        <option value="1991">1991</option>
+                        <option value="1990">1990</option>
+                        <option value="1989">1989</option>
+                        <option value="1988">1988</option>
+                        <option value="1987">1987</option>
+                        <option value="1986">1986</option>
+                        <option value="1985">1985</option>
+                        <option value="1984">1984</option>
+                        <option value="1983">1983</option>
+                        <option value="1982">1982</option>
+                        <option value="1981">1981</option>
+                        <option value="1980">1980</option>
+                        <option value="1979">1979</option>
+                        <option value="1978">1978</option>
+                        <option value="1977">1977</option>
+                        <option value="1976">1976</option>
+                        <option value="1975">1975</option>
+                        <option value="1974">1974</option>
+                        <option value="1973">1973</option>
+                        <option value="1972">1972</option>
+                        <option value="1971">1971</option>
+                        <option value="1970">1970</option>
+                        <option value="1969">1969</option>
+                        <option value="1968">1968</option>
+                        <option value="1967">1967</option>
+                        <option value="1966">1966</option>
+                        <option value="1965">1965</option>
+                        <option value="1964">1964</option>
+                        <option value="1963">1963</option>
+                        <option value="1962">1962</option>
+                        <option value="1961">1961</option>
+                        <option value="1960">1960</option>
+                        <option value="1959">1959</option>
+                        <option value="1958">1958</option>
+                        <option value="1957">1957</option>
+                        <option value="1956">1956</option>
+                        <option value="1955">1955</option>
+                        <option value="1954">1954</option>
+                        <option value="1953">1953</option>
+                        <option value="1952">1952</option>
+                        <option value="1951">1951</option>
+                        <option value="1950">1950</option>
+                    </select></div>		<div class="input select"><label for="VirtualJobFairJobSeekerGender">Gender</label><select name="data[VirtualJobFairJobSeeker][gender]" id="VirtualJobFairJobSeekerGender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select></div>
+                    <div class="input text"><label for="VirtualJobFairJobSeekerAddress">Address</label><input name="data[VirtualJobFairJobSeeker][address]" type="text" maxlength="100" id="VirtualJobFairJobSeekerAddress"></div>		<div class="input text"><label for="VirtualJobFairJobSeekerCity">City</label><input name="data[VirtualJobFairJobSeeker][city]" type="text" maxlength="50" id="VirtualJobFairJobSeekerCity"></div>		<div class="input select"><label for="VirtualJobFairJobSeekerState">State</label><select name="data[VirtualJobFairJobSeeker][state]" id="VirtualJobFairJobSeekerState">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select></div>		<div class="input text required"><label for="VirtualJobFairJobSeekerZip">Zipcode <span>*</span></label><input name="data[VirtualJobFairJobSeeker][zip]" type="text" maxlength="5" id="VirtualJobFairJobSeekerZip"></div>		<div class="input select"><label for="VirtualJobFairJobSeekerCounty">County <span>*</span></label><select name="data[VirtualJobFairJobSeeker][county]" id="VirtualJobFairJobSeekerCounty">
+                        <option value="N/A">Please Choose One</option>
+                        <option value="Alachua">Alachua</option>
+                        <option value="Baker">Baker</option>
+                        <option value="Bay">Bay</option>
+                        <option value="Bradford">Bradford</option>
+                        <option value="Brevard">Brevard</option>
+                        <option value="Broward">Broward</option>
+                        <option value="Calhoun">Calhoun</option>
+                        <option value="Charlotte">Charlotte</option>
+                        <option value="Citrus">Citrus</option>
+                        <option value="Clay">Clay</option>
+                        <option value="Collier">Collier</option>
+                        <option value="Columbia">Columbia</option>
+                        <option value="Dade">Dade</option>
+                        <option value="De Soto">De Soto</option>
+                        <option value="Dixie">Dixie</option>
+                        <option value="Duval">Duval</option>
+                        <option value="Escambia">Escambia</option>
+                        <option value="Flagler">Flagler</option>
+                        <option value="Franklin">Franklin</option>
+                        <option value="Gadsden">Gadsden</option>
+                        <option value="Gilchrist">Gilchrist</option>
+                        <option value="Glades">Glades</option>
+                        <option value="Gulf">Gulf</option>
+                        <option value="Hamilton">Hamilton</option>
+                        <option value="Hardee">Hardee</option>
+                        <option value="Hendry">Hendry</option>
+                        <option value="Hernando">Hernando</option>
+                        <option value="Highlands">Highlands</option>
+                        <option value="Hillsborough">Hillsborough</option>
+                        <option value="Holmes">Holmes</option>
+                        <option value="Indian River">Indian River</option>
+                        <option value="Jackson">Jackson</option>
+                        <option value="Jefferson">Jefferson</option>
+                        <option value="Lafayette">Lafayette</option>
+                        <option value="Lake">Lake</option>
+                        <option value="Lee">Lee</option>
+                        <option value="Leon">Leon</option>
+                        <option value="Levy">Levy</option>
+                        <option value="Liberty">Liberty</option>
+                        <option value="Madison">Madison</option>
+                        <option value="Manatee">Manatee</option>
+                        <option value="Marion">Marion</option>
+                        <option value="Martin">Monroe</option>
+                        <option value="Monroe">Monroe</option>
+                        <option value="Nassau">Nassau</option>
+                        <option value="Okaloosa">Okaloosa</option>
+                        <option value="Okeechobee">Okeechobee</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Osceola">Osceola</option>
+                        <option value="Palm Beach">Palm Beach</option>
+                        <option value="Pasco">Pasco</option>
+                        <option value="Pinellas">Pinellas</option>
+                        <option value="Polk">Polk</option>
+                        <option value="Putnam">Putnam</option>
+                        <option value="St. Johns">St. Johns</option>
+                        <option value="St. Lucie">St. Lucie</option>
+                        <option value="Santa Rosa">Santa Rosa</option>
+                        <option value="Sarasota">Sarasota</option>
+                        <option value="Seminole">Seminole</option>
+                        <option value="Sumter">Sumter</option>
+                        <option value="Suwannee">Suwannee</option>
+                        <option value="Taylor">Taylor</option>
+                        <option value="Union">Union</option>
+                        <option value="Volusia">Volusia</option>
+                        <option value="Wakulla">Wakulla</option>
+                        <option value="Walton">Walton</option>
+                        <option value="Washington">Washington</option>
+                    </select></div>		<div class="input text left"><label for="VirtualJobFairJobSeekerAreaCode">Phone</label><input name="data[VirtualJobFairJobSeeker][area_code]" type="text" class="short area-code" maxlength="3" id="VirtualJobFairJobSeekerAreaCode"><span style="color:#777">&nbsp;&nbsp;-&nbsp;&nbsp;</span><br><span style="color:#777;font-size:11px;">Area Code</span></div>		<div class="input text left required"><label for="VirtualJobFairJobSeekerPhone">&nbsp;</label><input name="data[VirtualJobFairJobSeeker][phone]" type="text" class="medium phone-number" maxlength="8" id="VirtualJobFairJobSeekerPhone"><span style="color:#777;font-size:11px;"><br>Phone Number</span></div>		<div class="clear" style="margin: 0;"></div>
+                    <div class="input textarea required"><label for="VirtualJobFairJobSeekerCareerObjectives">Career Objectives <span>*</span></label><textarea name="data[VirtualJobFairJobSeeker][career_objectives]" cols="30" rows="6" id="VirtualJobFairJobSeekerCareerObjectives"></textarea></div>		<div class="input text required"><label for="VirtualJobFairJobSeekerInterestsHobbies">Interests &amp; Hobbies <span>*</span></label><input name="data[VirtualJobFairJobSeeker][interests_hobbies]" type="text" maxlength="100" id="VirtualJobFairJobSeekerInterestsHobbies"></div>		<div class="input select"><label for="VirtualJobFairJobSeekerEducation">Education <span>*</span></label><select name="data[VirtualJobFairJobSeeker][education]" id="VirtualJobFairJobSeekerEducation">
+                        <option value="Did not complete High School">Did not complete High School</option>
+                        <option value="High School/GED" selected="selected">High School/GED</option>
+                        <option value="Some College">Some College</option>
+                        <option value="Associates Degree">Associates Degree</option>
+                        <option value="Bachelors Degree">Bachelors Degree</option>
+                        <option value="Masters Degree">Masters Degree</option>
+                        <option value="Doctoral Degree">Doctoral Degree</option>
+                    </select></div>		<div class="input checkbox"><input type="hidden" name="data[VirtualJobFairJobSeeker][currently_enrolled_in_school]" id="VirtualJobFairJobSeekerCurrentlyEnrolledInSchool_" value="0"><input type="checkbox" name="data[VirtualJobFairJobSeeker][currently_enrolled_in_school]" value="1" id="VirtualJobFairJobSeekerCurrentlyEnrolledInSchool"><label for="VirtualJobFairJobSeekerCurrentlyEnrolledInSchool">Currently Enrolled In School</label></div>		<div class="input checkbox"><input type="hidden" name="data[VirtualJobFairJobSeeker][currently_employed]" id="VirtualJobFairJobSeekerCurrentlyEmployed_" value="0"><input type="checkbox" name="data[VirtualJobFairJobSeeker][currently_employed]" value="1" id="VirtualJobFairJobSeekerCurrentlyEmployed"><label for="VirtualJobFairJobSeekerCurrentlyEmployed">Currently Employed</label></div>		<div class="input textarea required"><label for="VirtualJobFairJobSeekerVolunteerExperience">Volunteer Experience <span>*</span></label><textarea name="data[VirtualJobFairJobSeeker][volunteer_experience]" cols="30" rows="6" id="VirtualJobFairJobSeekerVolunteerExperience"></textarea></div>		<div class="input file"><label for="VirtualJobFairJobSeekerUserfile">Resume</label><input type="file" name="data[VirtualJobFairJobSeeker][userfile]" id="VirtualJobFairJobSeekerUserfile"><br><span style="color:#898989">Please upload your resume in .doc or .pdf format.</span></div>	</fieldset>
+
+                    <fieldset>
+                        <legend>Job Seeker Account Details</legend>
+                        <div class="input text required"><label for="UserUsername">Username <span>*</span></label><input name="data[User][username]" type="text" maxlength="50" id="UserUsername"></div>		<div class="input password required"><label for="UserPass">Password <span>*</span></label><input type="password" name="data[User][pass]" value="" id="UserPass"></div>		<div class="input password required"><label for="UserPasswordConfirmation">Password Confirmation <span>*</span></label><input type="password" name="data[User][password_confirmation]" value="" id="UserPasswordConfirmation"></div>		<input type="hidden" name="data[User][role]" value="jobseeker" id="UserRole">	</fieldset>
+                    <div class="submit"><input type="submit" value="Register"></div></form>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sidebar">
+                        <aside>
+                            <h1>Lorem ipsum dolor.</h1>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci, aperiam delectus
+                                dolore eaque eius eligendi eveniet expedita fuga iste itaque libero minima officiis quod
+                                reiciendis similique sint sit voluptate?</p>
+                        </aside>
+                        <aside>
+                            <h1>Eum perspiciatis, temporibus?</h1>
+
+                            <p>Architecto, dolores ducimus eius illo laborum repudiandae rerum unde. Aliquam aliquid
+                                aperiam architecto at, aut dolores ea eaque earum error excepturi ipsum maiores maxime
+                                quae rem repudiandae rerum saepe, vitae!</p>
+                        </aside>
+                        <aside>
+                            <h1>Impedit, libero, veritatis?</h1>
+
+                            <p>Commodi culpa dolore, expedita impedit ipsa, iste minus nihil obcaecati odio quam, quod
+                                ratione repellendus soluta vitae voluptatum? Aperiam exercitationem magnam sint.
+                                Aspernatur dicta doloribus omnis reprehenderit sequi totam vitae!</p>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="vtable">
+                        <div class="table-cell">
+                            <div class="footer">
+                                <p>&copy; Company 2013</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div id="top-link">
+    <a href="#page"><i class="fa fa-chevron-circle-up"></i></a>
+</div>
+
+<!-- /container -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+<!-- inject:js -->
+
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/knockout/build/output/knockout-latest.debug.js"></script>
+<script src="../bower_components/knockout-bootstrap/build/knockout-bootstrap.min.js"></script>
+<!-- endinject-->
+<script src="js/main.js"></script>
+<script src="js/app.js"></script>
+
+
+<script>
+    var _gaq = [
+        ['_setAccount', 'UA-XXXXX-X'],
+        ['_trackPageview']
+    ];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+</script>
+</body>
+</html>
