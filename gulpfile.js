@@ -31,14 +31,14 @@ var ignore = require('gulp-ignore');
 
 //  create some useful variables
 
-var srcDir = './src/';
+var srcDir = './app/';
 var scriptsPath = srcDir + 'js/';
 var buildPath = 'deploy/',
     ignore_files = [''];
 
 var src_files = [
-    './src/css/**/*.css',
-    './src/js/**/*.*',
+    './app/css/**/*.css',
+    './app/js/**/*.*',
 
 ];
 
@@ -175,8 +175,8 @@ gulp.task('css', function () {
 
 
 /*
-copies all the files from your src directory,
- src/dir -- (will not copy from scr/dir/dir )
+copies all the files from your app directory,
+ app/dir -- (will not copy from scr/dir/dir )
  into your build
  made for simple structure apps
  deprecated use move instead
@@ -242,7 +242,7 @@ gulp.task('default', ['html_files', 'scripts', 'fonts', 'images'], function () {
 gulp.task('move', function(){
     // the base option sets the relative root for the set of files,
     // preserving the folder structure
-    gulp.src(src_files, { base: './src' })
+    gulp.src(src_files, { base: './app' })
         .pipe(gulp.dest(buildPath))
         .pipe(print());
 });
