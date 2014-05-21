@@ -16,6 +16,7 @@ body {
 }
 #page {
   color: @font-color;
+  padding-top: @nav-height;
 }
 h1,h2,h3,h4,h5 {
   font-family:@font-family-bold;
@@ -31,13 +32,14 @@ header,
 section,
 footer {
   padding-top: @nav-height;
-  padding-bottom: @nav-height;
-}
+// padding-bottom: @nav-height;
 
-section {
-  padding-top: @nav-height;
-  padding-bottom: @nav-height;
 }
+//
+//section {
+//  padding-top: @nav-height;
+//  padding-bottom: @nav-height;
+//}
 
 .navbar-toggle .fa {
   font-size: 16px;
@@ -46,13 +48,14 @@ section {
 header {
   height: @header-height / 2;
   min-height: @header-min-height;
-  .home & {
-    height: @header-height;
-  }
   text-align: center;
   background-color: @header-bg-color;
   color: @header-color;
   padding: 0;
+  .home & {
+    height: @header-height;
+  }
+
   h1 {
     font-size: @font-xxlarge;
     .lh-transition(all 0.5s ease);

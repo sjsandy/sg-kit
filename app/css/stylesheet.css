@@ -12,6 +12,7 @@ body {
 }
 #page {
   color: #808080;
+  padding-top: 80px;
 }
 h1,
 h2,
@@ -32,18 +33,13 @@ p {
 header,
 section,
 footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-section {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 80px;
 }
 .navbar-toggle .fa {
   font-size: 16px;
 }
 header {
-  height: 300px;
+  height: 250px;
   min-height: 250px;
   text-align: center;
   background-color: #191919;
@@ -51,7 +47,7 @@ header {
   padding: 0;
 }
 .home header {
-  height: 600px;
+  height: 500px;
 }
 header h1 {
   font-size: 83px;
