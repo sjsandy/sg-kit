@@ -17,20 +17,7 @@ var inject = require('gulp-inject');
 var bower = require('gulp-bower-files');
 var ignore = require('gulp-ignore');
 var browserify = require('browserify');
-
-
-/*
- install gulp and dependencies the easy way
- *** ---- quick gulp + all package plugins ---- ***
- * npm install
- install gulp and dependencies the coder way
- *** ----- the coders way ----- ***
- * npm install gulp gulp-util --save-dev
- * ---- install required gulp plugins ---***
- * npm install event-stream gulp-concat gulp-rename gulp-uglify gulp-clean gulp-watch gulp-changed streamqueue gulp-print gulp-minify-css --save-dev
- */
-
-//  create some useful variables
+var flatten = require('gulp-flatten');
 
 
 /*
@@ -115,10 +102,32 @@ gulp.task('styles', function () {
 
 });
 
-gulp.task("bower-files", function() {
-    bower()
-        .pipe(gulp.dest(buildPath + 'vendors/'))
-        .pipe(print());
+gulp.task('bower:setup', function(){
+
+    es.merge(
+        bower()
+            .pipe(gulp.dest(srcDir + 'js/vendor'))
+    )
+
+
+})
+
+gulp.task('setup', function(){
+
+    sequence(
+        'clean:vendor',
+        'bower:setup'
+    )
+
+})
+
+gulp.task("bower:files", function() {
+
+ gulp.src('bower_components/**/*.min.js', {base: './bower_components' })
+     //.pipe(flatten())
+     .pipe(gulp.dest(srcDir + '/js/vendor'))
+     .pipe(print());
+
 });
 
 /* inject source */
@@ -169,6 +178,12 @@ gulp.task('clean', function () {
     gulp.src(buildPath, {read: false})
         .pipe(print())
         .pipe(clean());
+});
+
+gulp.task('clean:vendor', function(){
+   gulp.src(srcDir + '/vendor/**/*.*', {read: false})
+    .pipe(print())
+    .pipe(clean());
 });
 
 // test - test your gulp file to see if it works
