@@ -139,6 +139,7 @@ gulp.task('move', function(){
 gulp.task('deploy', function(callback){
     sequence(
         'cleanup',
+        'gulp:start',
         ['scripts', 'styles'],
         'html',
         'images',
@@ -159,7 +160,7 @@ gulp.task('bower:setup', function(){
     )
 })
 
-gulp.task('start', function(){
+gulp.task('gulp:start', function(){
 
     sequence(
         'clean:vendor',
