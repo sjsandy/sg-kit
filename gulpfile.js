@@ -99,27 +99,7 @@ gulp.task('styles', function () {
         .pipe(changed(buildPath + file_dir))
         .pipe(gulp.dest(buildPath + file_dir))
         .pipe(print());
-
 });
-
-gulp.task('bower:setup', function(){
-
-    es.merge(
-        bower()
-            .pipe(gulp.dest(srcDir + 'js/vendor'))
-    )
-
-
-})
-
-gulp.task('setup', function(){
-
-    sequence(
-        'clean:vendor',
-        'bower:setup'
-    )
-
-})
 
 gulp.task("bower:files", function() {
 
@@ -165,6 +145,29 @@ gulp.task('deploy', function(callback){
         'fonts',
         callback);
 });
+
+
+gulp.task('bower:setup', function(){
+
+    es.merge(
+        bower()
+            .pipe(gulp.dest(srcDir + 'js/vendor'))
+            .pipe(print()),
+        gulp.src('./bower_components/bootstrap/dist/js/**.*')
+            .pipe(gulp.dest(srcDir + 'js/vendor/'))
+            .pipe(print())
+    )
+})
+
+gulp.task('start', function(){
+
+    sequence(
+        'clean:vendor',
+        'bower:setup'
+    )
+
+})
+
 
 // delete all the files in the deploy directory
 gulp.task('cleanup', function () {
