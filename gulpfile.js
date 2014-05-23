@@ -28,7 +28,8 @@ var flatten = require('gulp-flatten');
  *** ----- the coders way ----- ***
  * npm install gulp gulp-util --save-dev
  * ---- install required gulp plugins ---***
- * npm install event-stream gulp-concat gulp-rename gulp-uglify gulp-clean gulp-watch gulp-changed streamqueue gulp-print gulp-minify-css --save-dev
+ * npm install event-stream gulp-concat gulp-rename gulp-uglify gulp-clean gulp-watch gulp-changed
+ * streamqueue gulp-print gulp-minify-css --save-dev
  */
 
 //  create some useful variables
@@ -192,3 +193,4 @@ gulp.task('clean:vendor', function(){
 
 // test - test your gulp file to see if it works
 gulp.task('test', function(){});
+
