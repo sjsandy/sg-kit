@@ -21,7 +21,8 @@ var ignore = require('gulp-ignore');
 var browserify = require('browserify');
 var flatten = require('gulp-flatten');
 var filter = require('gulp-filter');
-var domSrc = require('gulp-dom-src');
+var useref = require('gulp-useref');
+
 
 
 /*
@@ -166,7 +167,8 @@ gulp.task('sg:setup', function(){
             .pipe(print()),
         gulp.src('./bower_components/bootstrap/dist/js/*.js')
             .pipe(gulp.dest(srcDir + 'js/vendor/'))
-            .pipe(print())
+            .pipe(print()),
+        gulp.src('.bower_components/fontawesome/')
     )
 })
 
@@ -200,9 +202,7 @@ gulp.task('clean:vendor', function(){
 
 // test - test your gulp file to see if it works
 gulp.task('test', function(){
-    gulp.src(srcDir + 'js/**/*.js')
-        .pipe(filterOutJsMin)
-        .pipe(print());
+
 
 
 });

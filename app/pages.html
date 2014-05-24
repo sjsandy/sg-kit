@@ -14,17 +14,25 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!--inject:head:js-->
-    <script src="../bower_components/angular/angular.min.js"></script>
-    <!--endinject-->
+
+    <!-- inject:head:js -->
+    <script src="js/vendor/angular/angular.min.js"></script>
+    <!-- endinject -->
+
+
     <!-- inject:css -->
     <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css"/>
     <!-- endinject -->
-    <link rel="stylesheet" href="{{ theme_url }}css/bootstrap-styles.css"/>
+
+    <!-- build:css css/all.css -->
+
+    <link rel="stylesheet" href="css/bootstrap-styles.css"/>
     <link rel="stylesheet" href="css/stylesheet.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <!-- endbuild -->
 </head>
 <body class="index">
 <!--[if lt IE 8]>
@@ -99,6 +107,7 @@
     <section id="content">
         <div class="container">
             <div class="row">
+                <div ng-include src=" 'views/hello.html' "></div>
                 <div class="col-md-8">
                     <div class="post">
                         <article>

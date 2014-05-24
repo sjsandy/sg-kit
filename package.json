@@ -46,6 +46,7 @@
     "browserify": "^4.1.5",
     "gulp-flatten": "0.0.2",
     "gulp-filter": "^0.4.1",
-    "gulp-dom-src": "^0.1.1"
+    "gulp-dom-src": "^0.1.1",
+    "gulp-useref": "^0.4.3"
   }
 }
