@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app ng-cloak>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>
@@ -20,7 +20,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css"/>
     <!-- endinject -->
-    <link rel="stylesheet" href="css/bootstrap-styles.css"/>
+    <link rel="stylesheet" href="{{ theme_url }}css/bootstrap-styles.css"/>
     <link rel="stylesheet" href="css/stylesheet.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
@@ -90,7 +90,7 @@
                     <h1>
                         <i class="fa fa-cog"></i>
                     </h1>
-                    <p class="">{{ settings.title }}{{ slug | uppercase }}</p>
+                    <p class="">{{ settings.title }}{{ slug | uppercase }}{{ something }}</p>
                 </div>
 
             </div>

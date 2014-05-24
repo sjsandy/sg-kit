@@ -1,4 +1,5 @@
-//------- config -------------------
+//------- config ----------
+
 var fs = require('fs');
 var path = require('path');
 var es = require('event-stream');
@@ -6,6 +7,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var minifyCss = require('gulp-minify-css');
 var clean = require('gulp-clean');
 var print = require('gulp-print');
 var watch = require('gulp-watch');
@@ -18,6 +20,8 @@ var bower = require('gulp-bower-files');
 var ignore = require('gulp-ignore');
 var browserify = require('browserify');
 var flatten = require('gulp-flatten');
+var filter = require('gulp-filter');
+var domSrc = require('gulp-dom-src');
 
 
 /*
@@ -44,6 +48,14 @@ var src_files = [
     './app/js/**/*.*'
 ];
 
+//---- file filters --
+
+var filterJs = filter('**/*.js'),
+    filterOutJsMin = filter('!**/*.min.js'),
+    filterCss = filter('**/*.css'),
+    filterOutCss= filter('!**/*.min.css'),
+    filterOutless = filter('!less/**/*.*');
+
 //-----end config ----
 
 
@@ -57,7 +69,7 @@ function getFolders(dir) {
 gulp.task('scripts', function () {
 
     var file_dir = 'js/';
-    gulp.src(srcDir + file_dir + '**/*.*',{ base: './app' })
+    gulp.src(srcDir + file_dir + '**/*.*',{ base: './app/js' })
         .pipe(changed(buildPath + file_dir))
         .pipe(gulp.dest(buildPath + file_dir))
         .pipe(print());
@@ -76,7 +88,7 @@ gulp.task('html', function () {
 gulp.task('images', function () {
 
     var file_dir = 'images/';
-    gulp.src(srcDir + file_dir + '**/*.*', { base: './app' })
+    gulp.src(srcDir + file_dir + '**/*.*', { base: './app/'+ file_dir })
         .pipe(changed(buildPath + file_dir))
         .pipe(gulp.dest(buildPath + file_dir))
         .pipe(print()) ;
@@ -86,29 +98,22 @@ gulp.task('images', function () {
 gulp.task('fonts', function () {
 
     var file_dir = 'fonts/';
-    gulp.src(srcDir + file_dir + '**/*.*',{ base: './app' })
+    gulp.src(srcDir + file_dir + '**/*.*',{ base: './app/' + file_dir })
         .pipe(changed(buildPath + file_dir))
         .pipe(gulp.dest(buildPath + file_dir))
         .pipe(print());
 
 });
+
+
 
 gulp.task('styles', function () {
 
     var file_dir = 'css/';
-    gulp.src(srcDir + file_dir + '**/*.css',{ base: './app' })
+    gulp.src(srcDir + file_dir + '**/*.css',{ base: './app/' + file_dir })
         .pipe(changed(buildPath + file_dir))
         .pipe(gulp.dest(buildPath + file_dir))
         .pipe(print());
-});
-
-gulp.task("bower:files", function() {
-
- gulp.src('bower_components/**/*.min.js', {base: './bower_components' })
-     //.pipe(flatten())
-     .pipe(gulp.dest(srcDir + '/js/vendor'))
-     .pipe(print());
-
 });
 
 /* inject source */
@@ -136,11 +141,10 @@ gulp.task('move', function(){
 // * images
 // * fonts
 // * Finally call the callback function
-
-gulp.task('deploy', function(callback){
+gulp.task('sg:deploy', function(callback){
     sequence(
+        //'sg:start',
         'cleanup',
-        'gulp:start',
         ['scripts', 'styles'],
         'html',
         'images',
@@ -149,27 +153,29 @@ gulp.task('deploy', function(callback){
 });
 
 
-gulp.task('bower:setup', function(){
+gulp.task('sg:setup', function(){
 
     es.merge(
         bower()
             .pipe(gulp.dest(srcDir + 'js/vendor'))
+            .pipe(filterJs)
+            .pipe(uglify())
+            .pipe(rename({suffix: '.min'}))
+            .pipe(filterJs.restore())
+            .pipe(gulp.dest(srcDir + 'js/vendor/'))
             .pipe(print()),
-        gulp.src('./bower_components/bootstrap/dist/js/**.*')
+        gulp.src('./bower_components/bootstrap/dist/js/*.js')
             .pipe(gulp.dest(srcDir + 'js/vendor/'))
             .pipe(print())
     )
 })
 
-gulp.task('gulp:start', function(){
-
+gulp.task('sg:start', function(){
     sequence(
         'clean:vendor',
-        'bower:setup'
-    )
-
+        'sg:setup'
+    );
 })
-
 
 // delete all the files in the deploy directory
 gulp.task('cleanup', function () {
@@ -186,11 +192,18 @@ gulp.task('clean', function () {
 });
 
 gulp.task('clean:vendor', function(){
-   gulp.src(srcDir + '/vendor/**/*.*', {read: false})
+   gulp.src(srcDir + 'js/vendor/**/*.*', {read: false})
     .pipe(print())
     .pipe(clean());
 });
 
+
 // test - test your gulp file to see if it works
-gulp.task('test', function(){});
+gulp.task('test', function(){
+    gulp.src(srcDir + 'js/**/*.js')
+        .pipe(filterOutJsMin)
+        .pipe(print());
+
+
+});
 
