@@ -118,10 +118,11 @@ gulp.task('styles', function () {
 });
 
 /* inject source */
-gulp.task("inject", function(){
+gulp.task("inject:files", function(){
     gulp.src(srcDir + '*.html')
-        .pipe(inject(gulp.src([buildPath + "js/**/*.js", buildPath + "css/**/*.css"], {read: false})))
-        .pipe(gulp.dest("./dist"));
+        .pipe(inject(gulp.src([srcDir + "js/**/*.min.js", srcDir + "css/**/*.min.css"], {read: false})))
+        .pipe(gulp.dest(buildPath + '/'))
+        .pipe(print());
 });
 
 gulp.task('default', ['html_files', 'scripts', 'fonts', 'images'], function () {});
