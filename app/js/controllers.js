@@ -2,8 +2,9 @@
 
 /* Controllers */
 
-angular.module('sgApp.controllers', [])
-  .controller('styleGuide', ['$scope', function($scope) {
+var sgApp = angular.module('sgApp.controllers', []);
+
+  sgApp.controller('styleGuide', ['$scope', function($scope) {
 
         $scope.title = "Starter Kit";
         $scope.my_view = "views/view.html";
@@ -16,6 +17,6 @@ angular.module('sgApp.controllers', [])
         };
 
   }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
+  sgApp.controller('MyCtrl2', ['$scope', function($scope) {
 
   }]);

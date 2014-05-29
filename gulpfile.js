@@ -22,6 +22,10 @@ var browserify = require('browserify');
 var flatten = require('gulp-flatten');
 var filter = require('gulp-filter');
 var useref = require('gulp-useref');
+var livereload = require('gulp-livereload');
+var connect = require('connect');
+var express = require('express');
+
 
 
 
@@ -169,14 +173,16 @@ gulp.task('sg:setup', function(){
         gulp.src('./bower_components/bootstrap/dist/js/*.js')
             .pipe(gulp.dest(srcDir + 'js/vendor/'))
             .pipe(print()),
-        gulp.src('.bower_components/fontawesome/')
+        gulp.src(['./bower_components/fontawesome/css/*.css','./bower_components/fontawesome/fonts/*.*'], { base: './bower_components/' })
+            .pipe(gulp.dest(srcDir + 'css/vendor/'))
+            .pipe(print())
     )
 })
 
 gulp.task('sg:start', function(){
     sequence(
         'clean:vendor',
-        'sg:setup'
+        ['sg:setup']
     );
 })
 
@@ -195,7 +201,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('clean:vendor', function(){
-   gulp.src(srcDir + 'js/vendor/**/*.*', {read: false})
+   gulp.src([srcDir + 'js/vendor/**/*.*', srcDir + 'css/vendor/'], {read: false})
     .pipe(print())
     .pipe(clean());
 });
@@ -204,7 +210,9 @@ gulp.task('clean:vendor', function(){
 // test - test your gulp file to see if it works
 gulp.task('test', function(){
 
-
+    var app = express();
+    app.use(express.static('./app'));
+    app.listen(4000);
 
 });
 

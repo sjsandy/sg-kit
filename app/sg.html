@@ -14,16 +14,12 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css"/>
-    <!-- endinject -->
-
-
+    <link rel="stylesheet" href="css/vendor/fontawesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-styles.css"/>
     <link rel="stylesheet" href="css/stylesheet.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
     <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
 </head>
 <body class="home">
 <!--[if lt IE 8]>
@@ -35,66 +31,17 @@
 <![endif]-->
 <div id="page" ng-controller="styleGuide">
     <nav>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="./home.html">Cover</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#page">Home</a></li>
-                        <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#features">Featured</a></li>
-                        <li><a href="#guide">Quickstart</a></li>
-                        <li><a href="#contribute">Contribute</a></li>
-                        <!--<li class="dropdown">-->
-                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
-                        <!--<ul class="dropdown-menu">-->
-                        <!--<li><a href="#">Action</a></li>-->
-                        <!--<li><a href="#">Another action</a></li>-->
-                        <!--<li><a href="#">Something else here</a></li>-->
-                        <!--<li class="divider"></li>-->
-                        <!--<li class="dropdown-header">Nav header</li>-->
-                        <!--<li><a href="#">Separated link</a></li>-->
-                        <!--<li><a href="#">One more separated link</a></li>-->
-                        <!--</ul>-->
-                        <!--</li>-->
-                    </ul>
-                    <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                    <input type="text" class="form-control" ng-value="" ng-model="slug" placeholder="Your page slug"/>
-                    </div>
-                    <!--<input type="text" placeholder="Email" class="form-control">-->
-                    <!--</div>-->
-                    <!--<div class="form-group">-->
-                    <!--<input type="password" placeholder="Password" class="form-control">-->
-                    <!--</div>-->
-                    <!--<button type="submit" class="btn btn-success">Sign in</button>-->
-
-                    </form>
-                </div>
-                <!--/.navbar-collapse -->
-            </div>
-        </div>
+        <div ng-include="top_nav"></div>
     </nav>
+
     <header>
         <div class="container vtable">
             <div class="row table-cell">
-                <div class="page-header-off">
-                    <h1>
-                        <i class="fa fa-cog"></i>
-                    </h1>
-                    <p class="">{{ settings.title }} {{ slug | uppercase }} {{ hello }}</p>
-                </div>
-
+                <div ng-include="cover"></div>
             </div>
         </div>
     </header>
+
     <section id="content">
         <div class="container">
             <div class="row">
@@ -186,11 +133,12 @@
         </div>
     </section>
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="vtable">
-                        <div class="table-cell">
+        <div class="vtable">
+            <div class="table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
                             <div class="footer">
                                 <p>&copy; Company 2013</p>
                             </div>

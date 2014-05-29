@@ -17,7 +17,6 @@
     "fontawesome": "~4.0.3",
     "scroll-reveal": "~0.1.2",
     "angular": "~1.2.16",
-    "snap.svg": "~0.2.0",
     "angular-route": "~1.2.16",
     "angular-loader": "~1.2.16",
     "angular-mocks": "~1.2.16"
@@ -31,7 +30,8 @@
     "jquery": "~1.10.2",
     "angular-route": "~1.2.16",
     "angular-loader": "~1.2.16",
-    "angular-mocks": "~1.2.16"
+    "angular-mocks": "~1.2.16",
+    "snap.svg": "~0.2.0"
   },
   "config": {
     "port": "8080"
