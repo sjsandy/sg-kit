@@ -22,9 +22,11 @@ var browserify = require('browserify');
 var flatten = require('gulp-flatten');
 var filter = require('gulp-filter');
 var useref = require('gulp-useref');
-var livereload = require('gulp-livereload');
+var refresh = require('gulp-livereload');
 var connect = require('connect');
 var express = require('express');
+var livereload = require('connect-livereload');
+var config = require("./config.json");
 
 
 
@@ -43,10 +45,13 @@ var express = require('express');
 
 //  create some useful variables
 
-var srcDir = './app/';
+var srcDir = config.srcdir;
 var scriptsPath = srcDir + 'js/';
 var buildPath = 'deploy/',
+    livereloadport = 35729,
+    serverport = 4000;
     ignore_files = [''];
+
 
 var src_files = [
     './app/css/**/*.css',
@@ -81,14 +86,17 @@ gulp.task('scripts', function () {
 
 });
 
+
+
 gulp.task('html', function () {
     //collect all files in root di
     //move to dest folder
     gulp.src(srcDir + '/*')
         .pipe(gulp.dest(buildPath))
         .pipe(print());
-
 });
+
+
 
 gulp.task('images', function () {
 
@@ -100,6 +108,8 @@ gulp.task('images', function () {
 
 });
 
+
+
 gulp.task('fonts', function () {
 
     var file_dir = 'fonts/';
@@ -107,7 +117,6 @@ gulp.task('fonts', function () {
         .pipe(changed(buildPath + file_dir))
         .pipe(gulp.dest(buildPath + file_dir))
         .pipe(print());
-
 });
 
 
@@ -206,13 +215,27 @@ gulp.task('clean:vendor', function(){
     .pipe(clean());
 });
 
+gulp.task('sg:server', function(){
+    var app = express();
+    app.use(livereload({port: livereloadport}));
+    app.use(express.static('./app'));
+    app.listen(4000);
+});
 
 // test - test your gulp file to see if it works
 gulp.task('test', function(){
 
-    var app = express();
-    app.use(express.static('./app'));
-    app.listen(4000);
+//    es.merge(
+//        bower()
+//            .pipe(filterJs)
+//            .pipe(print())
+//            .pipe(filterJs.restore())
+//
+//
+//    );
+    gulp.src(srcDir)
+        .pipe(print())
+
 
 });
 
