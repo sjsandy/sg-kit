@@ -1,4 +1,4 @@
-//------- config ----------
+/* require dependencies */
 
 var fs = require('fs');
 var path = require('path');
@@ -27,9 +27,7 @@ var connect = require('connect');
 var express = require('express');
 var livereload = require('connect-livereload');
 var config = require("./config.json");
-
-
-
+var open = require('gulp-open');
 
 /*
  install gulp and dependencies the easy way
@@ -45,18 +43,12 @@ var config = require("./config.json");
 
 //  create some useful variables
 
-var srcDir = config.srcdir;
+var srcDir = config.source_directory;
 var scriptsPath = srcDir + 'js/';
-var buildPath = 'deploy/',
-    livereloadport = 35729,
-    serverport = 4000;
+var buildPath = config.build_directory,
+    livereloadport = config.live_reload_port;
+    serverport = config.server_port;
     ignore_files = [''];
-
-
-var src_files = [
-    './app/css/**/*.css',
-    './app/js/**/*.*'
-];
 
 //---- file filters --
 
@@ -76,6 +68,7 @@ function getFolders(dir) {
         });
 }
 
+/* copy js/scripts to build directory */
 gulp.task('scripts', function () {
 
     var file_dir = 'js/';
@@ -86,8 +79,7 @@ gulp.task('scripts', function () {
 
 });
 
-
-
+/* copy html files to the build */
 gulp.task('html', function () {
     //collect all files in root di
     //move to dest folder
@@ -97,7 +89,7 @@ gulp.task('html', function () {
 });
 
 
-
+/* copy images to build */
 gulp.task('images', function () {
 
     var file_dir = 'images/';
@@ -109,7 +101,7 @@ gulp.task('images', function () {
 });
 
 
-
+/* copy fonts to the build directory  */
 gulp.task('fonts', function () {
 
     var file_dir = 'fonts/';
@@ -119,8 +111,7 @@ gulp.task('fonts', function () {
         .pipe(print());
 });
 
-
-
+/* copy styles to build directory */
 gulp.task('styles', function () {
 
     var file_dir = 'css/';
@@ -138,6 +129,7 @@ gulp.task("inject:files", function(){
         .pipe(print());
 });
 
+/* default task */
 gulp.task('default', ['html_files', 'scripts', 'fonts', 'images'], function () {});
 
 // moves directory (entire) listed in src_files to a deploy directory
@@ -167,7 +159,7 @@ gulp.task('sg:deploy', function(callback){
         callback);
 });
 
-
+/* copy all files to src directory */
 gulp.task('sg:setup', function(){
 
     es.merge(
@@ -188,6 +180,8 @@ gulp.task('sg:setup', function(){
     )
 })
 
+
+/* copy bower files into your src/ app directory */
 gulp.task('sg:start', function(){
     sequence(
         'clean:vendor',
@@ -195,47 +189,38 @@ gulp.task('sg:start', function(){
     );
 })
 
-// delete all the files in the deploy directory
+/* delete all the files in the deploy directory */
 gulp.task('cleanup', function () {
     gulp.src(buildPath + '**/*.*' , {read: false})
         .pipe(print())
         .pipe(clean());
 });
 
-// delete the deploy directory
+/* delete the deploy directory  */
 gulp.task('clean', function () {
     gulp.src(buildPath, {read: false})
         .pipe(print())
         .pipe(clean());
 });
 
+/* removes the vendor directory */
 gulp.task('clean:vendor', function(){
    gulp.src([srcDir + 'js/vendor/**/*.*', srcDir + 'css/vendor/'], {read: false})
     .pipe(print())
     .pipe(clean());
 });
 
-gulp.task('sg:server', function(){
+/* start the server */
+gulp.task('sg:dev-server', function(){
     var app = express();
     app.use(livereload({port: livereloadport}));
     app.use(express.static('./app'));
-    app.listen(4000);
+    app.listen(config.dev_server_port);
 });
 
-// test - test your gulp file to see if it works
+/* run / write - test on your gulp file to see if it works */
 gulp.task('test', function(){
-
-//    es.merge(
-//        bower()
-//            .pipe(filterJs)
-//            .pipe(print())
-//            .pipe(filterJs.restore())
-//
-//
-//    );
-    gulp.src(srcDir)
-        .pipe(print())
-
-
+    gulp.src('./sg.html')
+        .pipe(open("", {url: "http://localhost:" + config.dev_server_port }));
 });
 

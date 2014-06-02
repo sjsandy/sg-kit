@@ -1,3 +1,8 @@
 {
-    "srcdir": "./app/"
+    "source_directory": "./app/",
+    "build_directory": "deploy/",
+    "startpage": "sg-home.html",
+    "server_port": "4000",
+    "dev_server_port": "4800",
+    "live_reload_port": "35729"
 }

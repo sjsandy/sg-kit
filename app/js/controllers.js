@@ -6,7 +6,6 @@ var sgApp = angular.module('sgApp.controllers', []);
 
   sgApp.controller('styleGuide', ['$scope', function($scope) {
 
-
         $scope.my_view = "views/view.html";
         $scope.cover = "views/cover.html";
         $scope.top_nav = "views/top-nav.html";
@@ -16,7 +15,7 @@ var sgApp = angular.module('sgApp.controllers', []);
             'slug': 'A Feature Packed Style Guide Toolkit!'
         };
 
-  }])
+  }]);
   sgApp.controller('MyCtrl2', ['$scope', function($scope) {
 
   }]);
