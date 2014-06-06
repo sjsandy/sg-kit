@@ -211,7 +211,7 @@ gulp.task('clean:vendor', function(){
 });
 
 /* start the server */
-gulp.task('sg:dev-server', function(){
+gulp.task('sg:server-dev', function(){
     var app = express();
     app.use(livereload({port: livereloadport}));
     app.use(express.static('./app'));
