@@ -18,8 +18,8 @@
     "scroll-reveal": "~0.1.2",
     "angular": "~1.2.16",
     "angular-route": "~1.2.16",
-    "angular-loader": "~1.2.16",
-    "angular-mocks": "~1.2.16"
+    "angular-loader": "~1.2.16"
+
   },
   "devDependencies": {
     "bootstrap": "~3.1.1",
@@ -31,7 +31,11 @@
     "angular-route": "~1.2.16",
     "angular-loader": "~1.2.16",
     "angular-mocks": "~1.2.16",
-    "snap.svg": "~0.2.0"
+    "snap.svg": "~0.2.0",
+    "polymer-elements": "Polymer/polymer-elements#~0.3.0",
+    "polymer-ui-elements": "Polymer/polymer-ui-elements#~0.3.0",
+    "polymer": "Polymer/polymer#~0.3.1",
+    "core-ajax": "Polymer/core-ajax#~0.3.1"
   },
   "config": {
     "port": "8080"
