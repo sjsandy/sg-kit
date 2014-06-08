@@ -188,8 +188,7 @@ gulp.task('sg:setup', function(){
 gulp.task('sg:start', function(){
     sequence(
         'clean:vendor',
-        ['sg:setup'],
-        'sg:open-server-dev'
+        ['sg:setup']
     );
 })
 
@@ -259,7 +258,11 @@ gulp.task('sg:open-server-dev',['sg:server-dev'], function(){
 /* run / write - test on your gulp file to see if it works */
 gulp.task('test', function(){
 
-    gulp.src("./deploy/index.html") // An actual file must be specified or gulp will overlook the task.
-        .pipe(notify(print()));
+    sync.init(null, {
+        server: {
+            baseDir: config.source_directory
+        },
+        startPath: config.startpage
+    });
 });
 
