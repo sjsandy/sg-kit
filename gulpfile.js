@@ -260,7 +260,6 @@ gulp.task('sg:open-server-dev',['sg:server-dev'], function(){
 gulp.task('test', function(){
 
     gulp.src("./deploy/index.html") // An actual file must be specified or gulp will overlook the task.
-        .pipe(print())
-        .pipe(notify('Testing videos'));
+        .pipe(notify(print()));
 });
 
