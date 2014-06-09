@@ -48,8 +48,10 @@ var sync = require('browser-sync');
 var srcDir = config.source_directory;
 var scriptsPath = srcDir + 'js/';
 var buildPath = config.build_directory,
-    livereloadport = config.live_reload_port;
-    serverport = config.server_port;
+    livereloadport = config.live_reload_port,
+    serverport = config.server_port,
+    sync_files = [ "./" + config.build_directory + "css/*.css", config.build_directory + "js/*.js", config.build_directory + "**/*.html"],
+    sync_files_dev = [ config.source_directory + "css/**/*.css", config.source_directory + "js/**/*.js", config.source_directory + "**/*.html" ],
     ignore_files = [''];
 
 //---- file filters --
@@ -230,20 +232,13 @@ gulp.task('sg:server', function(){
 /* start the development server */
 gulp.task('sg:server-dev', function(){
 
-    sync.init([ config.source_directory + "css/**/*.css", config.source_directory + "js/**/*.js", config.source_directory + "**/*.html" ], {
+    sync.init(sync_files_dev, {
         server: {
             baseDir: config.source_directory
         },
         startPath: config.startpage
     });
 
-});
-
-
-// Reload all Browsers
-gulp.task('refresh', function () {
-   sync.reload();
-    notify('Reloading server');
 });
 
 
