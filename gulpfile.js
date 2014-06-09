@@ -188,7 +188,8 @@ gulp.task('sg:setup', function(){
 gulp.task('sg:start', function(){
     sequence(
         'clean:vendor',
-        ['sg:setup']
+        ['sg:setup'],
+        "sg:server-dev"
     );
 })
 
@@ -215,54 +216,40 @@ gulp.task('clean:vendor', function(){
 
 /* start the server */
 gulp.task('sg:server', function(){
-    var app = express()
-    app.use(livereload({port: livereloadport}));
-    app.use(express.static('./app'));
-    app.listen(config.server_port);
+
+    sync.init([ "./" + config.build_directory + "css/*.css", config.build_directory + "js/*.js", config.build_directory + "**/*.html"], {
+        server: {
+            baseDir: config.build_directory
+        },
+        startPath: config.startpage
+    });
 
 });
 
 
 /* start the development server */
 gulp.task('sg:server-dev', function(){
-    var app = express();
-    app.use(livereload({port: livereloadport}));
-    app.use(express.static('./app'));
-    app.listen(config.dev_server_port);
 
-});
-
-
-gulp.task('sg:open-server',['sg:server'], function(){
-    var options = {
-        url: "http://localhost:" + config.server_port + "/" + config.startpage
-    };
-    gulp.src("./"+ config.build_directory + "/" + config.startpage) // An actual file must be specified or gulp will overlook the task.
-        .pipe(notify('Server starting...'))
-        .pipe(open("", options));
-
-});
-
-
-gulp.task('sg:open-server-dev',['sg:server-dev'], function(){
-    var options = {
-        url: "http://localhost:" + config.dev_server_port + "/" + config.startpage
-    };
-    gulp.src( config.source_directory + "/" + config.startpage) // An actual file must be specified or gulp will overlook the task.
-        .pipe(notify('Dev server starting'))
-        .pipe(print())
-        .pipe(open("", options));
-});
-
-
-/* run / write - test on your gulp file to see if it works */
-gulp.task('test', function(){
-
-    sync.init(null, {
+    sync.init([ config.source_directory + "css/**/*.css", config.source_directory + "js/**/*.js", config.source_directory + "**/*.html" ], {
         server: {
             baseDir: config.source_directory
         },
         startPath: config.startpage
     });
+
+});
+
+
+// Reload all Browsers
+gulp.task('refresh', function () {
+   sync.reload();
+    notify('Reloading server');
+});
+
+
+/* run / write - test on your gulp file to see if it works */
+gulp.task('test', function(){
+   gulp.watch("./app/css/**/*.*", ['refresh'])
+
 });
 
