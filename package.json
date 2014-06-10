@@ -1,5 +1,5 @@
 {
-  "name": "starter-kit",
+  "name": "sg-kit",
   "version": "0.0.0",
   "description": "A simple task runner starter kit built with gulp.js for front end designers/developers",
   "main": "gulpfile.js",

@@ -50,7 +50,7 @@ var scriptsPath = srcDir + 'js/';
 var buildPath = config.build_directory,
     livereloadport = config.live_reload_port,
     serverport = config.server_port,
-    sync_files = [ "./" + config.build_directory + "css/*.css", config.build_directory + "js/*.js", config.build_directory + "**.html"],
+    sync_files = [ "./" + config.build_directory + "css/*.css", config.build_directory + "js/*.js", config.build_directory + "**/*.html"],
     sync_files_dev = [ config.source_directory + "css/**/*.css", config.source_directory + "js/**/*.js", config.source_directory + "**/*.html" ],
     ignore_files = [''];
 
@@ -219,7 +219,7 @@ gulp.task('clean:vendor', function(){
 /* start the server */
 gulp.task('sg:server', function(){
 
-    sync.init([ "./" + config.build_directory + "css/*.css", config.build_directory + "js/*.js", config.build_directory + "*.html"], {
+    sync.init([ "./" + config.build_directory + "css/*.css", config.build_directory + "js/*.js", config.build_directory + "**/*.html"], {
         server: {
             baseDir: config.build_directory
         },

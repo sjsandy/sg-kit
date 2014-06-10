@@ -74,8 +74,15 @@ header .vtable .table-cell {
   width: 100%;
   vertical-align: middle;
 }
-footer .footer p {
-  text-align: center;
+footer .footer .copy-info {
+  padding: 20px;
+  font-size: 1.4;
+}
+footer .footer .copy-info .social i {
+  font-size: 32px;
+}
+footer .footer .social i {
+  font-size: 32px;
 }
 .sidebar ul {
   padding-left: 0;

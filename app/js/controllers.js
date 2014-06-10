@@ -9,7 +9,12 @@ var sgApp = angular.module('sgApp.controllers', []);
         $scope.my_view = "views/view.html";
         $scope.cover = "views/cover.html";
         $scope.top_nav = "views/top-nav.html";
-        $scope.post= "views/post.html";
+        $scope.features = "views/features.html";
+        $scope.post = "views/post.html";
+        $scope.footer = "views/footer.html";
+        $scope.elements = {
+         'social': "views/elements/social.html"
+      }
         $scope.settings= {
             'title': 'SG.Kit',
             'slug': 'A Feature Packed Style Guide Toolkit!'
