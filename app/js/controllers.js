@@ -12,8 +12,14 @@ var sgApp = angular.module('sgApp.controllers', []);
         $scope.features = "views/features.html";
         $scope.post = "views/post.html";
         $scope.footer = "views/footer.html";
+        $scope.comment = "views/footer.html";
         $scope.elements = {
-         'social': "views/elements/social.html"
+            'social': "views/elements/social.html"
+
+        };
+        $scope.components = {
+
+         'footer_copy' : 'views/footer/social_copy.html'
       }
         $scope.settings= {
             'title': 'SG.Kit',

@@ -13,13 +13,16 @@
 body {
   height: 100% !important;
   font-family: @font-family;
+  -webkit-font-smoothing: antialiased !important;
 }
 #page {
   color: @font-color;
   padding-top: @nav-height;
+
 }
 h1,h2,h3,h4,h5 {
   font-family:@font-family-bold;
+
 }
 
 p {
@@ -80,13 +83,21 @@ footer .footer {
     padding: 20px;
     font-size: @small;
     .social i {
-      font-size: 32px;
+      font-size: 16px;
+    }
+
+    p {
+      .font-size(@small);
     }
   }
 
   .social i {
     font-size: 32px;
+
   }
+
+
+
 }
 
 
@@ -106,7 +117,7 @@ footer .footer {
 #top-link {
   position: fixed;
   bottom: 100px;
-  right: 100px;
+  right: 20px;
   z-index: 9999;
   font-size: 36px;
   padding: 10px;

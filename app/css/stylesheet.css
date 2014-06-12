@@ -9,6 +9,7 @@ use full theme mixins
 body {
   height: 100% !important;
   font-family: 'OpenSansRegular', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
 }
 #page {
   color: #808080;
@@ -79,7 +80,11 @@ footer .footer .copy-info {
   font-size: 1.4;
 }
 footer .footer .copy-info .social i {
-  font-size: 32px;
+  font-size: 16px;
+}
+footer .footer .copy-info p {
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 footer .footer .social i {
   font-size: 32px;
@@ -93,7 +98,7 @@ footer .footer .social i {
 #top-link {
   position: fixed;
   bottom: 100px;
-  right: 100px;
+  right: 20px;
   z-index: 9999;
   font-size: 36px;
   padding: 10px;
