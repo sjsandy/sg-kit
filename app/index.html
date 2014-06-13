@@ -44,6 +44,7 @@
     </header>
     <section id="features">
         <div class="container">
+
             <div ng-include="features"></div>
         </div>
 
@@ -52,8 +53,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <div ng-include="post"></div>
+
+                 <div class="post" ng-repeat="title in sample_titles ">
+                        <div ng-include="post"></div>
+                    </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="sidebar">
                         <aside>

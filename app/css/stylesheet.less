@@ -8,133 +8,20 @@
 @import "less/style-guide/type";
 
 
-/* HTML output */
-
-body {
-  height: 100% !important;
-  font-family: @font-family;
-  -webkit-font-smoothing: antialiased !important;
-}
-#page {
-  color: @font-color;
-  padding-top: @nav-height;
-
-}
-h1,h2,h3,h4,h5 {
-  font-family:@font-family-bold;
-
-}
-
-p {
-  font-size: 16px;
-  font-size: 1.6rem;
-  .lh-justify-content(flex-end);
-}
-
-header,
-section,
-footer {
-  padding-top: @nav-height;
- //padding-bottom: @nav-height;
-
-}
-//
-//section {
-//  padding-top: @nav-height;
-//  padding-bottom: @nav-height;
-//}
-
-.navbar-toggle .fa {
-  font-size: 16px;
-}
-
-header {
-  height: @header-height / 2;
-  min-height: @header-min-height;
-  text-align: center;
-  background-color: @header-bg-color;
-  color: @header-color;
-  padding: 0;
-  .home & {
-    height: @header-height;
-  }
-
-  h1 {
-    font-size: @font-xxlarge;
-    .lh-transition(all 0.5s ease);
-    &:hover {
-
-      color: @gray-dark;
-
-    }
-  }
-  .vtable {
-    .vtable();
-    .table-cell {
-      .table-cell();
-    }
-  }
-}
+/* --- page --- */
+@import "less/page";
 
 
-footer .footer {
+/* ---- header ---- */
+@import "less/header";
 
-  .copy-info {
-    padding: 20px;
-    font-size: @small;
-    .social i {
-      font-size: 16px;
-    }
-
-    p {
-      .font-size(@small);
-    }
-  }
-
-  .social i {
-    font-size: 32px;
-
-  }
+/* --- footer ---*/
+@import "less/footer";
 
 
+/* --- content --- */
+@import "less/content";
 
-}
 
-
-#content {
-
-}
-
-.sidebar {
-  ul {
-    padding-left: 0;
-    li {
-      list-style: none;
-    }
-  }
-}
-
-#top-link {
-  position: fixed;
-  bottom: 100px;
-  right: 20px;
-  z-index: 9999;
-  font-size: 36px;
-  padding: 10px;
-  //  width: 100%;
-  a {
-    color: @header-color;
-  }
-}
-
-/*
-Customize bootstrap theme elements
-*/
-
-.btn {
-  //modify bootstrap the default button
-  //.lh-border-radius(2);
-  .lh-transition(all 0.3s ease);
-}
-
-.fontsizing;
+/* --- page elements --- */
+@import "less/page-elements";

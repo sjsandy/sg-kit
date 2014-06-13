@@ -5,7 +5,7 @@
 use full theme mixins
 */
 /* sg-fonts font mixins */
-/* HTML output */
+/* --- page --- */
 body {
   height: 100% !important;
   font-family: 'OpenSansRegular', Arial, sans-serif;
@@ -39,6 +39,7 @@ footer {
 .navbar-toggle .fa {
   font-size: 16px;
 }
+/* ---- header ---- */
 header {
   height: 250px;
   min-height: 250px;
@@ -75,6 +76,7 @@ header .vtable .table-cell {
   width: 100%;
   vertical-align: middle;
 }
+/* --- footer ---*/
 footer .footer .copy-info {
   padding: 20px;
   font-size: 1.4;
@@ -89,12 +91,26 @@ footer .footer .copy-info p {
 footer .footer .social i {
   font-size: 32px;
 }
+/* --- content --- */
+.post .post-meta {
+  font-size: 14px;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #f1f1f1;
+}
+.post .read-more {
+  display: block;
+  padding: 10px;
+  text-align: right;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
 .sidebar ul {
   padding-left: 0;
 }
 .sidebar ul li {
   list-style: none;
 }
+/* --- page elements --- */
 #top-link {
   position: fixed;
   bottom: 100px;

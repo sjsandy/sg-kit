@@ -1,0 +1,27 @@
+header {
+  height: @header-height / 2;
+  min-height: @header-min-height;
+  text-align: center;
+  background-color: @header-bg-color;
+  color: @header-color;
+  padding: 0;
+  .home & {
+    height: @header-height;
+  }
+
+  h1 {
+    font-size: @font-xxlarge;
+    .lh-transition(all 0.5s ease);
+    &:hover {
+
+      color: @gray-dark;
+
+    }
+  }
+  .vtable {
+    .vtable();
+    .table-cell {
+      .table-cell();
+    }
+  }
+}

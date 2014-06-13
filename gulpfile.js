@@ -160,7 +160,7 @@ gulp.task('sg:deploy', function(callback){
         'html',
         'images',
         'fonts',
-        'sg:open-server',
+        'sg:server',
         callback);
 });
 
@@ -219,7 +219,7 @@ gulp.task('clean:vendor', function(){
 /* start the server */
 gulp.task('sg:server', function(){
 
-    sync.init([ "./" + config.build_directory + "css/*.css", config.build_directory + "js/*.js", config.build_directory + "*.html"], {
+    sync.init([ "./" + config.build_directory + "css/*.css", config.build_directory + "js/*.js", config.build_directory + "**/*.html"], {
         server: {
             baseDir: config.build_directory
         },

@@ -13,13 +13,15 @@ var sgApp = angular.module('sgApp.controllers', []);
         $scope.post = "views/post.html";
         $scope.footer = "views/footer.html";
         $scope.comment = "views/footer.html";
+        $scope.sample_titles = ['A Sample Article','Another Sample Article', 'One More Sample title', 'Sample Article Number Four', 'One More For the Sake of it'];
         $scope.elements = {
             'social': "views/elements/social.html"
 
         };
         $scope.components = {
 
-         'footer_copy' : 'views/footer/social_copy.html'
+         'footer_copy' : 'views/footer/social_copy.html',
+            'subscribe': ''
       }
         $scope.settings= {
             'title': 'SG.Kit',
