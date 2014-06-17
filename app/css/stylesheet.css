@@ -13,7 +13,7 @@ body {
 }
 #page {
   color: #808080;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 h1,
 h2,
@@ -34,7 +34,7 @@ p {
 header,
 section,
 footer {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 .navbar-toggle .fa {
   font-size: 16px;
@@ -76,7 +76,7 @@ header .vtable .table-cell {
   width: 100%;
   vertical-align: middle;
 }
-/* --- footer ---*/
+/* --- footer --- */
 footer .footer .copy-info {
   padding: 20px;
   font-size: 1.4;
@@ -92,22 +92,22 @@ footer .footer .social i {
   font-size: 32px;
 }
 /* --- content --- */
-.post .post-meta {
+#content .post .post-meta {
   font-size: 14px;
   font-size: 1.4rem;
   border-bottom: 1px solid #f1f1f1;
 }
-.post .read-more {
+#content .post .read-more {
   display: block;
   padding: 10px;
   text-align: right;
   font-size: 14px;
   font-size: 1.4rem;
 }
-.sidebar ul {
+#content .sidebar ul {
   padding-left: 0;
 }
-.sidebar ul li {
+#content .sidebar ul li {
   list-style: none;
 }
 /* --- page elements --- */
@@ -122,9 +122,6 @@ footer .footer .social i {
 #top-link a {
   color: #e6e6e6;
 }
-/*
-Customize bootstrap theme elements
-*/
 .btn {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
