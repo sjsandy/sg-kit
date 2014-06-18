@@ -83,7 +83,7 @@
                             at cumque harum illo praesentium, quod! Cum fugit maiores nulla quibusdam suscipit! Amet
                             ducimus error laudantium magnam nisi officia omnis quia quos sint vel?</p>
 
-                        <div ng-include="elements.author"></div>
+                        <div ng-include="e.author"></div>
 
                     </article>
                 </div>
@@ -96,7 +96,7 @@
                 <div class="col-md-8">
 
                  <div class="post" ng-repeat="title in sample_titles ">
-                        <div ng-include="comp.post_preview"></div>
+                        <div ng-include="c.post_preview"></div>
                  </div>
                 </div>
 
@@ -105,7 +105,7 @@
                         <aside>
                             <h1>Free News Letter</h1>
                             <p>Get the latest News &AMP; Updates via email .</p>
-                            <div ng-include="elements.subscribe"></div>
+                            <div ng-include="e.subscribe"></div>
                             <small>Absolutely no spam. We Guarantee it!</small>
                         </aside>
                         <aside>
@@ -138,7 +138,7 @@
     <footer>
         <div class="container footer">
             <!--<div ng-include="footer"></div>-->
-            <div ng-include="comp.footer_copy"></div>
+            <div ng-include="c.footer_copy"></div>
         </div>
     </footer>
 </div>

@@ -14,12 +14,13 @@ var sgApp = angular.module('sgApp.controllers', []);
         $scope.footer = "views/footer.html";
         $scope.comment = "views/footer.html";
         $scope.sample_titles = ['A Sample Article','Another Sample Article', 'One More Sample title', 'Sample Article Number Four', 'One More For the Sake of it'];
-        $scope.elements = {
+        $scope.e = {
             'social': "views/elements/social.html",
             'author': "views/elements/author.html",
+            'post_meta': "views/elements/post-meta.html",
             'subscribe': "views/elements/subscribe.html"
         };
-        $scope.comp = {
+        $scope.c = {
 
          'footer_copy' : 'views/footer/social_copy.html',
          'post_preview' : 'views/post/preview.html',
