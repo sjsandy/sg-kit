@@ -133,6 +133,11 @@ article .author p {
   font-size: 14px;
   font-size: 1.4rem;
 }
+article .author .avatar {
+  min-height: 80px;
+  min-width: 80px;
+  background-color: #f1f1f1;
+}
 /* --- page elements --- */
 #top-link {
   position: fixed;

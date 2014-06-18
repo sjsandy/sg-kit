@@ -25,7 +25,7 @@ var sgApp = angular.module('sgApp.controllers', []);
          'post_preview' : 'views/post/preview.html',
          'post_meta' : 'views/post/post-meta.html',
          'post_preview_image' : 'views/post/preview-image.html',
-         'subscribe': ''
+         'register': ''
       }
         $scope.settings= {
             'title': 'SG.Kit',
