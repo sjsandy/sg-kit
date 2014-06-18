@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="sgApp.controllers" ng-cloak>
+<html data-ng-app="sgApp.controllers" data-ng-cloak>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>
@@ -14,13 +14,12 @@
     <title>A Feature Packed Style Guide Toolkit</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/vendor/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-styles.css"/>
     <link rel="stylesheet" href="css/stylesheet.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
     <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
 </head>
 <body class="home">
 <!--[if lt IE 8]>
@@ -32,19 +31,19 @@
 <![endif]-->
 <div id="page" ng-controller="styleGuide">
     <nav>
-        <div ng-include="top_nav"></div>
+        <div data-ng-include="top_nav"></div>
     </nav>
     <header>
-        <div class="container vtable view-code">
+        <div class="container vtable ccode">
             <div class="row table-cell">
-                <div ng-include="cover"></div>
+                <div data-ng-include="cover"></div>
             </div>
         </div>
 
     </header>
     <section id="features">
-        <div class="container view-code">
-            <div ng-include="features"></div>
+        <div class="container ccode">
+            <div data-ng-include="features"></div>
         </div>
     </section>
     <section id="articles">
@@ -84,7 +83,7 @@
                             at cumque harum illo praesentium, quod! Cum fugit maiores nulla quibusdam suscipit! Amet
                             ducimus error laudantium magnam nisi officia omnis quia quos sint vel?</p>
 
-                        <div ng-include="elements.author"></div>
+                        <div ng-include="e.author"></div>
 
                     </article>
                 </div>
@@ -96,8 +95,8 @@
             <div class="row">
                 <div class="col-md-8">
 
-                 <div class="post" ng-repeat="title in sample_titles ">
-                        <div ng-include="comp.post_preview"></div>
+                 <div class="post" data-ng-repeat="title in sample_titles ">
+                        <div data-ng-include="c.post_preview"></div>
                  </div>
                 </div>
 
@@ -139,7 +138,7 @@
     <footer>
         <div class="container footer">
             <!--<div ng-include="footer"></div>-->
-            <div ng-include="comp.footer_copy"></div>
+            <div ng-include="c.footer_copy"></div>
         </div>
     </footer>
 </div>
@@ -170,7 +169,7 @@
 
 <script src="js/vendor/bootstrap.min.js"></script>
 <!-- endinject-->
-<script src="js/vendor/view-code.js"></script>
+<script src="js/ccode.js"></script>
 
 <script src="js/main.js"></script>
 <script src="js/controllers.js"></script>
