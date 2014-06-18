@@ -14,7 +14,7 @@
     <title>A Feature Packed Style Guide Toolkit</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/vendor/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-styles.css"/>
     <link rel="stylesheet" href="css/stylesheet.css"/>
     <link rel="stylesheet" href="css/style.css">
@@ -35,7 +35,7 @@
         <div ng-include="top_nav"></div>
     </nav>
     <header>
-        <div class="container vtable">
+        <div class="container vtable ccode">
             <div class="row table-cell">
                 <div ng-include="cover"></div>
             </div>
@@ -99,7 +99,7 @@
                 <div class="col-md-8">
 
                  <div class="post" ng-repeat="title in sample_titles ">
-                        <div ng-include="comp.post_preview"></div>
+                        <div ng-include="c.post_preview"></div>
                  </div>
                 </div>
 
@@ -108,7 +108,7 @@
                         <aside>
                             <h1>Free News Letter</h1>
                             <p>Get the latest News &AMP; Updates via email .</p>
-                            <div ng-include="elements.subscribe"></div>
+                            <div ng-include="e.subscribe"></div>
                             <small>Absolutely no spam. We Guarantee it!</small>
                         </aside>
                         <aside>
@@ -141,7 +141,7 @@
     <footer>
         <div class="container footer">
             <!--<div ng-include="footer"></div>-->
-            <div ng-include="comp.footer_copy"></div>
+            <div ng-include="c.footer_copy"></div>
         </div>
     </footer>
 </div>
@@ -158,6 +158,7 @@
 
 <script src="js/vendor/bootstrap.min.js"></script>
 <!-- endinject-->
+<script src="js/ccode.js"></script>
 <script src="js/main.js"></script>
 <script src="js/controllers.js"></script>
 

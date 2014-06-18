@@ -51,7 +51,7 @@ var buildPath = config.build_directory,
     livereloadport = config.live_reload_port,
     serverport = config.server_port,
     sync_files = [ "./" + config.build_directory + "css/*.css", config.build_directory + "js/*.js", config.build_directory + "**.html"],
-    sync_files_dev = [ config.source_directory + "css/**/*.css", config.source_directory + "js/**/*.js", config.source_directory + "**/*.html" ],
+    sync_files_dev = [ config.source_directory + "**/*.css", config.source_directory + "**/*.js", config.source_directory + "**/*.html" ],
     ignore_files = [''];
 
 //---- file filters --
@@ -179,8 +179,8 @@ gulp.task('sg:setup', function(){
         gulp.src('./bower_components/bootstrap/dist/js/*.js')
             .pipe(gulp.dest(srcDir + 'js/vendor/'))
             .pipe(print()),
-        gulp.src(['./bower_components/fontawesome/css/*.css','./bower_components/fontawesome/fonts/*.*'], { base: './bower_components/' })
-            .pipe(gulp.dest(srcDir + 'css/vendor/'))
+        gulp.src(['./bower_components/fontawesome/css/**/*.*', './bower_components/fontawesome/fonts/**/*.*'], { base: './bower_components/' })
+            .pipe(gulp.dest(srcDir + 'fonts/'))
             .pipe(print())
     )
 })
