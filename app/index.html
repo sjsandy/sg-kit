@@ -49,18 +49,68 @@
         </div>
 
     </section>
+    <section id="articles">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <article class="post">
+                        <figure>
+                            <img src="img/car-watch.JPG" alt="images" class="img-responsive"/>
+
+                        </figure>
+                        <h1>Lorem ipsum dolor sit.</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur assumenda
+                            consequuntur debitis dolor ducimus facilis id iste magnam nam nemo, nihil nostrum odit optio
+                            perspiciatis sunt voluptas voluptatem. A assumenda doloremque facere in modi molestias
+                            mollitia nam nisi saepe vitae. Accusamus adipisci, commodi doloremque eaque explicabo, ipsa
+                            laboriosam, nesciunt nulla officiis porro praesentium rerum sequi soluta vel velit vero.</p>
+
+                        <p>Delectus facere fugit in ipsum laboriosam natus officiis perspiciatis quam sint soluta?
+                            Distinctio dolores earum ex magni necessitatibus obcaecati officiis omnis porro repudiandae!
+                            Adipisci asperiores autem culpa deserunt dignissimos distinctio dolor eos et fuga labore,
+                            nisi non nulla optio quam quisquam quod soluta. Assumenda delectus ea enim, iste itaque
+                            molestias, odit perspiciatis quod ratione reiciendis similique, sit veniam vitae
+                            voluptates.</p>
+
+                        <p>Aut consequatur consequuntur cupiditate deserunt dolorem eius ipsum iusto magnam, maiores
+                            perferendis porro quidem! Aperiam blanditiis dolorum ea expedita sequi. Assumenda, atque
+                            deleniti dolore earum fugiat laborum maiores neque! Adipisci architecto dicta dignissimos ea
+                            facere illum, inventore nemo neque nobis quis rerum tenetur, ullam unde! A adipisci, aliquid
+                            aut consequatur deleniti dolore magnam mollitia natus nulla perferendis, possimus sit
+                            vero?</p>
+
+                        <p>Quaerat, veniam, veritatis. Accusamus adipisci animi aut delectus est eveniet fugiat impedit
+                            in ipsum laboriosam laudantium molestias nam neque nesciunt nisi, nobis non nostrum
+                            obcaecati possimus quam quidem quo sed ut veniam voluptates voluptatibus voluptatum? Aliquam
+                            at cumque harum illo praesentium, quod! Cum fugit maiores nulla quibusdam suscipit! Amet
+                            ducimus error laudantium magnam nisi officia omnis quia quos sint vel?</p>
+
+                        <div ng-include="elements.author"></div>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="content">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
 
                  <div class="post" ng-repeat="title in sample_titles ">
-                        <div ng-include="post"></div>
-                    </div>
+                        <div ng-include="comp.post_preview"></div>
+                 </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="sidebar">
+                        <aside>
+                            <h1>Free News Letter</h1>
+                            <p>Get the latest News &AMP; Updates via email .</p>
+                            <div ng-include="elements.subscribe"></div>
+                            <small>Absolutely no spam. We Guarantee it!</small>
+                        </aside>
                         <aside>
                             <h1>Lorem ipsum dolor size size.</h1>
 
@@ -85,12 +135,13 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <footer>
         <div class="container footer">
             <!--<div ng-include="footer"></div>-->
-            <div ng-include="components.footer_copy"></div>
+            <div ng-include="comp.footer_copy"></div>
         </div>
     </footer>
 </div>

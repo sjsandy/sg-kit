@@ -10,18 +10,21 @@ var sgApp = angular.module('sgApp.controllers', []);
         $scope.cover = "views/cover.html";
         $scope.top_nav = "views/top-nav.html";
         $scope.features = "views/features.html";
-        $scope.post = "views/post.html";
+        $scope.post = "views/post/preview.html";
         $scope.footer = "views/footer.html";
         $scope.comment = "views/footer.html";
         $scope.sample_titles = ['A Sample Article','Another Sample Article', 'One More Sample title', 'Sample Article Number Four', 'One More For the Sake of it'];
         $scope.elements = {
-            'social': "views/elements/social.html"
-
+            'social': "views/elements/social.html",
+            'author': "views/elements/author.html",
+            'subscribe': "views/elements/subscribe.html"
         };
-        $scope.components = {
+        $scope.comp = {
 
          'footer_copy' : 'views/footer/social_copy.html',
-            'subscribe': ''
+         'post_preview' : 'views/post/preview.html',
+         'post_preview_image' : 'views/post/preview-image.html',
+         'subscribe': ''
       }
         $scope.settings= {
             'title': 'SG.Kit',
