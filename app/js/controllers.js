@@ -23,6 +23,7 @@ var sgApp = angular.module('sgApp.controllers', []);
 
          'footer_copy' : 'views/footer/social_copy.html',
          'post_preview' : 'views/post/preview.html',
+         'post_meta' : 'views/post/post-meta.html',
          'post_preview_image' : 'views/post/preview-image.html',
          'subscribe': ''
       }
