@@ -27,11 +27,12 @@ p {
   font-size: 1.6rem;
   -webkit-box-pack: end;
   -moz-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
 header,
+main,
 section,
 footer {
   padding-top: 100px;
@@ -103,22 +104,22 @@ footer .footer .social i {
   font-size: 32px;
 }
 /* --- content --- */
-#content .post .post-meta {
+main .post .post-meta {
   font-size: 14px;
   font-size: 1.4rem;
   border-bottom: 1px solid #f1f1f1;
 }
-#content .post .read-more {
+main .post .read-more {
   display: block;
   padding: 10px;
   text-align: right;
   font-size: 14px;
   font-size: 1.4rem;
 }
-#content .sidebar ul {
+main .sidebar ul {
   padding-left: 0;
 }
-#content .sidebar ul li {
+main .sidebar ul li {
   list-style: none;
 }
 article .author {
