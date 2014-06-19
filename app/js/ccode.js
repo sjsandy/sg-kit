@@ -2,10 +2,7 @@
  * Created by studio-mac on 6/18/14.
  */
 /**
- * Created by shawnsandy on 6/18/14.
- *
- *
- *
+ * Created by shawnsandy on 6/18/14
  *
  */
 
