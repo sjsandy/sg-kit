@@ -29,45 +29,81 @@ header.sg {
   width: 100%;
   vertical-align: middle;
 }
-.sg.background {
+.sg.white.background {
   background-color: #ffffff;
 }
-.sg.background.color-c1 {
+.sg.white.color {
+  color: #ffffff;
+}
+.sg.gray.background {
+  background-color: #808080;
+}
+.sg.gray.color {
+  color: #808080;
+}
+.sg.darkgray.background {
+  background-color: #222222;
+}
+.sg.darkgray.color {
+  color: #222222;
+}
+.sg.black.background {
+  background-color: #111111;
+}
+.sg.black.color {
+  color: #111111;
+}
+.sg.white-lilac.background {
+  background-color: #e6e6e6;
+}
+.sg.white-lilac.color {
+  color: #e6e6e6;
+}
+.sg.anti-white-flash.background {
   background-color: #f1f1f1;
 }
-.sg.background.color-c2 {
-  background-color: #f1f1f1;
-}
-.sg.background.color-c3 {
-  background-color: #f1f1f1;
-}
-.sg.background.color-c4 {
-  background-color: #f1f1f1;
-}
-.sg.background.color-c5 {
-  background-color: #f1f1f1;
-}
-.sg.background.color-c6 {
-  background-color: #f1f1f1;
-}
-.sg .color {
-  color: #404040;
-}
-.sg .color-c1 {
+.sg.anti-white-flash.color {
   color: #f1f1f1;
 }
-.sg .color-c2 {
-  color: #f1f1f1;
+.sg.sliver.background {
+  background-color: #c0c0c0;
 }
-.sg .color-c3 {
-  color: #f1f1f1;
+.sg.sliver.color {
+  color: #c0c0c0;
 }
-.sg .color-c4 {
-  color: #f1f1f1;
+.sg.yellow.background {
+  background-color: #ffdc00;
 }
-.sg .color-c5 {
-  color: #f1f1f1;
+.sg.yellow.color {
+  color: #ffdc00;
 }
-.sg .color-c6 {
-  color: #f1f1f1;
+.sg.navy.background {
+  background-color: #001f3f;
+}
+.sg.navy.color {
+  color: #001f3f;
+}
+.sg.blue.background {
+  background-color: #0074d9;
+}
+.sg.blue.color {
+  color: #0074d9;
+}
+.sg.green.background {
+  background-color: #2ecc40;
+}
+.sg.green.color {
+  color: #2ecc40;
+}
+.sg.red.background {
+  background-color: #ff4136;
+}
+.sg.red.color {
+  color: #ff4136;
+}
+.sg.aqua.background {
+  background-color: #7fdbff;
+}
+.sg.aqua.color {
+  color: #7fdbff;
 }

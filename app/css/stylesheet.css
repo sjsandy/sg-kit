@@ -12,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
 }
 #page {
-  color: #808080;
+  color: #404040;
   padding-top: 100px;
 }
 h1,
@@ -70,7 +70,7 @@ header h1 {
   transition: all 0.5s ease;
 }
 header h1:hover {
-  color: #333333;
+  color: #ff851b;
 }
 header .vtable {
   display: table;
@@ -136,7 +136,7 @@ article .author p {
 article .author .avatar {
   min-height: 80px;
   min-width: 80px;
-  background-color: #f1f1f1;
+  background-color: #222222;
 }
 /* --- page elements --- */
 #top-link {
