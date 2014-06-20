@@ -13,10 +13,12 @@ var sgApp = angular.module('sgApp.controllers', []);
         $scope.post = "views/post/preview.html";
         $scope.footer = "views/footer.html";
         $scope.comment = "views/footer.html";
+        $scope.colors = ['aqua','blue','navy','teal','green','olive','lime','yellow','orange','red','fuchsia','purple','maroon','white', 'sliver','gray','darkgray','black'];
         $scope.sample_titles = ['A Sample Article','Another Sample Article', 'One More Sample title', 'Sample Article Number Four', 'One More For the Sake of it'];
         $scope.e = {
             'social': "views/elements/social.html",
             'author': "views/elements/author.html",
+            'swatch': "views/elements/color-swatch.html",
             'subscribe': "views/elements/subscribe.html"
         };
         $scope.c = {

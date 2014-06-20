@@ -1,0 +1,29 @@
+// style guide
+@import "../../bower_components/lesshat/build/lesshat-prefixed";
+@import "less/mixins";
+@import "less/style-guide/vtable";
+@import "less/style-guide/colors";
+
+.sg {
+
+  &.header, header& {
+    background-color: @background-color;
+  }
+
+  &.vtable {
+    /* vertically align div content */
+    .sg-vtable;
+    .vtable();
+
+  }
+  /* sg colors */
+  .sg-colors;
+
+  &.swatch {
+    width: 100%;
+    height: 100px;
+    //margin-bottom: 20px;
+    .lh-border-radius(3);
+  }
+
+}

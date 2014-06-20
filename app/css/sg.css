@@ -107,3 +107,55 @@ header.sg {
 .sg.aqua.color {
   color: #7fdbff;
 }
+.sg.fuchsia.background {
+  background-color: #f012be;
+}
+.sg.fuchsia.color {
+  color: #f012be;
+}
+.sg.purple.background {
+  background-color: #b10dc9;
+}
+.sg.purple.color {
+  color: #b10dc9;
+}
+.sg.teal.background {
+  background-color: #39cccc;
+}
+.sg.teal.color {
+  color: #39cccc;
+}
+.sg.olive.background {
+  background-color: #3d9970;
+}
+.sg.olive.color {
+  color: #3d9970;
+}
+.sg.orange.background {
+  background-color: #b10dc9;
+}
+.sg.orange.color {
+  color: #b10dc9;
+}
+.sg.lime.background {
+  background-color: #01ff70;
+}
+.sg.lime.color {
+  color: #01ff70;
+}
+.sg.maroon.background {
+  background-color: #85144b;
+}
+.sg.maroon.color {
+  color: #85144b;
+}
+.sg.swatch {
+  width: 100%;
+  height: 100px;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
