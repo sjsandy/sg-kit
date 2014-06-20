@@ -4,6 +4,11 @@ use full theme mixins
 .sg {
   /* sg colors */
 }
+.sg.max-width {
+  max-width: 1680px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
 .sg.header,
 header.sg {
   background-color: #ffffff;

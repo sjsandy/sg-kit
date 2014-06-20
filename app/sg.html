@@ -43,22 +43,68 @@
             </div>
         </div>
     </header>
-    <section id="colors">
+    <section id="pitch">
         <div class="container">
-            <div data-ng-include="c.color_guide"></div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>The Pitch</h1>
+
+                    <p>Pitch something here </p>
+
+                    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut enim hic ipsam odio odit
+                        repudiandae, rerum vero? Animi asperiores assumenda corporis dolores eaque eius, expedita in
+                        mollitia quos recusandae voluptatum!
+                    </blockquote>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="colors" class="sg max-width">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SG.Kit! Color Guide</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-push-8 col-sm-12">
+                    <aside>
+                        <h1>Primary Colors</h1>
+                    </aside>
+                </div>
+                <div class="col-md-8 col-md-pull-4">
+                    <aside>
+                        <h1>Basic Colors</h1>
+                    </aside>
+                    <div data-ng-include="c.color_guide"></div>
+                </div>
+
+            </div>
+
+
         </div>
     </section>
     <section id="features">
-        <div class="container ccode">
-            <div data-ng-include="features"></div>
+        <div class="container-fluid ccode sg max-width">
+
+                <div class="col-md-8">
+                    <div data-ng-include="features"></div>
+                </div>
+            <div class="col-md-4">
+                <aside>
+                    <h1>Sidebar</h1>
+                </aside>
+            </div>
         </div>
     </section>
 
 
     <section id="articles">
-        <div class="container">
+        <div class="container-fluid sg max-width">
             <div class="row">
-                <div class="col-md-12">
+
+                <div class="col-md-8">
                     <article class="post">
                         <figure>
                             <img src="img/car-watch.JPG" alt="images" class="img-responsive"/>
@@ -96,11 +142,23 @@
 
                     </article>
                 </div>
+                <div class="col-md-4 sidebar">
+                    <aside>
+                        <h1>Sidebar</h1>
+                    </aside>
+                    <aside>
+                        <h1>Sidebar</h1>
+                    </aside>
+                    <aside>
+                        <h1>Sidebar</h1>
+                    </aside>
+                </div>
+
             </div>
         </div>
     </section>
     <main>
-        <div class="container">
+        <div class="container-fluid sg max-width">
             <div class="row">
                 <div class="col-md-8">
                  <div class="post" data-ng-repeat="title in sample_titles ">
@@ -143,7 +201,7 @@
         </div>
     </main>
     <footer>
-        <div class="container footer">
+        <div class="container-fluid sg max-width footer">
             <!--<div ng-include="footer"></div>-->
             <div ng-include="c.footer_copy"></div>
         </div>

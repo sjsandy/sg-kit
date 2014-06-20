@@ -23,6 +23,14 @@ h5 {
   font-family: 'OpenSansSemibold';
   line-height: 1.5;
 }
+.sidebar h1,
+.sidebar h2,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 p {
   font-size: 16px;
   font-size: 1.6rem;
@@ -138,6 +146,7 @@ article .author p {
 article .author .avatar {
   min-height: 80px;
   min-width: 80px;
+  max-width: 80px;
   background-color: #222222;
 }
 /* --- page elements --- */
