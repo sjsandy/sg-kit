@@ -26,6 +26,7 @@ var sgApp = angular.module('sgApp.controllers', []);
          'post_preview' : 'views/post/preview.html',
          'post_meta' : 'views/post/post-meta.html',
          'post_preview_image' : 'views/post/preview-image.html',
+         'color_guide' : 'views/sg/color-guide.html',
          'register': ''
       }
         $scope.settings= {

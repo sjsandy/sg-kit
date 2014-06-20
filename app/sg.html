@@ -45,18 +45,7 @@
     </header>
     <section id="colors">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>{{ settings.title }} Color Guide</h1>
-                </div>
-            </div>
-            <div class="row">
-
-                <div data-ng-repeat="color in colors">
-                    <div data-ng-include="e.swatch"></div>
-                </div>
-
-            </div>
+            <div data-ng-include="c.color_guide"></div>
         </div>
     </section>
     <section id="features">
