@@ -21,7 +21,7 @@ var sgApp = angular.module('sgApp.controllers', []);
             'swatch': "views/elements/color-swatch.html",
             'subscribe': "views/elements/subscribe.html"
         };
-        $scope.c = {
+        $scope.c = { //place yout components here
          'footer_copy' : 'views/footer/social_copy.html',
          'post_preview' : 'views/post/preview.html',
          'post_meta' : 'views/post/post-meta.html',
@@ -29,7 +29,7 @@ var sgApp = angular.module('sgApp.controllers', []);
          'color_guide' : 'views/sg/color-guide.html',
          'register': ''
       }
-        $scope.settings= {
+        $scope.settings= { // default settings
             'title': 'SG.Kit',
             'slug': 'A Feature Packed Style Guide Toolkit!'
         };
