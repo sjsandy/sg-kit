@@ -43,24 +43,29 @@
             </div>
         </div>
     </header>
+    <section id="colors">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ settings.title }} Color Guide</h1>
+                </div>
+            </div>
+            <div class="row">
 
+                <div data-ng-repeat="color in colors">
+                    <div data-ng-include="e.swatch"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <section id="features">
         <div class="container ccode">
             <div data-ng-include="features"></div>
         </div>
     </section>
-    <section>
-        <div id="colors">
-            <div class="container">
-                <div class="row">
-                    <div data-ng-repeat="color in colors">
-                        <div data-ng-include="e.swatch"></div>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-    </section>
+
     <section id="articles">
         <div class="container">
             <div class="row">
