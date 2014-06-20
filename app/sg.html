@@ -35,7 +35,7 @@
         <div data-ng-include="top_nav"></div>
     </nav>
     <header>
-        <div class="container vtable ccode">
+        <div class="container-fluid vtable ccode">
             <div class="row table-cell">
                 <div>
                     <h1>{{ settings.title }} <i class="fa fa-cog"></i></h1>
@@ -44,21 +44,25 @@
         </div>
     </header>
     <section id="colors">
-        <div class="container">
+        <div class="container-fluid">
             <div data-ng-include="c.color_guide"></div>
         </div>
     </section>
     <section id="features">
-        <div class="container ccode">
-            <div data-ng-include="features"></div>
+        <div class="container-fluid ccode">
+
+                <div class="col-md-12">
+                    <div data-ng-include="features"></div>
+                </div>
         </div>
     </section>
 
 
     <section id="articles">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+
+                <div class="col-md-8">
                     <article class="post">
                         <figure>
                             <img src="img/car-watch.JPG" alt="images" class="img-responsive"/>
@@ -96,11 +100,25 @@
 
                     </article>
                 </div>
+                <div class="col-md-4 sidebar">
+
+                    <aside>
+                        <h1>Sidebar</h1>
+                    </aside>
+                    <aside>
+                        <h1>Sidebar</h1>
+                    </aside>
+                    <aside>
+                        <h1>Sidebar</h1>
+                    </aside>
+
+                </div>
+
             </div>
         </div>
     </section>
     <main>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8">
                  <div class="post" data-ng-repeat="title in sample_titles ">
@@ -143,7 +161,7 @@
         </div>
     </main>
     <footer>
-        <div class="container footer">
+        <div class="container-fluid footer">
             <!--<div ng-include="footer"></div>-->
             <div ng-include="c.footer_copy"></div>
         </div>
