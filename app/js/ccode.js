@@ -16,36 +16,31 @@
         $("#source-modal").modal();
     });
 
+    function view_code(element ) {
 
-    $(".ccode").click(function(){
-        var src = $(this).data('src');
-        var html = $(this).parent().html();
+        $(element).click(function(){
+            var src = $(this).data('src');
+            var html = $(this).parent().html();
+            var _html = $(this).data('htmlsrc');
+            if(_html) {
+                html = _html;
+            }
+            html = cleanSource(html);
 
-        html = cleanSource(html);
+            if(src){
+                $("#source-modal pre").load(src);
+            } else {
+                $("#source-modal pre").text(html);
+            }
+            $("#source-modal").modal();
+            console.log('clicked');
 
-        if(src){
-            $("#source-modal pre").load(src);
-        } else {
-            $("#source-modal pre").text(html);
-        }
-        $("#source-modal").modal();
-        console.log('clicked');
+        });
 
-    });
+    }
 
+    view_code('.ccode');
 
-
-
-
-    $('.bs-component [data-toggle="popover"]').popover();
-    $('.bs-component [data-toggle="tooltip"]').tooltip();
-
-    $(".bs-component").hover(function(){
-        $(this).append($button);
-        $button.show();
-    }, function(){
-        $button.hide();
-    });
 
     function cleanSource(html) {
         var lines = html.split(/\n/);
