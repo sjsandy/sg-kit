@@ -18,8 +18,8 @@
     "scroll-reveal": "~0.1.2",
     "angular": "~1.2.16",
     "angular-route": "~1.2.16",
-    "angular-loader": "~1.2.16"
-
+    "angular-loader": "~1.2.16",
+    "paper-elements": "Polymer/paper-elements#~0.3.3"
   },
   "devDependencies": {
     "bootstrap": "~3.1.1",
