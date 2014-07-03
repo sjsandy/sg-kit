@@ -14,15 +14,12 @@
     <title>A Feature Packed Style Guide Toolkit</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/bootstrap-styles.css"/>
-    <link rel="stylesheet" href="css/stylesheet.css"/>
-    <link rel="stylesheet" href="css/sg.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
-    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="bower_components/platform/platform.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html"/>
+    <link rel="import" href="components/header-links.html"/>
+    <link rel="import" href="components/top-nav.html"/>
 </head>
-<body class="home-off">
+<body class="home-off" unresolved touch-action="auto">
 <!--[if lt IE 8]>
 <p class="chromeframe bg-danger">You are using an <strong>outdated</strong> browser. Please <a
         href="http://browsehappy.com/">upgrade your browser</a> or <a
@@ -32,7 +29,8 @@
 <![endif]-->
 <div id="page" ng-controller="styleGuide">
     <nav>
-        <div data-ng-include="top_nav"></div>
+        <top-nav></top-nav>
+        <!--<div data-ng-include="top_nav"></div>-->
     </nav>
     <header>
         <div class="container vtable ccode">
@@ -233,14 +231,13 @@
             </div>
         </div>
     </div>
+
 </div>
 <!--go to top of page-->
 <div id="top-link">
     <a href="#page"><i class="fa fa-chevron-circle-up"></i></a>
 </div>
-
-<!-- /container -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/vendor/jquery/jquery.min.js"></script>
 <script src="js/vendor/angular/angular.min.js"></script>
 <script src="ng-app.js"></script>
 <!-- inject:js -->
@@ -252,17 +249,17 @@
 <script src="js/main.js"></script>
 <script src="js/controllers.js"></script>
 
-
-<script>
-    var _gaq = [
-        ['_setAccount', 'UA-XXXXX-X'],
-        ['_trackPageview']
-    ];
-    (function (d, t) {
-        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        g.src = '//www.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g, s)
-    }(document, 'script'));
-</script>
+<!--<script>-->
+    <!--var _gaq = [-->
+        <!--['_setAccount', 'UA-XXXXX-X'],-->
+        <!--['_trackPageview']-->
+    <!--];-->
+    <!--(function (d, t) {-->
+        <!--var g = d.createElement(t), s = d.getElementsByTagName(t)[0];-->
+        <!--g.src = '//www.google-analytics.com/ga.js';-->
+        <!--s.parentNode.insertBefore(g, s)-->
+    <!--}(document, 'script'));-->
+<!--</script>-->
 </body>
+
 </html>

@@ -1,0 +1,30 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/shawnsandy/sg-kit",
+  "authors": [
+    "shawn sandy <shawnsandy04@gmail.com>"
+  ],
+  "description": "sgp-kit a polymer style guide tool kit",
+  "main": "index",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "polymer",
+    "style-guide"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "polymer": "Polymer/polymer#~0.3.3"
+  }
+}

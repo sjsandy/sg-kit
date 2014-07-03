@@ -19,7 +19,7 @@
     "angular": "~1.2.16",
     "angular-route": "~1.2.16",
     "angular-loader": "~1.2.16",
-    "paper-elements": "Polymer/paper-elements#~0.3.3"
+      "jquery": "~1.10.2"
   },
   "devDependencies": {
     "bootstrap": "~3.1.1",
@@ -27,7 +27,6 @@
     "angular-seed": "*",
     "jquery-validation": "~1.12.0",
     "modernizr": "~2.6.2",
-    "jquery": "~1.10.2",
     "angular-route": "~1.2.16",
     "angular-loader": "~1.2.16",
     "angular-mocks": "~1.2.16",
