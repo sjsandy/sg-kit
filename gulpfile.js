@@ -7,29 +7,21 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
-var minifyCss = require('gulp-minify-css');
 var clean = require('gulp-clean');
 var print = require('gulp-print');
 var watch = require('gulp-watch');
 var changed = require('gulp-changed');
-var include = require('gulp-file-includer');
 var sequence = require('run-sequence');
 var grunt = require('gulp-grunt');
 var inject = require('gulp-inject');
 var bower = require('gulp-bower-files');
-var ignore = require('gulp-ignore');
 var browserify = require('browserify');
-var flatten = require('gulp-flatten');
 var filter = require('gulp-filter');
-var useref = require('gulp-useref');
-var refresh = require('gulp-livereload');
-var connect = require('connect');
-var express = require('express');
-var livereload = require('connect-livereload');
 var config = require("./config.json");
 var open = require('gulp-open');
 var notify = require('gulp-notify');
 var sync = require('browser-sync');
+var prompt = require('gulp-prompt');
 
 /*
  install gulp and dependencies the easy way
@@ -44,7 +36,7 @@ var sync = require('browser-sync');
  */
 
 //  create some useful variables
-
+var layout_dir = 'test';
 var srcDir = config.source_directory;
 var scriptsPath = srcDir + 'js/';
 var buildPath = config.build_directory,
@@ -87,7 +79,7 @@ gulp.task('scripts', function () {
 gulp.task('html', function () {
     //collect all files in root di
     //move to dest folder
-    gulp.src(srcDir + '/*')
+    gulp.src([srcDir + '/*', srcDir + '/**/*.html'])
         .pipe(gulp.dest(buildPath))
         .pipe(print());
 });
@@ -97,7 +89,8 @@ gulp.task('html', function () {
 gulp.task('images', function () {
 
     var file_dir = 'images/';
-    gulp.src(srcDir + file_dir + '**/*.*', { base: './app/'+ file_dir })
+    var images = [srcDir + '**/*.jpg',srcDir + '**/*.png',srcDir + '**/*.gif', srcDir + 'images/**.*', srcDir + 'img/**.*'];
+    gulp.src(images, { base: './app/'+ file_dir })
         .pipe(changed(buildPath + file_dir))
         .pipe(gulp.dest(buildPath + file_dir))
         .pipe(print()) ;
@@ -241,10 +234,33 @@ gulp.task('sg:server-dev', function(){
 
 });
 
+gulp.task('gulp:layout', function(){
+
+   return gulp.src(buildPath , { read : false })
+        .pipe(prompt.prompt({
+            type: 'input',
+            name: 'layout',
+            message: 'Enter the layout folder name'
+
+        }, function(res){
+            layout_dir = res.layout;
+        })
+
+);
+
+
+});
+
+gulp.task('create:layout',['gulp:layout'], function(){
+    gulp.src(buildPath + '**/*.*')
+        .pipe(gulp.dest('layouts/' + layout_dir))
+        .pipe(print())
+        //.pipe(notify('Your new layout,' + layout_dir + ' has been created'));
+});
+
 
 /* run / write - test on your gulp file to see if it works */
 gulp.task('test', function(){
-   gulp.watch("./app/css/**/*.*", ['refresh'])
 
 });
 
