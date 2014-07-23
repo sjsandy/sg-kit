@@ -1,0 +1,242 @@
+/* ==========================================================================
+   theme styles
+   ========================================================================== */
+/* mixins
+use full theme mixins
+*/
+/* sg-fonts font mixins */
+/* --- page --- */
+body {
+  height: 100% !important;
+  font-family: 'OpenSansRegular', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+}
+#page {
+  color: #404040;
+  padding-top: 100px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'OpenSansSemibold';
+  line-height: 1.5;
+}
+.sidebar h1,
+.sidebar h2,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+header,
+main,
+section,
+footer {
+  padding-top: 100px;
+}
+figure {
+  margin-bottom: 10px;
+  display: block;
+}
+.navbar-toggle .fa {
+  font-size: 16px;
+}
+.ccode {
+  cursor: pointer;
+}
+/* --- forms --- */
+.input-group {
+  margin-bottom: 10px;
+}
+/* ---- header ---- */
+header {
+  height: 250px;
+  min-height: 250px;
+  text-align: center;
+  background-color: #191919;
+  color: #e6e6e6;
+  padding: 0;
+}
+.home header {
+  height: 500px;
+}
+header h1 {
+  font-size: 83px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+header h1:hover {
+  color: #ff851b;
+}
+header .vtable {
+  display: table;
+  height: inherit !important;
+  width: 100% !important;
+}
+header .vtable .table-cell {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+header .vtable .table-cell {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+/* --- footer --- */
+footer .footer .copy-info {
+  padding: 20px;
+  font-size: 1.4;
+}
+footer .footer .copy-info .social i {
+  font-size: 16px;
+}
+footer .footer .copy-info p {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+footer .footer .social i {
+  font-size: 32px;
+}
+/* --- content --- */
+main .post .post-meta {
+  font-size: 14px;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #f1f1f1;
+}
+main .post .read-more {
+  display: block;
+  padding: 10px;
+  text-align: right;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+main .sidebar ul {
+  padding-left: 0;
+}
+main .sidebar ul li {
+  list-style: none;
+}
+article .author {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+}
+article .author p {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+article .author .avatar {
+  min-height: 80px;
+  min-width: 80px;
+  max-width: 80px;
+  background-color: #222222;
+}
+/* --- page elements --- */
+#top-link {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 9999;
+  font-size: 36px;
+  padding: 10px;
+}
+#top-link a {
+  color: #e6e6e6;
+}
+.btn {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.headlines {
+  font-size: 101px;
+  font-size: 10.1rem;
+}
+.titles {
+  font-size: 82px;
+  font-size: 8.2rem;
+}
+.subtitles {
+  font-size: 68px;
+  font-size: 6.8rem;
+}
+.xxlarge {
+  font-size: 52px;
+  font-size: 5.2rem;
+}
+.xlarge {
+  font-size: 41px;
+  font-size: 4.1rem;
+}
+.large {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+.medium {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+.default-font {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+.small {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.tiny {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+h1 {
+  font-size: 51px;
+  font-size: 5.1rem;
+}
+h2 {
+  font-size: 41px;
+  font-size: 4.1rem;
+}
+h3 {
+  font-size: 31px;
+  font-size: 3.1rem;
+}
+header h1 {
+  font-size: 101px;
+  font-size: 10.1rem;
+}
+section h1 {
+  font-size: 68px;
+  font-size: 6.8rem;
+}
+aside h1 {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+article h1 {
+  font-size: 41px;
+  font-size: 4.1rem;
+}
+footer h1 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}

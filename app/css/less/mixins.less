@@ -1,0 +1,74 @@
+/* mixins
+use full theme mixins
+*/
+.vtable() {
+  display: table;
+  height: inherit !important;
+  width: 100% !important;
+
+  .table-cell {
+
+      display: table-cell;
+      width: 100%;
+      vertical-align: middle;
+
+  }
+}
+
+.table-cell(){
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.sg-vtable() {
+
+  .vtable();
+
+  .table-cell {
+    .table-cell();
+  }
+
+}
+
+//rgba color mixin
+.rgba(@r:255, @g:255, @b:255, @transparency:0.5, @type:'background'){
+
+  @color: rgba(@r, @g, @b, @transparency);
+
+  & when(@type = 'color'){
+   color: @color;
+  }
+  & when(@type = 'background') {
+    background-color: rgb(@r @g @b);
+    background-color: @color;
+  }
+}
+
+
+//output font px/rem for font sizes
+//@font-size decimal value (1.6)
+//converts and outputs as px and rem values
+.font-size (@font-size) {
+  @px: @font-size * 10px;
+  font-size: floor(@px);
+  @rem: round(@font-size,3);
+  font-size: unit(@rem,rem);
+}
+
+
+.color-swatch(@color:#fff) {
+
+  & {
+    &.background {
+      background-color: @color;
+    }
+
+    &.color {
+      color: @color;
+    }
+
+  }
+}
+
+

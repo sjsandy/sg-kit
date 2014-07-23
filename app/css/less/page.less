@@ -1,0 +1,51 @@
+body {
+  height: 100% !important;
+  font-family: @font-family;
+  -webkit-font-smoothing: antialiased !important;
+}
+#page {
+  color: @font-color;
+  padding-top: @nav-height;
+
+
+}
+h1,h2,h3,h4,h5 {
+  font-family:@font-family-bold;
+  line-height: 1.5;
+
+  .sidebar & {
+//    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+
+}
+
+p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  .lh-justify-content(flex-end);
+}
+
+header,
+main,
+section,
+footer {
+  padding-top: @nav-height;
+  //padding-bottom: @nav-height;
+
+}
+
+figure {
+  margin-bottom: @margins;
+  display: block;
+}
+
+.navbar-toggle .fa {
+  font-size: 16px;
+}
+
+.ccode {
+  cursor: pointer;
+}

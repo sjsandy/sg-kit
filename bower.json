@@ -1,5 +1,5 @@
 {
-  "name": "strater-kit",
+  "name": "starter-kit",
   "version": "0.0.1",
   "authors": [
     "Shawn Sandy <shawnsandy04@gmail.com>"
@@ -14,11 +14,30 @@
     "tests"
   ],
   "dependencies": {
+    "fontawesome": "~4.0.3",
+    "scroll-reveal": "~0.1.2",
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "angular-loader": "~1.2.16",
+    "paper-elements": "Polymer/paper-elements#~0.3.3"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.1.1",
+    "lesshat": "~3.0.0",
+    "angular-seed": "*",
+    "jquery-validation": "~1.12.0",
     "modernizr": "~2.6.2",
     "jquery": "~1.10.2",
-    "knockout": "",
-    "knockout-bootstrap": "~0.2.1",
-    "bootstrap": "~3.1.1"
+    "angular-route": "~1.2.16",
+    "angular-loader": "~1.2.16",
+    "angular-mocks": "~1.2.16",
+    "snap.svg": "~0.2.0",
+    "polymer-elements": "Polymer/polymer-elements#~0.3.0",
+    "polymer-ui-elements": "Polymer/polymer-ui-elements#~0.3.0",
+    "polymer": "Polymer/polymer#~0.3.1",
+    "core-ajax": "Polymer/core-ajax#~0.3.1"
   },
-  "devDependencies": {}
+  "config": {
+    "port": "8080"
+  }
 }

@@ -1,0 +1,107 @@
+/* sg-fonts font mixins */
+.fontsizing(){
+  //#kit-layout-typeset > .scale-fonts(90);
+  .headlines {
+     .font-size(@headlines);
+  }
+  .titles {
+
+     .font-size(@titles);
+
+  }
+  .subtitles {
+     .font-size(@subtitles);
+
+  }
+
+  .xxlarge {
+     .font-size(@xxlarge);
+
+  }
+  .xlarge {
+     .font-size(@xlarge);
+
+  }
+
+  .large {
+     .font-size(@large);
+
+  }
+
+  .medium {
+     .font-size(@medium);
+
+  }
+
+  .default-font {
+     .font-size(@base-font-size);
+  }
+
+  .small {
+     .font-size(@small);
+
+  }
+
+  .tiny {
+     .font-size(@tiny);
+
+  }
+
+  h1 {
+     .font-size(@h1);
+
+  }
+  h2 {
+     .font-size(@h2);
+
+  }
+  h3 {
+     .font-size(@h3);
+
+  }
+
+
+  h1 {
+
+    header & {
+      .font-size(@headlines);
+    }
+
+    section & {
+      .font-size(@subtitles);
+    }
+    aside & {
+       .font-size(@medium);
+    }
+    article & {
+       .font-size(@xlarge);
+    }
+    footer & {
+       .font-size(@default-font-size);
+      font-weight: bolder;
+    }
+  }
+
+}
+
+.fontsettings(){
+  line-height: @line-height;
+  margin-bottom: @margins;
+}
+
+.scale-base-fonts(@value:40,@headline:@headlines,@title:@titles,@subtitle:@subtitles,@xxl:@xxlarge,@xl:@xlarge,@_large:@large,@_medium:@medium,@_small:@small,@_tiny:@tiny,@_h1:@h1,@_h2:@h2,@_h3:@h3) {
+  //set font sizes
+  @headlines: @headline * @value/100;
+  @titles: @title * @value/100;
+  @subtitles: @subtitle * @value/100;
+  @xxlarge: @xxl * @value/100;
+  @xlarge: @xl * @value/100;
+  @large: @_large * @value/100;
+  @medium: @_medium * @value/100;
+  @small: @_small * @value/100;
+  @tiny: @_tiny * @value/100;
+  @h1: @_h1 * @value/100;
+  @h2: @_h2 * @value/100;
+  @h3: @_h3 * @value/100;
+  //@h4: 2.6 * @value/100;
+}

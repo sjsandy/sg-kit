@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html data-ng-app="sgApp.controllers" data-ng-cloak>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>A Feature Packed Style Guide Toolkit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-styles.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+    <link rel="stylesheet" href="css/sg.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
+    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body class="home-off">
+<!--[if lt IE 8]>
+<p class="chromeframe bg-danger">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> or <a
+        href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your
+    experience.
+</p>
+<![endif]-->
+<div id="page" ng-controller="styleGuide">
+    <nav>
+        <div data-ng-include="top_nav"></div>
+    </nav>
+    <header>
+        <div class="container vtable ccode">
+            <div class="row table-cell">
+                <div>
+                    <h1>{{ settings.title }} <i class="fa fa-cog"></i></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="pitch">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>The Pitch</h1>
+
+                    <p>Pitch something here </p>
+
+                    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut enim hic ipsam odio odit
+                        repudiandae, rerum vero? Animi asperiores assumenda corporis dolores eaque eius, expedita in
+                        mollitia quos recusandae voluptatum!
+                    </blockquote>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="colors" class="sg max-width">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>SG.Kit! Color Guide</h1>
+
+                    <aside>
+                        <h1>Brand Colors</h1>
+                    </aside>
+                    <aside>
+                        <h1>Base Colors</h1>
+                        <div data-ng-include="c.color_guide"></div>
+                    </aside>
+
+                </div>
+                <div class="col-md-4">
+                    <aside>
+                        <h1>Color Infrormation</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad architecto corporis eveniet
+                            harum ipsum magni minus nam natus provident quis repudiandae sed veritatis? Alias
+                            exercitationem odio quis repellendus sed velit, voluptates! Commodi earum hic laborum ut
+                            voluptatibus. At blanditiis cum est expedita hic inventore, iusto magnam molestias pariatur
+                            soluta?</p>
+                    </aside>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+    <section id="features">
+        <div class="container-fluid ccode sg max-width">
+
+                <div class="col-md-8">
+                    <div data-ng-include="features"></div>
+                </div>
+            <div class="col-md-4">
+                <aside>
+                    <h1>Sidebar</h1>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="articles">
+        <div class="container-fluid sg max-width">
+            <div class="row">
+
+                <div class="col-md-8">
+                    <article class="post">
+                        <figure>
+                            <img src="img/car-watch.JPG" alt="images" class="img-responsive"/>
+
+                        </figure>
+                        <h1>Lorem ipsum dolor sit.</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur assumenda
+                            consequuntur debitis dolor ducimus facilis id iste magnam nam nemo, nihil nostrum odit optio
+                            perspiciatis sunt voluptas voluptatem. A assumenda doloremque facere in modi molestias
+                            mollitia nam nisi saepe vitae. Accusamus adipisci, commodi doloremque eaque explicabo, ipsa
+                            laboriosam, nesciunt nulla officiis porro praesentium rerum sequi soluta vel velit vero.</p>
+
+                        <p>Delectus facere fugit in ipsum laboriosam natus officiis perspiciatis quam sint soluta?
+                            Distinctio dolores earum ex magni necessitatibus obcaecati officiis omnis porro repudiandae!
+                            Adipisci asperiores autem culpa deserunt dignissimos distinctio dolor eos et fuga labore,
+                            nisi non nulla optio quam quisquam quod soluta. Assumenda delectus ea enim, iste itaque
+                            molestias, odit perspiciatis quod ratione reiciendis similique, sit veniam vitae
+                            voluptates.</p>
+
+                        <p>Aut consequatur consequuntur cupiditate deserunt dolorem eius ipsum iusto magnam, maiores
+                            perferendis porro quidem! Aperiam blanditiis dolorum ea expedita sequi. Assumenda, atque
+                            deleniti dolore earum fugiat laborum maiores neque! Adipisci architecto dicta dignissimos ea
+                            facere illum, inventore nemo neque nobis quis rerum tenetur, ullam unde! A adipisci, aliquid
+                            aut consequatur deleniti dolore magnam mollitia natus nulla perferendis, possimus sit
+                            vero?</p>
+
+                        <p>Quaerat, veniam, veritatis. Accusamus adipisci animi aut delectus est eveniet fugiat impedit
+                            in ipsum laboriosam laudantium molestias nam neque nesciunt nisi, nobis non nostrum
+                            obcaecati possimus quam quidem quo sed ut veniam voluptates voluptatibus voluptatum? Aliquam
+                            at cumque harum illo praesentium, quod! Cum fugit maiores nulla quibusdam suscipit! Amet
+                            ducimus error laudantium magnam nisi officia omnis quia quos sint vel?</p>
+
+                        <div ng-include="e.author"></div>
+
+                    </article>
+                </div>
+                <div class="col-md-4 sidebar">
+                    <aside>
+                        <h1>Sidebar</h1>
+                    </aside>
+                    <aside>
+                        <h1>Sidebar</h1>
+                    </aside>
+                    <aside>
+                        <h1>Sidebar</h1>
+                    </aside>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="container-fluid sg max-width">
+            <div class="row">
+                <div class="col-md-8">
+                 <div class="post" data-ng-repeat="title in sample_titles ">
+                        <div data-ng-include="c.post_preview"></div>
+                 </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sidebar">
+                        <aside>
+                            <h1>Free News Letter</h1>
+                            <p>Get the latest News &AMP; Updates via email .</p>
+                            <div ng-include="e.subscribe"></div>
+                            <small>Absolutely no spam. We Guarantee it!</small>
+                        </aside>
+                        <aside>
+                            <h1>Lorem ipsum dolor size size.</h1>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci, aperiam delectus
+                                dolore eaque eius eligendi eveniet expedita fuga iste itaque libero minima officiis quod
+                                reiciendis similique sint sit voluptate?</p>
+                        </aside>
+                        <aside>
+                            <h1>Eum perspiciatis, temporibus?</h1>
+
+                            <p>Architecto, dolores ducimus eius illo laborum repudiandae rerum unde. Aliquam aliquid
+                                aperiam architecto at, aut dolores ea eaque earum error excepturi ipsum maiores maxime
+                                quae rem repudiandae rerum saepe, vitae!</p>
+                        </aside>
+                        <aside>
+                            <h1>Impedit, libero, veritatis?</h1>
+
+                            <p>Commodi culpa dolore, expedita impedit ipsa, iste minus nihil obcaecati odio quam, quod
+                                ratione repellendus soluta vitae voluptatum? Aperiam exercitationem magnam sint.
+                                Aspernatur dicta doloribus omnis reprehenderit sequi totam vitae!</p>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid sg max-width footer">
+            <!--<div ng-include="footer"></div>-->
+            <div ng-include="c.footer_copy"></div>
+        </div>
+    </footer>
+</div>
+<!--view source modal-->
+<div id="source-modal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Source Code</h4>
+            </div>
+            <div class="modal-body">
+                <pre></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!--go to top of page-->
+<div id="top-link">
+    <a href="#page"><i class="fa fa-chevron-circle-up"></i></a>
+</div>
+
+<!-- /container -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/vendor/angular/angular.min.js"></script>
+<script src="ng-app.js"></script>
+<!-- inject:js -->
+
+<script src="js/vendor/bootstrap.min.js"></script>
+<!-- endinject-->
+<script src="js/ccode.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/controllers.js"></script>
+
+
+<script>
+    var _gaq = [
+        ['_setAccount', 'UA-XXXXX-X'],
+        ['_trackPageview']
+    ];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+</script>
+</body>
+</html>

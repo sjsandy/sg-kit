@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html data-ng-app="sgApp.controllers" data-ng-cloak>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>A Feature Packed Style Guide Toolkit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-styles.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+    <link rel="stylesheet" href="css/sg.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
+    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body class="pages">
+<!--[if lt IE 8]>
+<p class="chromeframe bg-danger">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> or <a
+        href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your
+    experience.
+</p>
+<![endif]-->
+<div id="page" ng-controller="styleGuide">
+<nav>
+    <!--<div data-ng-include="top_nav"></div>-->
+    <div class="container">
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../index.html">Cover</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#features">Featured</a></li>
+                        <li><a href="#guide">Quickstart</a></li>
+                        <li><a href="#contribute">Contribute</a></li>
+                        <li><a href="./sg.html">Style Guide</a></li>
+                        <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
+                        <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">Action</a></li>-->
+                        <!--<li><a href="#">Another action</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li class="dropdown-header">Nav header</li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                        <!--<li><a href="#">One more separated link</a></li>-->
+                        <!--</ul>-->
+                        <!--</li>-->
+                    </ul>
+                    <form class="navbar-form navbar-right visible-lg">
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-value="" ng-model="slug" placeholder="Your page slug"/>
+                        </div>
+                        <!--<input type="text" placeholder="Email" class="form-control">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<input type="password" placeholder="Password" class="form-control">-->
+                        <!--</div>-->
+                        <!--<button type="submit" class="btn btn-success">Sign in</button>-->
+
+                    </form>
+                </div>
+                <!--/.navbar-collapse -->
+            </div>
+        </div>
+
+    </div>
+
+</nav>
+<header>
+    <div class="container vtable ccode">
+        <div class="row table-cell">
+            <div class="">
+                <h1>
+                    <i class="fa fa-cog"></i> {{ settings.title }}
+                </h1>
+                <!--<p class="lead">{{ settings.slug }}</p>-->
+            </div>
+        </div>
+    </div>
+
+</header>
+<section id="features">
+    <div class="container ccode">
+        <div class="row features view-code ng-scope">
+            <div class="col-md-4 col-sm-6 col-lg-3">
+                <aside>
+                    <h1>Lorem ipsum dolor!</h1>
+                </aside>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, unde!
+                </p>
+            </div>
+            <div class="col-md-4 col-sm-6 col-lg-3">
+                <aside>
+                    <h1>Lorem ipsum dolor!</h1>
+                </aside>
+                <p>
+                    Illo libero obcaecati quisquam ratione repudiandae, sed veritatis vero
+                    voluptatem?
+                </p>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-lg-3">
+                <aside>
+                    <h1>Lorem ipsum dolor.</h1>
+                    <p>
+                        Dicta dignissimos, dolor eius id maxime necessitatibus nesciunt tempore velit?
+                    </p>
+                </aside>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-lg-3">
+                <aside>
+                    <h1>Lorem ipsum dolor.</h1>
+                    <p>
+                        Eos exercitationem id inventore ipsa necessitatibus nesciunt perspiciatis quam
+                        repudiandae!
+                    </p>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="articles">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <article class="post">
+                    <figure>
+                        <img src="img/car-watch.JPG" alt="images" class="img-responsive"/>
+
+                    </figure>
+                    <h1>Lorem ipsum dolor sit.</h1>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur assumenda
+                        consequuntur debitis dolor ducimus facilis id iste magnam nam nemo, nihil nostrum odit optio
+                        perspiciatis sunt voluptas voluptatem. A assumenda doloremque facere in modi molestias
+                        mollitia nam nisi saepe vitae. Accusamus adipisci, commodi doloremque eaque explicabo, ipsa
+                        laboriosam, nesciunt nulla officiis porro praesentium rerum sequi soluta vel velit vero.</p>
+
+                    <p>Delectus facere fugit in ipsum laboriosam natus officiis perspiciatis quam sint soluta?
+                        Distinctio dolores earum ex magni necessitatibus obcaecati officiis omnis porro repudiandae!
+                        Adipisci asperiores autem culpa deserunt dignissimos distinctio dolor eos et fuga labore,
+                        nisi non nulla optio quam quisquam quod soluta. Assumenda delectus ea enim, iste itaque
+                        molestias, odit perspiciatis quod ratione reiciendis similique, sit veniam vitae
+                        voluptates.</p>
+
+                    <p>Aut consequatur consequuntur cupiditate deserunt dolorem eius ipsum iusto magnam, maiores
+                        perferendis porro quidem! Aperiam blanditiis dolorum ea expedita sequi. Assumenda, atque
+                        deleniti dolore earum fugiat laborum maiores neque! Adipisci architecto dicta dignissimos ea
+                        facere illum, inventore nemo neque nobis quis rerum tenetur, ullam unde! A adipisci, aliquid
+                        aut consequatur deleniti dolore magnam mollitia natus nulla perferendis, possimus sit
+                        vero?</p>
+
+                    <p>Quaerat, veniam, veritatis. Accusamus adipisci animi aut delectus est eveniet fugiat impedit
+                        in ipsum laboriosam laudantium molestias nam neque nesciunt nisi, nobis non nostrum
+                        obcaecati possimus quam quidem quo sed ut veniam voluptates voluptatibus voluptatum? Aliquam
+                        at cumque harum illo praesentium, quod! Cum fugit maiores nulla quibusdam suscipit! Amet
+                        ducimus error laudantium magnam nisi officia omnis quia quos sint vel?</p>
+
+                    <aside class="author">
+                        <div class="row">
+                            <div class="col-sm-2 col-md-1">
+                                <div class="avatar">
+
+                                </div>
+                            </div>
+                            <div class="col-sm-10 col-md-11">
+                                <p>Author: John Hancok</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam necessitatibus porro quibusdam
+                                    recusandae? Doloremque et minima quidem? Aliquam, animi assumenda corporis doloribus ducimus ea illo
+                                    natus nemo ullam ut.
+                                </p>
+                            </div>
+                        </div>
+                    </aside>
+
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="post ng-scope" data-ng-repeat="title in sample_titles ">
+                    <!-- ngInclude: c.post_preview --><div data-ng-include="c.post_preview" class="ng-scope"><article class="ng-scope">
+                    <h1 class="ng-binding">A Sample Article...</h1>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi autem beatae
+                        consectetur delectus dolores eos excepturi expedita explicabo facere iure laudantium
+                        maxime mollitia nulla pariatur quidem ratione recusandae rem repellat repudiandae sequi,
+                        sit velit veritatis voluptatem voluptatum? Consectetur ea facere illum in molestiae nam
+                        nisi porro provident quaerat ratione rerum sed suscipit, totam velit vitae. Ad excepturi
+                        tempore voluptatum. <span class="read-more"><a href="#">Full Story <i class="fa fa-angle-double-right"></i></a></span></p>
+                    <!-- ngInclude: c.post_meta --><div data-ng-include="c.post_meta" class="ng-scope"><aside class="post-meta ng-scope">
+                    <ul class="list-inline">
+                        <li><i class="fa fa-angle-double-right"></i> Date: </li>
+                        <li><i class="fa fa-angle-double-right"></i> Tags: </li>
+                        <li><i class="fa fa-angle-double-right"></i> Comments: </li>
+                    </ul>
+                </aside></div>
+
+                </article></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <aside>
+                        <h1>Free News Letter</h1>
+                        <p>Get the latest News &AMP; Updates via email .</p>
+                        <!--<div ng-include="e.subscribe"></div>-->
+                        <form role="form" action="" class="ng-scope ng-pristine ng-valid">
+                            <div class="input-group">
+                                <input type="text" placeholder="Your email address" class="form-control">
+    <span class="input-group-btn">
+    <button class="btn btn-default">
+        Subscribe!
+    </button>
+    </span>
+                            </div>
+                        </form>
+                        <small>Absolutely no spam. We Guarantee it!</small>
+                    </aside>
+                    <aside>
+                        <h1>Lorem ipsum dolor size size.</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci, aperiam delectus
+                            dolore eaque eius eligendi eveniet expedita fuga iste itaque libero minima officiis quod
+                            reiciendis similique sint sit voluptate?</p>
+                    </aside>
+                    <aside>
+                        <h1>Eum perspiciatis, temporibus?</h1>
+
+                        <p>Architecto, dolores ducimus eius illo laborum repudiandae rerum unde. Aliquam aliquid
+                            aperiam architecto at, aut dolores ea eaque earum error excepturi ipsum maiores maxime
+                            quae rem repudiandae rerum saepe, vitae!</p>
+                    </aside>
+                    <aside>
+                        <h1>Impedit, libero, veritatis?</h1>
+
+                        <p>Commodi culpa dolore, expedita impedit ipsa, iste minus nihil obcaecati odio quam, quod
+                            ratione repellendus soluta vitae voluptatum? Aperiam exercitationem magnam sint.
+                            Aspernatur dicta doloribus omnis reprehenderit sequi totam vitae!</p>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+<footer>
+    <div class="container footer">
+        <div ng-include="c.footer_copy" class="ng-scope"><div class="row copy-info ng-scope">
+            <div class="col-md-12">
+
+                <p class="ng-binding">© SG.Kit 2013 <!-- ngInclude: e.social --><span class="pull-right ng-scope">
+                        <ul class="social list-inline ng-scope">
+                            <li><i class="fa fa-twitter-square"></i></li>
+                            <li><i class="fa fa-facebook-square"></i></li>
+                            <li><i class="fa fa-google-plus-square"></i></li>
+                            <li><i class="fa fa-rss-square"></i></li>
+                        </ul>
+                    </span>
+                </p>
+            </div>
+        </div></div>
+        <!--<div ng-include="c.footer_copy"></div>-->
+    </div>
+</footer>
+</div>
+<!--view source modal-->
+<div id="source-modal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Source Code</h4>
+            </div>
+            <div class="modal-body">
+                <pre></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!--go to top of page-->
+<div id="top-link">
+    <a href="#page"><i class="fa fa-chevron-circle-up"></i></a>
+</div>
+
+<!-- /container -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/vendor/angular/angular.min.js"></script>
+<script src="ng-app.js"></script>
+<!-- inject:js -->
+
+<script src="js/vendor/bootstrap.min.js"></script>
+<!-- endinject-->
+<script src="js/ccode.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/controllers.js"></script>
+
+
+<script>
+    var _gaq = [
+        ['_setAccount', 'UA-XXXXX-X'],
+        ['_trackPageview']
+    ];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+</script>
+</body>
+</html>
