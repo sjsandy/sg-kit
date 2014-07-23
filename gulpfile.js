@@ -240,7 +240,7 @@ gulp.task('gulp:layout', function(){
         .pipe(prompt.prompt({
             type: 'input',
             name: 'layout',
-            message: 'Enter the layout folder name'
+            message: 'Enter the layout folders name'
 
         }, function(res){
             layout_dir = res.layout;
