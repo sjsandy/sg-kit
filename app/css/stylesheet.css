@@ -13,7 +13,7 @@ body {
 }
 #page {
   color: #404040;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 h1,
 h2,
@@ -44,7 +44,7 @@ header,
 main,
 section,
 footer {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 figure {
   margin-bottom: 10px;
@@ -65,8 +65,8 @@ header {
   height: 250px;
   min-height: 250px;
   text-align: center;
-  background-color: #191919;
-  color: #e6e6e6;
+  background-color: #404040;
+  color: #f2f2f2;
   padding: 0;
 }
 .home header {
@@ -80,7 +80,7 @@ header h1 {
   transition: all 0.5s ease;
 }
 header h1:hover {
-  color: #ff851b;
+  color: #222222;
 }
 header .vtable {
   display: table;
@@ -159,7 +159,7 @@ article .author .avatar {
   padding: 10px;
 }
 #top-link a {
-  color: #e6e6e6;
+  color: #f2f2f2;
 }
 .btn {
   -webkit-transition: all 0.3s ease;
