@@ -65,8 +65,8 @@ header {
   height: 250px;
   min-height: 250px;
   text-align: center;
-  background-color: #404040;
-  color: #f2f2f2;
+  background-color: #333333;
+  color: #fcfcfc;
   padding: 0;
 }
 .home header {
@@ -159,7 +159,7 @@ article .author .avatar {
   padding: 10px;
 }
 #top-link a {
-  color: #f2f2f2;
+  color: #fcfcfc;
 }
 .btn {
   -webkit-transition: all 0.3s ease;
