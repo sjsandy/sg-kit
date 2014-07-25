@@ -22,6 +22,7 @@ var open = require('gulp-open');
 var notify = require('gulp-notify');
 var sync = require('browser-sync');
 var prompt = require('gulp-prompt');
+var newer = require('gulp-newer');
 
 /*
  install gulp and dependencies the easy way
@@ -252,10 +253,12 @@ gulp.task('gulp:layout', function(){
 });
 
 gulp.task('create:layout',['gulp:layout'], function(){
+    var l_dir = 'layouts/' + layout_dir;
     gulp.src(buildPath + '**/*.*')
-        .pipe(gulp.dest('layouts/' + layout_dir))
+        .pipe(newer(l_dir))
+        .pipe(gulp.dest(l_dir))
         .pipe(print())
-        //.pipe(notify('Your new layout,' + layout_dir + ' has been created'));
+        .pipe(prompt.confirm('Your new layout,' + layout_dir + ' has been created'));
 });
 
 
