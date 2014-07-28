@@ -1,8 +1,8 @@
 // style guide
 @import "../../bower_components/lesshat/build/lesshat-prefixed";
-@import "less/mixins";
-@import "less/style-guide/vtable";
 @import "less/style-guide/colors";
+@import "less/mixins";
+
 
 .sg {
 
@@ -12,14 +12,15 @@
     margin-right: auto;
   }
 
-  &.header, header& {
-    background-color: @background-color;
-  }
+//
+//  &.header, header& {
+//    background-color: @background-color;
+//  }
 
   &.vtable {
     /* vertically align div content */
     .sg-vtable;
-    .vtable();
+//    .vtable();
 
   }
   /* sg colors */
@@ -35,5 +36,12 @@
   .color-swatch > & {
      margin-bottom: 20px;
   }
+
+  &.text {
+    &.shadow {
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    }
+  }
+
 
 }

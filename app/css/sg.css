@@ -9,20 +9,11 @@ use full theme mixins
   margin-left: auto;
   margin-right: auto;
 }
-.sg.header,
-header.sg {
-  background-color: #ffffff;
-}
 .sg.vtable {
   /* vertically align div content */
   display: table;
   height: inherit !important;
   width: 100% !important;
-}
-.sg.vtable .table-cell {
-  display: table-cell;
-  width: 100%;
-  vertical-align: middle;
 }
 .sg.vtable .table-cell {
   display: table-cell;
@@ -167,4 +158,7 @@ header.sg {
 }
 .color-swatch > .sg {
   margin-bottom: 20px;
+}
+.sg.text.shadow {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
