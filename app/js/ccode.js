@@ -1,10 +1,3 @@
-/**
- * Created by studio-mac on 6/18/14.
- */
-/**
- * Created by shawnsandy on 6/18/14
- *
- */
 
 (function(){
 
@@ -39,7 +32,7 @@
         });
 
         $(element).parent().tooltip({
-                title: "ClickView or Copy Code",
+                title: "Click to View or Copy Code",
                 placement : "bottom"
             }
         );
