@@ -32,10 +32,17 @@
             } else {
                 $("#source-modal pre").text(html);
             }
+
             $("#source-modal").modal();
-            console.log('clicked');
+            //console.log('clicked');
 
         });
+
+        $(element).parent().tooltip({
+                title: "ClickView or Copy Code",
+                placement : "bottom"
+            }
+        );
 
     }
 
