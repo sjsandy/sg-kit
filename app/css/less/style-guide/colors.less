@@ -1,13 +1,52 @@
 //style guide colors
 @import "color-variables";
+//@import "../mixins";
 //set your  base colors
 @background-color: #FFFFFF;
 @font-color: #404040;
 
-
-
 .sg-colors() {
 
+  &.gray-darker {
+    .color-swatch(@gray-darker);
+  }
+  &.gray-dark {
+    .color-swatch(@gray-dark);
+  }
+  &.gray {
+    .color-swatch(@gray);
+  }
+  &.gray-light {
+    .color-swatch(@gray-light);
+  }
+  &.gray-lighter {
+    .color-swatch(@gray-lighter);
+  }
+
+ &.brand {
+   .color-swatch();
+ }
+
+
+  &.brand-primary {
+    .color-swatch(@brand-primary);
+  }
+
+  &.brand-sucess {
+    .color-swatch(@brand-success);
+  }
+
+  &.brand-info {
+    .color-swatch(@brand-info);
+  }
+
+  &.brand-warning {
+    .color-swatch(@brand-warning);
+  }
+
+  &.brand-danger {
+    .color-swatch(@brand-danger);
+  }
 
   &.white {
     .color-swatch(#fff);

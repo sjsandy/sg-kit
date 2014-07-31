@@ -1,10 +1,3 @@
-/**
- * Created by studio-mac on 6/18/14.
- */
-/**
- * Created by shawnsandy on 6/18/14
- *
- */
 
 (function(){
 
@@ -32,10 +25,17 @@
             } else {
                 $("#source-modal pre").text(html);
             }
+
             $("#source-modal").modal();
-            console.log('clicked');
+            //console.log('clicked');
 
         });
+
+        $(element).parent().tooltip({
+                title: "Click to View or Copy Code",
+                placement : "bottom"
+            }
+        );
 
     }
 

@@ -9,10 +9,6 @@ use full theme mixins
   margin-left: auto;
   margin-right: auto;
 }
-.sg.header,
-header.sg {
-  background-color: #ffffff;
-}
 .sg.vtable {
   /* vertically align div content */
   display: table;
@@ -29,10 +25,71 @@ header.sg {
   width: 100%;
   vertical-align: middle;
 }
-.sg.vtable .table-cell {
-  display: table-cell;
-  width: 100%;
-  vertical-align: middle;
+.sg.gray-darker.background {
+  background-color: #222222;
+}
+.sg.gray-darker.color {
+  color: #222222;
+}
+.sg.gray-dark.background {
+  background-color: #333333;
+}
+.sg.gray-dark.color {
+  color: #333333;
+}
+.sg.gray.background {
+  background-color: #aaaaaa;
+}
+.sg.gray.color {
+  color: #aaaaaa;
+}
+.sg.gray-light.background {
+  background-color: #999999;
+}
+.sg.gray-light.color {
+  color: #999999;
+}
+.sg.gray-lighter.background {
+  background-color: #eeeeee;
+}
+.sg.gray-lighter.color {
+  color: #eeeeee;
+}
+.sg.brand.background {
+  background-color: #ffffff;
+}
+.sg.brand.color {
+  color: #ffffff;
+}
+.sg.brand-primary.background {
+  background-color: #428bca;
+}
+.sg.brand-primary.color {
+  color: #428bca;
+}
+.sg.brand-sucess.background {
+  background-color: #5cb85c;
+}
+.sg.brand-sucess.color {
+  color: #5cb85c;
+}
+.sg.brand-info.background {
+  background-color: #5bc0de;
+}
+.sg.brand-info.color {
+  color: #5bc0de;
+}
+.sg.brand-warning.background {
+  background-color: #f0ad4e;
+}
+.sg.brand-warning.color {
+  color: #f0ad4e;
+}
+.sg.brand-danger.background {
+  background-color: #d9534f;
+}
+.sg.brand-danger.color {
+  color: #d9534f;
 }
 .sg.white.background {
   background-color: #ffffff;
@@ -167,4 +224,7 @@ header.sg {
 }
 .color-swatch > .sg {
   margin-bottom: 20px;
+}
+.sg.text.shadow {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }

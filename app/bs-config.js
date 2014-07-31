@@ -10,13 +10,16 @@
  | There are more options than you see here, these are just the ones that are
  | set internally. See the website for more info.
  |
+ | browser-sync start --config bs-config.js
  |
  */
 module.exports = {
-    "files": false,
-    "server": './',
+    "files": ["**/*.css", "**/*.html", "**/*.js"],
+    "server": {
+        baseDir: "./"
+    },
     "proxy": false,
-    "port": 3000,
+    "port": 3080,
     "ghostMode": {
         "clicks": true,
         "scroll": true,
