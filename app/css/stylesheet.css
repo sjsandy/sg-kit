@@ -2,6 +2,7 @@
    theme styles
    ========================================================================== */
 /* navbars */
+/* navbars */
 /* mixins
 use full theme mixins
 */
@@ -66,8 +67,8 @@ header {
   height: 250px;
   min-height: 250px;
   text-align: center;
-  background-color: #333333;
-  color: #fcfcfc;
+  background-color: #fafafa;
+  color: #808080;
   padding: 0;
 }
 .home header {
@@ -160,7 +161,7 @@ article .author .avatar {
   padding: 10px;
 }
 #top-link a {
-  color: #fcfcfc;
+  color: #808080;
 }
 .btn {
   -webkit-transition: all 0.3s ease;
