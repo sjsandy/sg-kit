@@ -1,6 +1,8 @@
 /* ==========================================================================
    theme styles
    ========================================================================== */
+/* navbars */
+/* navbars */
 /* mixins
 use full theme mixins
 */
@@ -12,8 +14,8 @@ body {
   -webkit-font-smoothing: antialiased !important;
 }
 #page {
-  color: #808080;
-  padding-top: 100px;
+  color: #404040;
+  padding-top: 80px;
 }
 h1,
 h2,
@@ -21,20 +23,30 @@ h3,
 h4,
 h5 {
   font-family: 'OpenSansSemibold';
+  line-height: 1.5;
+}
+.sidebar h1,
+.sidebar h2,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5 {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 p {
   font-size: 16px;
   font-size: 1.6rem;
   -webkit-box-pack: end;
   -moz-box-pack: end;
-  -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 header,
+main,
 section,
 footer {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 figure {
   margin-bottom: 10px;
@@ -43,7 +55,7 @@ figure {
 .navbar-toggle .fa {
   font-size: 16px;
 }
-.ccode:hover {
+.ccode {
   cursor: pointer;
 }
 /* --- forms --- */
@@ -55,8 +67,8 @@ header {
   height: 250px;
   min-height: 250px;
   text-align: center;
-  background-color: #191919;
-  color: #e6e6e6;
+  background-color: #fafafa;
+  color: #808080;
   padding: 0;
 }
 .home header {
@@ -70,7 +82,7 @@ header h1 {
   transition: all 0.5s ease;
 }
 header h1:hover {
-  color: #333333;
+  color: #222222;
 }
 header .vtable {
   display: table;
@@ -103,22 +115,22 @@ footer .footer .social i {
   font-size: 32px;
 }
 /* --- content --- */
-#content .post .post-meta {
+main .post .post-meta {
   font-size: 14px;
   font-size: 1.4rem;
   border-bottom: 1px solid #f1f1f1;
 }
-#content .post .read-more {
+main .post .read-more {
   display: block;
   padding: 10px;
   text-align: right;
   font-size: 14px;
   font-size: 1.4rem;
 }
-#content .sidebar ul {
+main .sidebar ul {
   padding-left: 0;
 }
-#content .sidebar ul li {
+main .sidebar ul li {
   list-style: none;
 }
 article .author {
@@ -133,6 +145,12 @@ article .author p {
   font-size: 14px;
   font-size: 1.4rem;
 }
+article .author .avatar {
+  min-height: 80px;
+  min-width: 80px;
+  max-width: 80px;
+  background-color: #222222;
+}
 /* --- page elements --- */
 #top-link {
   position: fixed;
@@ -143,7 +161,7 @@ article .author p {
   padding: 10px;
 }
 #top-link a {
-  color: #e6e6e6;
+  color: #808080;
 }
 .btn {
   -webkit-transition: all 0.3s ease;
@@ -203,6 +221,14 @@ h3 {
   font-size: 31px;
   font-size: 3.1rem;
 }
+header h1 {
+  font-size: 101px;
+  font-size: 10.1rem;
+}
+section h1 {
+  font-size: 68px;
+  font-size: 6.8rem;
+}
 aside h1 {
   font-size: 26px;
   font-size: 2.6rem;
@@ -216,3 +242,4 @@ footer h1 {
   font-size: 1.6rem;
   font-weight: bolder;
 }
+/* --- style guide --- */

@@ -3,3 +3,5 @@ desktop.ini
 src/images/white.png
 bower_components/
 deploy/
+app/sg-kit.sublime-project
+app/sg-kit.sublime-workspace

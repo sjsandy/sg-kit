@@ -1,72 +1,112 @@
 //style guide colors
-
+@import "color-variables";
+//@import "../mixins";
 //set your  base colors
 @background-color: #FFFFFF;
 @font-color: #404040;
 
-
-//simple color list
-@c1: #f1f1f1;
-@c2: #f1f1f1;
-@c3: #f1f1f1;
-@c4: #f1f1f1;
-@c5: #f1f1f1;
-@c6: #f1f1f1;
 .sg-colors() {
 
+  &.gray-darker {
+    .color-swatch(@gray-darker);
+  }
+  &.gray-dark {
+    .color-swatch(@gray-dark);
+  }
+  &.gray {
+    .color-swatch(@gray);
+  }
+  &.gray-light {
+    .color-swatch(@gray-light);
+  }
+  &.gray-lighter {
+    .color-swatch(@gray-lighter);
+  }
 
-    &.background {
+ &.brand {
+   .color-swatch();
+ }
 
-      background-color: @background-color;
 
-      &.color {
+  &.brand-primary {
+    .color-swatch(@brand-primary);
+  }
 
-        &-c1{
-          background-color: @c1;
-        }
-        &-c2{
-          background-color: @c2;
-        }
-        &-c3{
-          background-color: @c3;
-        }
-        &-c4{
-          background-color: @c4;
-        }
-        &-c5{
-          background-color: @c5;
-        }
-        &-c6{
-          background-color: @c6;
-        }
+  &.brand-sucess {
+    .color-swatch(@brand-success);
+  }
 
-      }
+  &.brand-info {
+    .color-swatch(@brand-info);
+  }
 
-    }
+  &.brand-warning {
+    .color-swatch(@brand-warning);
+  }
 
-  .color {
+  &.brand-danger {
+    .color-swatch(@brand-danger);
+  }
 
-    color: @font-color;
-
-    &-c1{
-      color: @c1;
-    }
-    &-c2{
-      color: @c2;
-    }
-    &-c3{
-      color: @c3;
-    }
-    &-c4{
-      color: @c4;
-    }
-    &-c5{
-      color: @c5;
-    }
-    &-c6{
-      color: @c6;
-    }
-
+  &.white {
+    .color-swatch(#fff);
+  }
+  &.gray{
+    .color-swatch(#808080);
+  }
+  &.darkgray{
+    .color-swatch(#222222);
+  }
+  &.black {
+    .color-swatch(@black);
+  }
+  &.white-lilac {
+    .color-swatch(#e6e6e6);
+  }
+  &.anti-white-flash {
+    .color-swatch(#f1f1f1);
+  }
+  &.sliver {
+    .color-swatch(#c0c0c0);
+  }
+  &.yellow{
+    .color-swatch(@yellow);
+  }
+  &.navy {
+    .color-swatch(@navy);
+  }
+  &.blue{
+    .color-swatch(@blue);
+  }
+  &.lime-green{
+    .color-swatch(@lime-green);
+  }
+  &.red{
+    .color-swatch(@red);
+  }
+  &.aqua{
+    .color-swatch(@aqua);
+  }
+  &.fuchsia {
+    .color-swatch(@fuchsia);
+  }
+  &.purple {
+    .color-swatch(@purple);
+  }
+  &.teal {
+    .color-swatch(@teal);
+  }
+  &.olive {
+    .color-swatch(@olive);
+  }
+  &.orange {
+    .color-swatch(@purple);
+  }
+  &.lime {
+    .color-swatch(@lime);
+  }
+  &.maroon {
+    .color-swatch(@maroon);
   }
 
 

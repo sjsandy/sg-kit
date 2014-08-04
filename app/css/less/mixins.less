@@ -28,6 +28,7 @@ use full theme mixins
   .table-cell {
     .table-cell();
   }
+
 }
 
 //rgba color mixin
@@ -53,6 +54,21 @@ use full theme mixins
   font-size: floor(@px);
   @rem: round(@font-size,3);
   font-size: unit(@rem,rem);
+}
+
+
+.color-swatch(@color:#fff) {
+
+  & {
+    &.background {
+      background-color: @color;
+    }
+
+    &.color {
+      color: @color;
+    }
+
+  }
 }
 
 

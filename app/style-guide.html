@@ -47,12 +47,12 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="../index.html">Home</a></li>
                         <li><a href="#introduction">Introduction</a></li>
                         <li><a href="#features">Featured</a></li>
                         <li><a href="#guide">Quickstart</a></li>
                         <li><a href="#contribute">Contribute</a></li>
-                        <li><a href="./style-guide.html">Style Guide</a></li>
+                        <li><a href="./sg.html">Style Guide</a></li>
                         <!--<li class="dropdown">-->
                         <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
                         <!--<ul class="dropdown-menu">-->
@@ -67,9 +67,9 @@
                         <!--</li>-->
                     </ul>
                     <form class="navbar-form navbar-right visible-lg">
-                        <!--<div class="form-group">-->
-                            <!--<input type="text" class="form-control" ng-value="" ng-model="slug" placeholder="Your page slug"/>-->
-                        <!--</div>-->
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-value="" ng-model="slug" placeholder="Your page slug"/>
+                        </div>
                         <!--<input type="text" placeholder="Email" class="form-control">-->
                         <!--</div>-->
                         <!--<div class="form-group">-->
@@ -206,25 +206,46 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
+                <div>
+                    <article class="ccode">
+
+                        <h1>Article Preview List</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi autem beatae
+                            consectetur delectus dolores eos excepturi expedita explicabo facere iure laudantium
+                            maxime mollitia nulla pariatur quidem ratione recusandae rem repellat repudiandae sequi,
+                            sit velit veritatis voluptatem voluptatum? Consectetur ea facere illum in molestiae nam
+                            nisi porro provident quaerat ratione rerum sed suscipit, totam velit vitae. Ad excepturi
+                            tempore voluptatum. <span class="read-more"><a href="#">Full Story <i class="fa fa-angle-double-right"></i></a></span></p>
+                        <aside class="post-meta">
+                            <ul class="list-inline">
+                                <li><i class="fa fa-angle-double-right"></i> Date: </li>
+                                <li><i class="fa fa-angle-double-right"></i> Tags: </li>
+                                <li><i class="fa fa-angle-double-right"></i> Comments: </li>
+                            </ul>
+                        </aside>
+
+                    </article>
+                </div>
+
                 <div class="post ng-scope" data-ng-repeat="title in sample_titles ">
-                    <!-- ngInclude: c.post_preview --><div data-ng-include="c.post_preview" class="ng-scope"><article class="ng-scope">
-                    <h1 class="ng-binding">A Sample Article...</h1>
+                    <!-- ngInclude: c.post_preview -->
+                    <article>
+                            <h1>{{ title }}</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi autem beatae
+                                consectetur delectus dolores eos excepturi expedita explicabo facere iure laudantium
+                                maxime mollitia nulla pariatur quidem ratione recusandae rem repellat repudiandae sequi,
+                                sit velit veritatis voluptatem voluptatum? Consectetur ea facere illum in molestiae nam
+                                nisi porro provident quaerat ratione rerum sed suscipit, totam velit vitae. Ad excepturi
+                                tempore voluptatum. <span class="read-more"><a href="#">Full Story <i class="fa fa-angle-double-right"></i></a></span></p>
+                            <aside class="post-meta">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-angle-double-right"></i> Date: </li>
+                                    <li><i class="fa fa-angle-double-right"></i> Tags: </li>
+                                    <li><i class="fa fa-angle-double-right"></i> Comments: </li>
+                                </ul>
+                            </aside>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi autem beatae
-                        consectetur delectus dolores eos excepturi expedita explicabo facere iure laudantium
-                        maxime mollitia nulla pariatur quidem ratione recusandae rem repellat repudiandae sequi,
-                        sit velit veritatis voluptatem voluptatum? Consectetur ea facere illum in molestiae nam
-                        nisi porro provident quaerat ratione rerum sed suscipit, totam velit vitae. Ad excepturi
-                        tempore voluptatum. <span class="read-more"><a href="#">Full Story <i class="fa fa-angle-double-right"></i></a></span></p>
-                    <!-- ngInclude: c.post_meta --><div data-ng-include="c.post_meta" class="ng-scope"><aside class="post-meta ng-scope">
-                    <ul class="list-inline">
-                        <li><i class="fa fa-angle-double-right"></i> Date: </li>
-                        <li><i class="fa fa-angle-double-right"></i> Tags: </li>
-                        <li><i class="fa fa-angle-double-right"></i> Comments: </li>
-                    </ul>
-                </aside></div>
-
-                </article></div>
+                    </article>
                 </div>
             </div>
             <div class="col-md-4">
@@ -267,7 +288,7 @@
                             Aspernatur dicta doloribus omnis reprehenderit sequi totam vitae!</p>
                     </aside>
                 </div>
-            </div>
+        </div>
         </div>
 
     </div>
@@ -326,15 +347,15 @@
 
 
 <script>
-//    var _gaq = [
-//        ['_setAccount', 'UA-XXXXX-X'],
-//        ['_trackPageview']
-//    ];
-//    (function (d, t) {
-//        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-//        g.src = '//www.google-analytics.com/ga.js';
-//        s.parentNode.insertBefore(g, s)
-//    }(document, 'script'));
+    var _gaq = [
+        ['_setAccount', 'UA-XXXXX-X'],
+        ['_trackPageview']
+    ];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
 </script>
 </body>
 </html>

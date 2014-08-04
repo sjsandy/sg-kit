@@ -1,159 +1,51 @@
+
 /*
  |--------------------------------------------------------------------------
  | Browser-sync config file
  |--------------------------------------------------------------------------
  |
- | Please report any issues you encounter:
- |  https://github.com/shakyShane/browser-sync/issues
- |
  | For up-to-date information about the options:
- |  https://github.com/shakyShane/browser-sync/wiki/Working-with-a-Config-File
+ |   http://www.browsersync.io/docs/options/
+ |
+ | There are more options than you see here, these are just the ones that are
+ | set internally. See the website for more info.
+ |
+ | browser-sync start --config bs-config.js
  |
  */
 module.exports = {
-
-    /*
-     |--------------------------------------------------------------------------
-     | Files to watch
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-files
-     */
-    files: ["./css/*.css", "./*.html", "./views/**/*.html", "./js/**/*.js"],
-
-    /*
-     |--------------------------------------------------------------------------
-     | Directories or files to exclude
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-exclude
-     */
-    exclude: false,
-
-    /*
-     |--------------------------------------------------------------------------
-     | Server
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-server
-     */
-    server: {
-baseDir: "./",
-    index: "index.html"
+    "files": ["**/*.css", "**/*.html", "**/*.js"],
+    "server": {
+        baseDir: "./"
     },
-
-    /*
-     |--------------------------------------------------------------------------
-     | Proxy
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-proxy
-     */
-    proxy: false,
-
-    /*
-     |--------------------------------------------------------------------------
-     | Start path
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-startPath
-     */
-    startPath: null,
-
-    /*
-     |--------------------------------------------------------------------------
-     | Ghost Mode
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-ghostmode
-     */
-    ghostMode: {
-        clicks: true,
-        links: true,
-        forms: true,
-        scroll: true
+    "proxy": false,
+    "port": 3080,
+    "ghostMode": {
+        "clicks": true,
+        "scroll": true,
+        "location": false,
+        "forms": {
+            "submit": true,
+            "inputs": true,
+            "toggles": true
+        }
     },
-
-    /*
-     |--------------------------------------------------------------------------
-     | Open (true|false)
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-open
-     */
-    open: true,
-
-    /*
-     |--------------------------------------------------------------------------
-     | xip (true|false)
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-xip
-     */
-    xip: false,
-
-    /*
-     |--------------------------------------------------------------------------
-     | Timestamps (true|false)
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-timestamps
-     */
-    timestamps: true,
-
-    /*
-     |--------------------------------------------------------------------------
-     | File Timeout (milliseconds)
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-filetimeout
-     */
-    fileTimeout: 1000,
-
-    /*
-     |--------------------------------------------------------------------------
-     | Inject Changes
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-injectchanges
-     */
-    injectChanges: true,
-
-    /*
-     |--------------------------------------------------------------------------
-     | Scroll Proportionally (true|false)
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-scrollproportionally
-     */
-    scrollProportionally: true,
-
-    /*
-     |--------------------------------------------------------------------------
-     | Scroll Throttle (milliseconds)
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-scrollthrottle
-     */
-    scrollThrottle: 0,
-
-    /*
-     |--------------------------------------------------------------------------
-     | Notify (true|false)
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-notify
-     */
-    notify: true,
-
-    /*
-     |--------------------------------------------------------------------------
-     | Host
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-host
-     */
-    host: null,
-
-    /*
-     |--------------------------------------------------------------------------
-     | Excluded File Types
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-excludedfiletypes
-     */
-    excludedFileTypes: [],
-
-    /*
-     |--------------------------------------------------------------------------
-     | Reload Delay
-     |--------------------------------------------------------------------------
-     | https://github.com/shakyShane/browser-sync/wiki/options#wiki-reloadDelay
-     */
-    reloadDelay: 0
-
-};
+    "logLevel": "info",
+    "open": true,
+    "browser": "default",
+    "xip": false,
+    "hostnameSuffix": false,
+    "notify": true,
+    "scrollProportionally": true,
+    "scrollThrottle": 0,
+    "reloadDelay": 0,
+    "injectChanges": true,
+    "startPath": null,
+    "minify": true,
+    "logConnections": false,
+    "logFileChanges": true,
+    "host": null,
+    "codeSync": true,
+    "timestamps": true,
+    "debugInfo": true
+}
