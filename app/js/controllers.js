@@ -37,15 +37,17 @@ sgApp.controller('styleGuide', ['$scope', function ($scope) {
 
 }]);
 
-sgApp.controller('settingCtrl', ['$scope', '$http', function($scope, $http){
+sgApp.controller('settingCtrl', ['$scope', '$http', function ($scope, $http) {
     //$scope.something ="something here";
-        $http.get('data/sg.json').
-            success(function(data, status, headers, config){
+    $http.get('data/sg.json').
+        success(function (data, status, headers, config) {
             $scope.data = data.config;
-            $scope.var = $scope.data.settings ;
+            $scope.settings = $scope.data.settings;
+            $scope.e = $scope.data.e;
+            $scope.c = $scope.data.c;
 
-        }).error(function(data, status, headers, config){
-            $scope.error = "error loading http data ";
-                console.log('wow http error');
+        }).error(function (data, status, headers, config) {
+            // $scope.error = "error loading http data ";
+            console.log('ERROR connecting to http');
         });
 }]);

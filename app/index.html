@@ -87,9 +87,9 @@
 
 </nav>
 <header>
-    <div class="container vtable ccode">
-        <div class="row table-cell">
-            <div class="">
+    <div class="container sg vtable">
+        <div class="row table-cell ccode">
+            <div class="" ng-controller="settingCtrl">
                 <h1>
                     <i class="fa fa-cog"></i><br>
                     {{ settings.title }}
@@ -98,6 +98,7 @@
             </div>
         </div>
     </div>
+
 
 </header>
 <section id="features">
@@ -294,18 +295,6 @@
 </div>
 
 <!--data-->
-<div class="container sg vtable">
-    <div class="row table-cell ccode">
-        <div class="" ng-controller="settingCtrl">
-            <h1>
-                <i class="fa fa-cog"></i><br>
-                {{ data.cover }}
-            </h1>
-            <p class="lead">{{ var.slug }}</p>
-            <p>{{ error }}{{ something }}</p>
-        </div>
-    </div>
-</div>
 
 <!--view source modal-->
 <div id="source-modal" class="modal fade">
