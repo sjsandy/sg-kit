@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="sgApp.controllers" data-ng-cloak>
+<html data-ng-app="sgApp" data-ng-cloak>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>
@@ -87,9 +87,9 @@
 
 </nav>
 <header>
-    <div class="container vtable ccode">
-        <div class="row table-cell">
-            <div class="">
+    <div class="container sg vtable">
+        <div class="row table-cell ccode">
+            <div class="" ng-controller="settingCtrl">
                 <h1>
                     <i class="fa fa-cog"></i><br>
                     {{ settings.title }}
@@ -98,6 +98,7 @@
             </div>
         </div>
     </div>
+
 
 </header>
 <section id="features">
@@ -292,6 +293,9 @@
     </div>
 </footer>
 </div>
+
+<!--data-->
+
 <!--view source modal-->
 <div id="source-modal" class="modal fade">
     <div class="modal-dialog modal-lg">

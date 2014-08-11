@@ -253,6 +253,7 @@ gulp.task('gulp:layout', function(){
 
 gulp.task('create:layout',['gulp:layout'], function(){
     gulp.src(buildPath + '**/*.*')
+        .pipe(changed('layouts/' + layout_dir))
         .pipe(gulp.dest('layouts/' + layout_dir))
         .pipe(print())
         //.pipe(notify('Your new layout,' + layout_dir + ' has been created'));

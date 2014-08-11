@@ -2,9 +2,10 @@
 
 /* Controllers */
 
-var sgApp = angular.module('sgApp.controllers', []);
+var sgApp = angular.module('sgApp', []);
 
 sgApp.controller('styleGuide', ['$scope', function ($scope) {
+
 
     $scope.my_view = "views/view.html";
     $scope.cover = "views/cover.html";
@@ -29,12 +30,24 @@ sgApp.controller('styleGuide', ['$scope', function ($scope) {
         'color_guide': 'views/sg/color-guide.html',
         'register': ''
     }
-    $scope.settings = { // default settings
+    $scope.settings = {
         'title': 'SG.Kit',
         'slug': 'A Feature Packed Style Guide Toolkit!'
     };
 
 }]);
-sgApp.controller('MyCtrl2', ['$scope', function ($scope) {
 
+sgApp.controller('settingCtrl', ['$scope', '$http', function ($scope, $http) {
+    //$scope.something ="something here";
+    $http.get('data/sg.json').
+        success(function (data, status, headers, config) {
+            $scope.data = data.config;
+            $scope.settings = $scope.data.settings;
+            $scope.e = $scope.data.e;
+            $scope.c = $scope.data.c;
+
+        }).error(function (data, status, headers, config) {
+            // $scope.error = "error loading http data ";
+            console.log('ERROR connecting to http');
+        });
 }]);
