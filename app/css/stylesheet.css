@@ -15,7 +15,7 @@ body {
 }
 #page {
   color: #404040;
-  padding-top: 80px;
+  padding-top: 150px;
 }
 h1,
 h2,
@@ -46,7 +46,7 @@ header,
 main,
 section,
 footer {
-  padding-top: 80px;
+  padding-top: 150px;
 }
 figure {
   margin-bottom: 10px;
