@@ -1,30 +1,30 @@
 {
     "config" : {
-        "my_view": "views/view.html",
-        "cover": "views/cover.html",
-        "top_nav": "views/top-nav.html",
-        "features": "views/features.html",
-        "post": "views/post/preview.html",
-        "footer": "views/footer.html",
-        "comment": "views/footer.html",
+        "my_view": "partials/view.html",
+        "cover": "partials/cover.html",
+        "top_nav": "partials/top-nav.html",
+        "features": "partials/features.html",
+        "post": "partials/post/preview.html",
+        "footer": "partials/footer.html",
+        "comment": "partials/footer.html",
         "colors": [ "aqua", "blue", "navy", "teal", "olive", "lime", "yellow", "orange", "red", "uchsia", "purple", "maroon", "white", "sliver", "gray", "darkgray", "black"],
         "sample_titles": ["A Sample Article", "Another Sample Article", "One More Sample title", "Sample Article Number Four", "One More For the Sake of it"],
         "e": {
-            "social": "views/elements/social.html",
-            "author": "views/elements/author.html",
-            "swatch": "views/elements/color-swatch.html",
-            "subscribe": "views/elements/subscribe.html"
+            "social": "partials/elements/social.html",
+            "author": "partials/elements/author.html",
+            "swatch": "partials/elements/color-swatch.html",
+            "subscribe": "partials/elements/subscribe.html"
         },
         "c": {
-            "footer_copy": "views/footer/social_copy.html",
-            "post_preview": "views/post/preview.html",
-            "post_meta": "views/post/post-meta.html",
-            "post_preview_image": "views/post/preview-image.html",
-            "color_guide": "views/sg/color-guide.html",
+            "footer_copy": "partials/footer/social_copy.html",
+            "post_preview": "partials/post/preview.html",
+            "post_meta": "partials/post/post-meta.html",
+            "post_preview_image": "partials/post/preview-image.html",
+            "color_guide": "partials/sg/color-guide.html",
             "register": "code"
         },
         "settings": {
-            "title": "SG.Kit!",
+            "title": "SG.Kit!!",
             "slug": "A Feature Packed Style Guide Toolkit!"
         }
     }
