@@ -68,7 +68,7 @@ function getFolders(dir) {
 gulp.task('scripts', function () {
 
     var file_dir = 'js/';
-    gulp.src(srcDir + file_dir + '**/*.*',{ base: './app/js' })
+    gulp.src([ srcDir + file_dir + '**/*.*', srcDir + 'data/**/*.json'],{ base: './app/js' })
         .pipe(changed(buildPath + file_dir))
         .pipe(gulp.dest(buildPath + file_dir))
         .pipe(print());
