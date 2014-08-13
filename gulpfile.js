@@ -1,5 +1,7 @@
 /* require dependencies */
 
+require('./gulp');
+
 var fs = require('fs');
 var path = require('path');
 var es = require('event-stream');
@@ -259,9 +261,4 @@ gulp.task('create:layout',['gulp:layout'], function(){
         //.pipe(notify('Your new layout,' + layout_dir + ' has been created'));
 });
 
-
-/* run / write - test on your gulp file to see if it works */
-gulp.task('test', function(){
-
-});
 
