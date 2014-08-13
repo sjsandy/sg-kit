@@ -30,7 +30,7 @@
     experience.
 </p>
 <![endif]-->
-<div id="page" ng-controller="styleGuide">
+<div id="page" ng-controller="settingCtrl">
 <nav>
     <!--<div data-ng-include="top_nav"></div>-->
     <div class="container">
@@ -86,7 +86,7 @@
 <header>
     <div class="container sg vtable">
         <div class="row table-cell ccode">
-            <div class="" ng-controller="settingCtrl">
+            <div class="">
                 <h1>
                     <i class="fa fa-cog"></i><br>
                     {{ settings.title }}
@@ -204,7 +204,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <div class="post ng-scope" data-ng-repeat="title in sample_titles ">
+                <div class="post ng-scope" data-ng-repeat="title in data.sample_titles ">
                     <!-- ngInclude: c.post_preview --><div data-ng-include="c.post_preview" class="ng-scope"><article class="ng-scope">
                     <h1 class="ng-binding">A Sample Article...</h1>
 
