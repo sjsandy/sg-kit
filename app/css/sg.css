@@ -212,6 +212,7 @@ use full theme mixins
   color: #85144b;
 }
 .sg.swatch {
+  /* swatch attribuite */
   width: 100%;
   height: 100px;
   margin-bottom: 20px;
@@ -223,6 +224,7 @@ use full theme mixins
   background-clip: padding-box;
 }
 .color-swatch > .sg {
+  /* style-guide color swatch */
   margin-bottom: 20px;
 }
 .sg.text.shadow {
