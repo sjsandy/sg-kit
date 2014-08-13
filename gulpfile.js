@@ -1,5 +1,7 @@
 /* require dependencies */
 
+require('./gulp');
+
 var fs = require('fs');
 var path = require('path');
 var es = require('event-stream');
@@ -68,7 +70,7 @@ function getFolders(dir) {
 gulp.task('scripts', function () {
 
     var file_dir = 'js/';
-    gulp.src(srcDir + file_dir + '**/*.*',{ base: './app/js' })
+    gulp.src([ srcDir + file_dir + '**/*.*', srcDir + 'data/**/*.json'],{ base: './app/js' })
         .pipe(changed(buildPath + file_dir))
         .pipe(gulp.dest(buildPath + file_dir))
         .pipe(print());
@@ -259,9 +261,4 @@ gulp.task('create:layout',['gulp:layout'], function(){
         //.pipe(notify('Your new layout,' + layout_dir + ' has been created'));
 });
 
-
-/* run / write - test on your gulp file to see if it works */
-gulp.task('test', function(){
-
-});
 
