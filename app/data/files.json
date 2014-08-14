@@ -1,0 +1,16 @@
+[
+  "partials/cover.html",
+  "partials/features.html",
+  "partials/footer.html",
+  "partials/hello.html",
+  "partials/partial1.html",
+  "partials/partial2.html",
+  "partials/post-preview.html",
+  "partials/top-nav.html",
+  "home.html",
+  "index-async.html",
+  "index.html",
+  "pages.html",
+  "sg.html",
+  "style-guide.html"
+]
