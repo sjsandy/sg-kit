@@ -28,15 +28,15 @@ gulp.task('tojson', function (){
 })
 
 
-gulp.task('json_lint', function(){
+gulp.task('jsonlint', function(){
     gulp.src(jsonfile)
         .pipe(jsonlint())
         .pipe(jsonlint.report(jsonReport));
 });
 
-gulp.task('jsonlint', function(callback){
+gulp.task('jsonlist', function(callback){
     sequence(
         'tojson',
-        'json_lint'
+        'jsonlint'
     )
 });
