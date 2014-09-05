@@ -1,7 +1,8 @@
 // Shawn Sandy - created 09/04/2014
 
 @import "../../../bower_components/bootstrap/less/variables";
-@import "../../../bower_components/bootstrap/less/mixins";
+@import "../../../bower_components/bootstrap/less/bootstrap";
+//@import "../../../bower_components/bootstrap/less/grid";
 @import "theme-variables";
 
 
@@ -13,7 +14,7 @@
 
       .container-fixed();
 
-      &.contained {
+      &.contain {
 
         .container-fixed();
 
@@ -29,68 +30,40 @@
 
       }
 
-    }
 
-    .row, .block {
-      .make-row();
-    }
+  }
+
+
+
+}
+  .blocks {
+
+    .make-row();
+  }
+  .blog();
+
+}
+
+
+//article { @extend .col-lg-9; }
+
+.blog() {
+  .post {
+    .cols(8);
+
+  }
+  .sidebar {
+    .cols(4);
 
   }
 
 }
 
 .cols(@desktop, @tablet:12, @phone:12){
-  .make-xs-column(@phone);
+  // .make-xs-column(@phone);
   .make-sm-column(@tablet);
   .make-md-column(@desktop);
   .make-lg-column(@desktop);
 }
 
-.layout() {
-  .row, .block, footer  {
-    .post, .article {
-      .cols(12);
-    }
-
-    &.blog  {
-      .post {
-        .cols(8);
-      }
-      .sidebar {
-        .cols(4);
-      }
-    }
-
-    //.grids();
-
-  }
-}
-
-//bootstrap grids 3 Cols : .grid .triple
-.grids() {
-
-  .grid, .feature, .folio, aside {
-      //four cols
-      .cols(3,6);
-
-    //3 cols
-      &.triple {
-        .cols(4);
-      }
-
-    //3 cols
-      &.double {
-        .cols(6);
-      }
-    //6 cols
-      &.max {
-        .cols(2);
-      }
-
-    &.single {
-      .cols(12);
-    }
-
-  }
-}
 

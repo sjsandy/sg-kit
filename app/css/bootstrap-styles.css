@@ -5606,7 +5606,25 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+section.ui > div:before,
+section.ui > div:after,
+header.ui > div:before,
+header.ui > div:after,
+footer.ui > div:before,
+footer.ui > div:after,
+main.ui > div:before,
+main.ui > div:after,
+section.ui > div.contain:before,
+section.ui > div.contain:after,
+header.ui > div.contain:before,
+header.ui > div.contain:after,
+footer.ui > div.contain:before,
+footer.ui > div.contain:after,
+main.ui > div.contain:before,
+main.ui > div.contain:after,
+.ui .blocks:before,
+.ui .blocks:after {
   content: " ";
   display: table;
 }
@@ -5623,7 +5641,16 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+section.ui > div:after,
+header.ui > div:after,
+footer.ui > div:after,
+main.ui > div:after,
+section.ui > div.contain:after,
+header.ui > div.contain:after,
+footer.ui > div.contain:after,
+main.ui > div.contain:after,
+.ui .blocks:after {
   clear: both;
 }
 .center-block {
@@ -5774,3 +5801,98 @@ button.close {
 }
 /* boot starp */
 /* navbars */
+/* --- ui styles --- */
+section.ui > div,
+header.ui > div,
+footer.ui > div,
+main.ui > div {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+section.ui > div.contain,
+header.ui > div.contain,
+footer.ui > div.contain,
+main.ui > div.contain {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  section.ui > div.contain,
+  header.ui > div.contain,
+  footer.ui > div.contain,
+  main.ui > div.contain {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  section.ui > div.contain,
+  header.ui > div.contain,
+  footer.ui > div.contain,
+  main.ui > div.contain {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  section.ui > div.contain,
+  header.ui > div.contain,
+  footer.ui > div.contain,
+  main.ui > div.contain {
+    width: 1170px;
+  }
+}
+.ui .blocks {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.ui .post {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .ui .post {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .ui .post {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .ui .post {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+.ui .sidebar {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .ui .sidebar {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .ui .sidebar {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 1200px) {
+  .ui .sidebar {
+    float: left;
+    width: 33.33333333%;
+  }
+}
