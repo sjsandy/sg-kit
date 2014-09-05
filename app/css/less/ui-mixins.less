@@ -1,0 +1,36 @@
+// Shawn Sandy - created 09/04/2014
+
+@import "../../../bower_components/bootstrap/less/variables";
+@import "../../../bower_components/bootstrap/less/mixins";
+@import "theme-variables";
+
+
+.sections() {
+
+  section, header, footer, main  {
+
+    > div {
+
+      .container-fixed();
+
+      &.fixed {
+
+        @media (min-width: @screen-sm-min) {
+          width: @container-sm;
+        }
+        @media (min-width: @screen-md-min) {
+          width: @container-md;
+        }
+        @media (min-width: @screen-lg-min) {
+          width: @container-lg;
+        }
+      }
+
+
+    }
+
+  }
+
+}
+
+
