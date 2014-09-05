@@ -7,7 +7,7 @@
 
 .sections() {
 
-  section, header, footer, main  {
+  section&, header&, footer&, main&  {
 
     > div {
 
@@ -26,13 +26,71 @@
         @media (min-width: @screen-lg-min) {
           width: @container-lg;
         }
+
       }
 
+    }
 
+    .row, .block {
+      .make-row();
     }
 
   }
 
 }
 
+.cols(@desktop, @tablet:12, @phone:12){
+  .make-xs-column(@phone);
+  .make-sm-column(@tablet);
+  .make-md-column(@desktop);
+  .make-lg-column(@desktop);
+}
+
+.layout() {
+  .row, .block, footer  {
+    .post, .article {
+      .cols(12);
+    }
+
+    &.blog  {
+      .post {
+        .cols(8);
+      }
+      .sidebar {
+        .cols(4);
+      }
+    }
+
+    //.grids();
+
+  }
+}
+
+//bootstrap grids 3 Cols : .grid .triple
+.grids() {
+
+  .grid, .feature, .folio, aside {
+      //four cols
+      .cols(3,6);
+
+    //3 cols
+      &.triple {
+        .cols(4);
+      }
+
+    //3 cols
+      &.double {
+        .cols(6);
+      }
+    //6 cols
+      &.max {
+        .cols(2);
+      }
+
+    &.single {
+      .cols(12);
+    }
+
+  }
+}
 
