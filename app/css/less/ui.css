@@ -8,27 +8,36 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+.ui section > div.contained,
+.ui header > div.contained,
+.ui footer > div.contained,
+.ui main > div.contained {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 @media (min-width: 768px) {
-  .ui section > div.fixed,
-  .ui header > div.fixed,
-  .ui footer > div.fixed,
-  .ui main > div.fixed {
+  .ui section > div.contained,
+  .ui header > div.contained,
+  .ui footer > div.contained,
+  .ui main > div.contained {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .ui section > div.fixed,
-  .ui header > div.fixed,
-  .ui footer > div.fixed,
-  .ui main > div.fixed {
+  .ui section > div.contained,
+  .ui header > div.contained,
+  .ui footer > div.contained,
+  .ui main > div.contained {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .ui section > div.fixed,
-  .ui header > div.fixed,
-  .ui footer > div.fixed,
-  .ui main > div.fixed {
+  .ui section > div.contained,
+  .ui header > div.contained,
+  .ui footer > div.contained,
+  .ui main > div.contained {
     width: 1170px;
   }
 }
