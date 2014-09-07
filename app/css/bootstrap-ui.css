@@ -5624,7 +5624,55 @@ footer.bootui > div.contain:after,
 main.bootui > div.contain:before,
 main.bootui > div.contain:after,
 .bootui .blocks:before,
-.bootui .blocks:after {
+.bootui .blocks:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after,
+.bootui .column.width:before,
+.bootui .column.width:after,
+.bootui .cw:before,
+.bootui .cw:after {
   content: " ";
   display: table;
 }
@@ -5650,7 +5698,31 @@ section.bootui > div.contain:after,
 header.bootui > div.contain:after,
 footer.bootui > div.contain:after,
 main.bootui > div.contain:after,
-.bootui .blocks:after {
+.bootui .blocks:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after,
+.bootui .column.width:after,
+.bootui .cw:after {
   clear: both;
 }
 .center-block {
@@ -5806,9 +5878,6 @@ main.bootui > div.contain:after,
 * Semantic bootstrap
 *
 *******************/
-.bootui {
-  /* col 1 */
-}
 section.bootui > div,
 header.bootui > div,
 footer.bootui > div,
@@ -6339,5 +6408,425 @@ main.bootui > div.contain {
   .bootui .tweleve.columns > div {
     float: left;
     width: 8.33333333%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .one,
+.bootui .cw > .one {
+  float: left;
+  width: 8.33333333%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .one,
+  .bootui .cw > .one {
+    float: left;
+    width: 8.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .one,
+  .bootui .cw > .one {
+    float: left;
+    width: 8.33333333%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .one,
+  .bootui .cw > .one {
+    float: left;
+    width: 8.33333333%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .two,
+.bootui .cw > .two {
+  float: left;
+  width: 16.66666667%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .two,
+  .bootui .cw > .two {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .two,
+  .bootui .cw > .two {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .two,
+  .bootui .cw > .two {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .three,
+.bootui .cw > .three {
+  float: left;
+  width: 25%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .three,
+  .bootui .cw > .three {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .three,
+  .bootui .cw > .three {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .three,
+  .bootui .cw > .three {
+    float: left;
+    width: 25%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .four,
+.bootui .cw > .four {
+  float: left;
+  width: 33.33333333%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .four,
+  .bootui .cw > .four {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .four,
+  .bootui .cw > .four {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .four,
+  .bootui .cw > .four {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .five,
+.bootui .cw > .five {
+  float: left;
+  width: 41.66666667%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .five,
+  .bootui .cw > .five {
+    float: left;
+    width: 41.66666667%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .five,
+  .bootui .cw > .five {
+    float: left;
+    width: 41.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .five,
+  .bootui .cw > .five {
+    float: left;
+    width: 41.66666667%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .six,
+.bootui .cw > .six {
+  float: left;
+  width: 50%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .six,
+  .bootui .cw > .six {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .six,
+  .bootui .cw > .six {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .six,
+  .bootui .cw > .six {
+    float: left;
+    width: 50%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .seven,
+.bootui .cw > .seven {
+  float: left;
+  width: 58.33333333%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .seven,
+  .bootui .cw > .seven {
+    float: left;
+    width: 58.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .seven,
+  .bootui .cw > .seven {
+    float: left;
+    width: 58.33333333%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .seven,
+  .bootui .cw > .seven {
+    float: left;
+    width: 58.33333333%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .eight,
+.bootui .cw > .eight {
+  float: left;
+  width: 66.66666667%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .eight,
+  .bootui .cw > .eight {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .eight,
+  .bootui .cw > .eight {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .eight,
+  .bootui .cw > .eight {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .nine,
+.bootui .cw > .nine {
+  float: left;
+  width: 75%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .nine,
+  .bootui .cw > .nine {
+    float: left;
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .nine,
+  .bootui .cw > .nine {
+    float: left;
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .nine,
+  .bootui .cw > .nine {
+    float: left;
+    width: 75%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .ten,
+.bootui .cw > .ten {
+  float: left;
+  width: 83.33333333%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .ten,
+  .bootui .cw > .ten {
+    float: left;
+    width: 83.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .ten,
+  .bootui .cw > .ten {
+    float: left;
+    width: 83.33333333%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .ten,
+  .bootui .cw > .ten {
+    float: left;
+    width: 83.33333333%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .eleven,
+.bootui .cw > .eleven {
+  float: left;
+  width: 91.66666667%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .eleven,
+  .bootui .cw > .eleven {
+    float: left;
+    width: 91.66666667%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .eleven,
+  .bootui .cw > .eleven {
+    float: left;
+    width: 91.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .eleven,
+  .bootui .cw > .eleven {
+    float: left;
+    width: 91.66666667%;
+  }
+}
+.bootui .column.width,
+.bootui .cw {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.bootui .column.width > .tweleve,
+.bootui .cw > .tweleve {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .bootui .column.width > .tweleve,
+  .bootui .cw > .tweleve {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .bootui .column.width > .tweleve,
+  .bootui .cw > .tweleve {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .bootui .column.width > .tweleve,
+  .bootui .cw > .tweleve {
+    float: left;
+    width: 100%;
   }
 }
