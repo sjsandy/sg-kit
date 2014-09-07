@@ -1,4 +1,4 @@
-// Shawn Sandy - created 09/04/2014
+//************** Shawn Sandy - created 09/04/2014 ******************/
 
 @import "../../../bower_components/bootstrap/less/variables";
 @import "../../../bower_components/bootstrap/less/bootstrap";
@@ -33,14 +33,12 @@
 
   }
 
-
-
 }
   .blocks {
-
     .make-row();
   }
-  .blog();
+
+
 
 }
 
@@ -48,22 +46,43 @@
 //article { @extend .col-lg-9; }
 
 .blog() {
-  .post {
-    .cols(8);
 
-  }
-  .sidebar {
-    .cols(4);
-
+  .blog{
+    .post {
+      .cols(8);
+      &.single.page{ .cols(12) }
+    }
+    .sidebar {
+      .cols(4);
+    }
   }
 
 }
 
 .cols(@desktop, @tablet:12, @phone:12){
-  // .make-xs-column(@phone);
+  .make-xs-column(@phone);
   .make-sm-column(@tablet);
   .make-md-column(@desktop);
   .make-lg-column(@desktop);
 }
+
+//bootstrap-ui semantic column
+
+.semantic-columns(@name, @col){
+
+ .@{name}{
+    &.columns {
+      > aside {
+        .cols(@col,@col,@col);
+      }
+
+    }
+  }
+
+ }
+
+
+
+
 
 
