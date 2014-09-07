@@ -1,0 +1,60 @@
+{
+  "arr": [
+    {
+      "urlname": "cover",
+      "path": "partials/cover.html"
+    },
+    {
+      "urlname": "features",
+      "path": "partials/features.html"
+    },
+    {
+      "urlname": "footer",
+      "path": "partials/footer.html"
+    },
+    {
+      "urlname": "hello",
+      "path": "partials/hello.html"
+    },
+    {
+      "urlname": "partial1",
+      "path": "partials/partial1.html"
+    },
+    {
+      "urlname": "partial2",
+      "path": "partials/partial2.html"
+    },
+    {
+      "urlname": "post-preview",
+      "path": "partials/post-preview.html"
+    },
+    {
+      "urlname": "top-nav",
+      "path": "partials/top-nav.html"
+    },
+    {
+      "urlname": "home",
+      "path": "home.html"
+    },
+    {
+      "urlname": "index-async",
+      "path": "index-async.html"
+    },
+    {
+      "urlname": "index",
+      "path": "index.html"
+    },
+    {
+      "urlname": "pages",
+      "path": "pages.html"
+    },
+    {
+      "urlname": "sg",
+      "path": "sg.html"
+    },
+    {
+      "urlname": "style-guide",
+      "path": "style-guide.html"
+    }
+  ]
+}
