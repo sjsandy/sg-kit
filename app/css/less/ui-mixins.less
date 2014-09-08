@@ -82,6 +82,18 @@
  }
 
 
+.column-width(@name,@width){
+
+ .column.width, .cw {
+   .make-row();
+  > .@{name} {
+    .cols(@width, @width, @width);
+   }
+ }
+
+}
+
+
 
 
 
