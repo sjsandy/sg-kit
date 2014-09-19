@@ -8,30 +8,34 @@
 
 .sections() {
 
-  section&, header&, footer&, main&  {
+  div, p, aside {
+    margin-bottom: @margins;
+  }
 
-    > div {
+    section&, header&, footer&, main&  {
 
-      .container-fixed();
-
-      &.contain {
+      div {
 
         .container-fixed();
 
-        @media (min-width: @screen-sm-min) {
-          width: @container-sm;
+        &.contain {
+
+          .container-fixed();
+
+          @media (min-width: @screen-sm-min) {
+            width: @container-sm;
+          }
+          @media (min-width: @screen-md-min) {
+            width: @container-md;
+          }
+          @media (min-width: @screen-lg-min) {
+            width: @container-lg;
+          }
+
         }
-        @media (min-width: @screen-md-min) {
-          width: @container-md;
-        }
-        @media (min-width: @screen-lg-min) {
-          width: @container-lg;
-        }
+
 
       }
-
-
-  }
 
 }
   .blocks {
@@ -75,7 +79,6 @@
       > aside, > ul > li, > div {
         .cols(@col,@col,@col);
       }
-
     }
   }
 
@@ -84,12 +87,30 @@
 
 .column-width(@name,@width){
 
- .column.width, .cw {
+ .cols.wide, .cw {
    .make-row();
   > .@{name} {
     .cols(@width, @width, @width);
    }
  }
+
+}
+
+
+.position-vertically(){
+
+  .position.middle {
+    display: table;
+    height: inherit !important;
+    width: 100%;
+
+    > div, > aside, > li {
+      display: table-cell;
+      width: 100%;
+      vertical-align: middle;
+    }
+
+  }
 
 }
 
