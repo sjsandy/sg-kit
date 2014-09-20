@@ -1,5 +1,6 @@
-header {
-  height: @header-height / 2;
+#page > header {
+  //height: @header-height / 2;
+  height: @header-min-height;
   min-height: @header-min-height;
   text-align: center;
   background-color: @header-bg-color;
@@ -14,9 +15,7 @@ header {
     .lh-transition(all 0.5s ease);
 
     &:hover {
-
       color: @darkgray;
-
     }
   }
   .vtable {

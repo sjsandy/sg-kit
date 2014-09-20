@@ -7,7 +7,7 @@
 use full theme mixins
 */
 /* sg-fonts font mixins */
-/* --- page --- */
+/* --- page update --- */
 body {
   height: 100% !important;
   font-family: 'OpenSansRegular', Arial, sans-serif;
@@ -21,15 +21,20 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  font-family: 'OpenSansSemibold';
+h5,
+aside h1,
+aside h2,
+aside h3,
+aside h4,
+aside h5 {
+  font-family: 'OpenSansRegular', Arial, sans-serif;
   line-height: 1.5;
 }
-.sidebar h1,
-.sidebar h2,
-.sidebar h3,
-.sidebar h4,
-.sidebar h5 {
+aside h1,
+aside h2,
+aside h3,
+aside h4,
+aside h5 {
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -42,11 +47,16 @@ p {
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
-header,
-main,
-section,
-footer {
+#page > header,
+div[role="page"] > header,
+#page > main,
+div[role="page"] > main,
+#page > section,
+div[role="page"] > section,
+#page > footer,
+div[role="page"] > footer {
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 figure {
   margin-bottom: 10px;
@@ -58,43 +68,43 @@ figure {
 .ccode {
   cursor: pointer;
 }
-/* --- forms --- */
+/* --- forms update  --- */
 .input-group {
   margin-bottom: 10px;
 }
 /* ---- header ---- */
-header {
-  height: 250px;
-  min-height: 250px;
+#page > header {
+  height: 320px;
+  min-height: 320px;
   text-align: center;
   background-color: #f2f2f2;
   color: #808080;
   padding: 0;
 }
-.home header {
+.home #page > header {
   height: 500px;
 }
-header h1 {
+#page > header h1 {
   font-size: 83px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-header h1:hover {
+#page > header h1:hover {
   color: #222222;
 }
-header .vtable {
+#page > header .vtable {
   display: table;
   height: inherit !important;
   width: 100% !important;
 }
-header .vtable .table-cell {
+#page > header .vtable .table-cell {
   display: table-cell;
   width: 100%;
   vertical-align: middle;
 }
-header .vtable .table-cell {
+#page > header .vtable .table-cell {
   display: table-cell;
   width: 100%;
   vertical-align: middle;
@@ -209,7 +219,12 @@ article .author .avatar {
   font-size: 12px;
   font-size: 1.2rem;
 }
-h1 {
+h1,
+aside h1,
+aside h2,
+aside h3,
+aside h4,
+aside h5 {
   font-size: 51px;
   font-size: 5.1rem;
 }

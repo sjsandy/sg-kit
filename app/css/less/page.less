@@ -7,16 +7,18 @@ body {
   color: @font-color;
   padding-top: @nav-height;
 
-
 }
 h1,h2,h3,h4,h5 {
-  font-family:@font-family-bold;
+  font-family:@font-family;
   line-height: 1.5;
 
-  .sidebar & {
+
+
+  aside &  {
 //    line-height: 1.2;
     margin-top: 0;
     margin-bottom: 20px;
+    &:extend(h1);
   }
 
 
@@ -28,14 +30,18 @@ p {
   .lh-justify-content(flex-end);
 }
 
-header,
-main,
-section,
-footer {
-  padding-top: @nav-height;
-  //padding-bottom: @nav-height;
+
+#page, div[role="page"] {
+  & > header,
+  & > main,
+  & > section,
+  & > footer {
+    padding-top: @nav-height;
+    padding-bottom: @nav-height;
+  }
 
 }
+
 
 figure {
   margin-bottom: @margins;
