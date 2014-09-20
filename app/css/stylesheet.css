@@ -42,10 +42,10 @@ p {
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
-header,
-main,
-section,
-footer {
+#page > header,
+#page > main,
+#page > section,
+#page > footer {
   padding-top: 80px;
 }
 figure {
@@ -63,7 +63,7 @@ figure {
   margin-bottom: 10px;
 }
 /* ---- header ---- */
-header {
+#page > header {
   height: 250px;
   min-height: 250px;
   text-align: center;
@@ -71,30 +71,30 @@ header {
   color: #808080;
   padding: 0;
 }
-.home header {
+.home #page > header {
   height: 500px;
 }
-header h1 {
+#page > header h1 {
   font-size: 83px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-header h1:hover {
+#page > header h1:hover {
   color: #222222;
 }
-header .vtable {
+#page > header .vtable {
   display: table;
   height: inherit !important;
   width: 100% !important;
 }
-header .vtable .table-cell {
+#page > header .vtable .table-cell {
   display: table-cell;
   width: 100%;
   vertical-align: middle;
 }
-header .vtable .table-cell {
+#page > header .vtable .table-cell {
   display: table-cell;
   width: 100%;
   vertical-align: middle;

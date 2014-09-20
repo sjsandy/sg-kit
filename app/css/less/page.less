@@ -27,15 +27,17 @@ p {
   font-size: 1.6rem;
   .lh-justify-content(flex-end);
 }
+#page {
+  & > header,
+  & > main,
+  & > section,
+  & > footer {
+    padding-top: @nav-height;
+    //padding-bottom: @nav-height;
 
-header,
-main,
-section,
-footer {
-  padding-top: @nav-height;
-  //padding-bottom: @nav-height;
-
+  }
 }
+
 
 figure {
   margin-bottom: @margins;
