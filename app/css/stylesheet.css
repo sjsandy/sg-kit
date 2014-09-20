@@ -74,15 +74,15 @@ figure {
 }
 /* ---- header ---- */
 #page > header {
-  height: 200px;
-  min-height: 250px;
+  height: 320px;
+  min-height: 320px;
   text-align: center;
   background-color: #f2f2f2;
   color: #808080;
   padding: 0;
 }
 .home #page > header {
-  height: 400px;
+  height: 500px;
 }
 #page > header h1 {
   font-size: 83px;
