@@ -73,7 +73,8 @@ figure {
   margin-bottom: 10px;
 }
 /* ---- header ---- */
-#page > header {
+#page > header,
+[role="header"] {
   height: 320px;
   min-height: 320px;
   text-align: center;
@@ -81,30 +82,36 @@ figure {
   color: #808080;
   padding: 0;
 }
-.home #page > header {
+.home #page > header,
+.home [role="header"] {
   height: 500px;
 }
-#page > header h1 {
+#page > header h1,
+[role="header"] h1 {
   font-size: 83px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-#page > header h1:hover {
+#page > header h1:hover,
+[role="header"] h1:hover {
   color: #222222;
 }
-#page > header .vtable {
+#page > header .vtable,
+[role="header"] .vtable {
   display: table;
   height: inherit !important;
   width: 100% !important;
 }
-#page > header .vtable .table-cell {
+#page > header .vtable .table-cell,
+[role="header"] .vtable .table-cell {
   display: table-cell;
   width: 100%;
   vertical-align: middle;
 }
-#page > header .vtable .table-cell {
+#page > header .vtable .table-cell,
+[role="header"] .vtable .table-cell {
   display: table-cell;
   width: 100%;
   vertical-align: middle;
